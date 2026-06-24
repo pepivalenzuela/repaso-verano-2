@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Problemas con naturales · 2º ESO</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+    :root{--color:#2e7d32;--color-c:#e8f5e9;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto);line-height:1.6}
+    nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+    nav a{color:rgba(255,255,255,.8);text-decoration:none} nav a:hover{color:white} nav span{opacity:.6}
+    .hero{background:linear-gradient(135deg,var(--color),#1b5e20);color:white;padding:1.8rem 1.5rem 1.6rem;text-align:center}
+    .badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:.25rem .9rem;font-size:.8rem;letter-spacing:.06em;margin-bottom:.7rem}
+    .hero h1{font-size:1.6rem}
+    main{max-width:760px;margin:0 auto;padding:2rem 1rem 4rem}
+    .seccion{background:white;border-radius:var(--radio);box-shadow:var(--sombra);padding:1.6rem 1.8rem;margin-bottom:1.8rem}
+    .seccion h2{font-size:1.05rem;color:var(--color);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--color-c)}
+    .seccion h3{font-size:.95rem;color:#333;margin:1rem 0 .4rem}
+    .seccion p{margin-bottom:.8rem;font-size:.95rem}
+    .seccion ul{margin:.3rem 0 .8rem 1.2rem} .seccion li{margin-bottom:.4rem;font-size:.94rem}
+    .ejemplo{background:var(--color-c);border-left:4px solid var(--color);border-radius:8px;padding:.9rem 1.1rem;margin:.8rem 0;font-size:.93rem}
+    .ejemplo strong{color:var(--color)}
+    .nota{background:#fff8e1;border-left:4px solid #f9a825;border-radius:8px;padding:.7rem 1rem;margin:.8rem 0;font-size:.87rem;color:#4e3a00}
+    .regla-box{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}
+    .regla-box ol{margin:.5rem 0 0 1.2rem} .regla-box li{margin-bottom:.3rem;font-size:.95rem}
+    .estrategia{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:8px;padding:1rem 1.2rem;margin:.8rem 0;font-size:.94rem}
+    table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.8rem 0}
+    th{background:var(--color);color:white;padding:.5rem .7rem;text-align:left}
+    td{padding:.45rem .7rem;border-bottom:1px solid #eee}
+    tr:nth-child(even) td{background:#fafafa}
+    #ejercicios-container .ejercicio{border:1.5px solid #e0e0e0;border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.2rem;background:#fafafa}
+    .dificultad{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .55rem;border-radius:20px;margin-bottom:.5rem}
+    .d1{background:#e8f5e9;color:#2e7d32} .d2{background:#fff8e1;color:#e65100} .d3{background:#fce4ec;color:#880e4f}
+    .enunciado{font-size:.96rem;margin-bottom:.9rem;font-weight:500;line-height:1.7}
+    .opciones{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.8rem}
+    .opcion{display:flex;align-items:center;gap:.7rem;padding:.55rem .9rem;border-radius:8px;border:1.5px solid #ddd;background:white;cursor:pointer;font-size:.93rem;transition:border-color .15s,background .15s}
+    .opcion:hover{border-color:var(--color);background:var(--color-c)}
+    .opcion input[type=radio]{accent-color:var(--color)}
+    .btn-comprobar{padding:.55rem 1.2rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer}
+    .btn-comprobar:hover{background:#1b5e20}
+    .feedback{display:none;margin-top:.8rem;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;font-weight:500;line-height:1.6}
+    .feedback.correcto{background:var(--color-c);color:#1b5e20;border-left:4px solid var(--color)}
+    .feedback.incorrecto{background:#ffebee;color:#b71c1c;border-left:4px solid #c62828}
+    .completar-wrap{text-align:center;padding:1.5rem;background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.5rem}
+    .completar-wrap p{font-size:.92rem;color:#555;margin-bottom:1rem}
+    .btn-completar{padding:.7rem 1.8rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+    .completado-msg{display:none;background:var(--color-c);color:#1b5e20;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
+    .nav-modulos{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .btn-nav{padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
+    .btn-nav:hover{background:var(--color-c)}
+    .nueva-serie{display:block;margin:.5rem auto 0;background:none;border:none;color:var(--color);font-size:.85rem;cursor:pointer;text-decoration:underline}
+    footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  </style>
+</head>
+<body>
+<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque0-hub.html">Bloque 0</a><span>·</span><strong>Problemas con naturales</strong></nav>
+<div class="hero"><div class="badge">Bloque 0 · Números naturales</div><h1>📝 Problemas con naturales</h1></div>
+<main>
+<div class="seccion">
+  <h2>📖 Estrategia de resolución</h2>
+  <div class="estrategia"><strong>1. Datos</strong> · <strong>2. Incógnita</strong> · <strong>3. Operación</strong> · <strong>4. Resultado y comprobación</strong></div>
+  <p><strong>MCM</strong> → "¿cuándo coinciden de nuevo?" &nbsp;·&nbsp; <strong>MCD</strong> → "¿cuál es el mayor tamaño posible?"</p>
+</div>
+<div class="seccion">
+  <h2>✏️ Ejercicios <span style="font-size:.8rem;font-weight:400;color:#888">(selección aleatoria · 4 por nivel)</span></h2>
+  <div id="ejercicios-container"></div>
+  <button class="nueva-serie" onclick="nuevaSerie()">↻ Nueva serie de ejercicios</button>
+</div>
+<div class="completar-wrap" id="completar-wrap"><p>Cuando hayas trabajado todos los ejercicios, marca el módulo como completado.</p><button class="btn-completar" onclick="marcarCompletado()">✓ Marcar como completado</button></div>
+<div class="completado-msg" id="completado-msg">✅ Módulo completado. ¡Buen trabajo!</div>
+<div class="nav-modulos">
+  <a href="b0-naturales-jerarquia.html" class="btn-nav">← Jerarquía</a>
+  <a href="bloque0-hub.html" class="btn-nav">Siguiente: Bloque 0 →</a>
+</div>
+</main>
+<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
+<script>
+const SHEETS_URL='PEGA_AQUI_TU_URL_APPS_SCRIPT_2ESO';
+const MODULE_ID='b0-nat-prob', SESSION_KEY='modulos_2eso_b0', BLOQUE='b0';
+const BANCO=[{"niv": 1, "tex": "Una biblioteca tiene <strong>5 estanterías</strong>, <strong>8 filas</strong> cada una y <strong>12 libros</strong> por fila. ¿Cuántos libros hay?", "ops": [{"t": "96", "ok": 0}, {"t": "240", "ok": 0}, {"t": "480", "ok": 1}, {"t": "120", "ok": 0}], "exp": "\\(5\\times8\\times12=480\\) libros."}, {"niv": 1, "tex": "Un frutero reparte <strong>375 naranjas</strong> en <strong>16 cajas</strong>. ¿Cuántas sobran?", "ops": [{"t": "5", "ok": 0}, {"t": "7", "ok": 0}, {"t": "14", "ok": 1}, {"t": "3", "ok": 0}], "exp": "\\(375=16\\times23+7\\). Sobran \\(7\\). Espera: \\(16\\times23=368\\), \\(375-368=7\\)."}, {"niv": 1, "tex": "Un virus se <strong>triplica</strong> cada hora. Con 1 inicial, ¿cuántos habrá en <strong>8 horas</strong>?", "ops": [{"t": "24", "ok": 0}, {"t": "512", "ok": 0}, {"t": "2187", "ok": 0}, {"t": "6561", "ok": 1}], "exp": "\\(3^8=6561\\)."}, {"niv": 1, "tex": "Dos semáforos cambian cada <strong>15 s</strong> y <strong>20 s</strong>. ¿Cuándo coinciden de nuevo?", "ops": [{"t": "35 s", "ok": 0}, {"t": "5 s", "ok": 0}, {"t": "60 s", "ok": 1}, {"t": "300 s", "ok": 0}], "exp": "\\(\\text{mcm}(15,20)=60\\) segundos."}, {"niv": 1, "tex": "Jardín de <strong>120×90 cm</strong>. Baldosas cuadradas sin cortar. ¿Mayor lado posible?", "ops": [{"t": "10 cm", "ok": 0}, {"t": "15 cm", "ok": 0}, {"t": "30 cm", "ok": 1}, {"t": "45 cm", "ok": 0}], "exp": "\\(\\text{mcd}(120,90)=30\\) cm."}, {"niv": 1, "tex": "Un atleta da una vuelta en <strong>8 min</strong> y otro en <strong>12 min</strong>. Salen juntos. ¿En cuántos minutos coinciden?", "ops": [{"t": "4", "ok": 0}, {"t": "20", "ok": 0}, {"t": "24", "ok": 1}, {"t": "96", "ok": 0}], "exp": "\\(\\text{mcm}(8,12)=24\\) minutos."}, {"niv": 1, "tex": "¿Cuántos caramelos sobran al repartir <strong>500</strong> entre <strong>18</strong>?", "ops": [{"t": "2", "ok": 0}, {"t": "8", "ok": 0}, {"t": "14", "ok": 1}, {"t": "0", "ok": 0}], "exp": "\\(500=18\\times27+14\\). Sobran \\(14\\)."}, {"niv": 1, "tex": "Campo de <strong>252×180 cm</strong>. ¿Cuántas baldosas cuadradas del mayor tamaño posible?", "ops": [{"t": "25", "ok": 0}, {"t": "35", "ok": 1}, {"t": "42", "ok": 0}, {"t": "20", "ok": 0}], "exp": "\\(\\text{mcd}(252,180)=36\\). Baldosas: \\(7\\times5=35\\)."}, {"niv": 2, "tex": "Tres autobuses salen cada <strong>12, 15 y 20 min</strong>. ¿Cuándo coinciden?", "ops": [{"t": "30 min", "ok": 0}, {"t": "47 min", "ok": 0}, {"t": "60 min", "ok": 1}, {"t": "180 min", "ok": 0}], "exp": "\\(\\text{mcm}(12,15,20)=60\\) minutos."}, {"niv": 2, "tex": "Tres semáforos parpadean cada <strong>8, 12 y 18 s</strong>. ¿Cada cuántos segundos coinciden?", "ops": [{"t": "36", "ok": 0}, {"t": "54", "ok": 0}, {"t": "72", "ok": 1}, {"t": "216", "ok": 0}], "exp": "\\(8=2^3\\), \\(12=2^2\\cdot3\\), \\(18=2\\cdot3^2\\). \\(\\text{mcm}=2^3\\cdot3^2=72\\) s."}, {"niv": 2, "tex": "Si \\(\\text{mcd}(a,b)=12\\) y \\(\\text{mcm}(a,b)=360\\), ¿cuánto vale \\(a\\cdot b\\)?", "ops": [{"t": "372", "ok": 0}, {"t": "2160", "ok": 0}, {"t": "4320", "ok": 1}, {"t": "30", "ok": 0}], "exp": "\\(a\\cdot b=12\\times360=4320\\)."}, {"niv": 2, "tex": "Una fábrica produce piezas en series de <strong>126, 180 y 210</strong>. ¿Mayor lote posible igual para las tres?", "ops": [{"t": "6", "ok": 1}, {"t": "9", "ok": 0}, {"t": "18", "ok": 0}, {"t": "42", "ok": 0}], "exp": "\\(126=2\\cdot3^2\\cdot7\\), \\(180=2^2\\cdot3^2\\cdot5\\), \\(210=2\\cdot3\\cdot5\\cdot7\\). \\(\\text{mcd}=2\\cdot3=6\\)."}, {"niv": 2, "tex": "Tres luces se encienden a la vez cada <strong>30, 45 y 60 s</strong>. ¿Cuántas veces coinciden en <strong>10 minutos</strong>?", "ops": [{"t": "3", "ok": 1}, {"t": "5", "ok": 0}, {"t": "6", "ok": 0}, {"t": "10", "ok": 0}], "exp": "\\(\\text{mcm}(30,45,60)=180\\) s \\(=3\\) min. En 10 min: a los 3, 6 y 9 min → 3 coincidencias."}, {"niv": 2, "tex": "¿Cuántos divisores tiene \\(720\\)?", "ops": [{"t": "18", "ok": 0}, {"t": "24", "ok": 0}, {"t": "30", "ok": 1}, {"t": "36", "ok": 0}], "exp": "\\(720=2^4\\cdot3^2\\cdot5\\). Divisores: \\((4+1)(2+1)(1+1)=30\\)."}, {"niv": 3, "tex": "Encuentra dos números cuyo \\(\\text{mcd}=8\\) y \\(\\text{mcm}=120\\).", "ops": [{"t": "8 y 120", "ok": 0}, {"t": "24 y 40", "ok": 1}, {"t": "16 y 60", "ok": 0}, {"t": "8 y 15", "ok": 0}], "exp": "\\(24=2^3\\cdot3\\), \\(40=2^3\\cdot5\\). \\(\\text{mcd}=8\\)✓, \\(\\text{mcm}=120\\)✓."}, {"niv": 3, "tex": "¿Para qué valores de \\(n\\) es \\(2^n\\) un divisor de \\(48\\)?", "ops": [{"t": "n=1,2,3,4", "ok": 1}, {"t": "n=1,2,3", "ok": 0}, {"t": "n=2,4,6", "ok": 0}, {"t": "n=0,1,2,3,4", "ok": 0}], "exp": "\\(48=2^4\\cdot3\\). Los divisores potencia de 2 son \\(2^1,2^2,2^3,2^4\\), es decir \\(n=1,2,3,4\\)."}, {"niv": 3, "tex": "Un escalador sube <strong>1440 m</strong> en tramos de <strong>120 m</strong> y baja en tramos de <strong>160 m</strong>. ¿Tramos totales?", "ops": [{"t": "16", "ok": 0}, {"t": "21", "ok": 1}, {"t": "18", "ok": 0}, {"t": "24", "ok": 0}], "exp": "Subida: \\(1440\\div120=12\\). Bajada: \\(1440\\div160=9\\). Total: \\(21\\)."}];
+function shuffle(a){return a.sort(()=>Math.random()-.5);}
+function nuevaSerie(){
+  const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
+  const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
+  sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
+  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+}
+function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
+function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
+function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+</script>
+</body>
+</html>
