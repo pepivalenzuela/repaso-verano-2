@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal · Matemáticas 2º ESO</title>
+  <style>
+    :root{--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto)}
+    nav{background:#263238;color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+    .nav-left{display:flex;align-items:center;gap:.5rem} .nav-left span{opacity:.6}
+    .alumno-badge{background:rgba(255,255,255,.15);border-radius:20px;padding:.25rem .9rem;font-size:.82rem}
+    .hero{background:linear-gradient(135deg,#263238,#37474f);color:white;padding:2rem 1.5rem 1.8rem;text-align:center}
+    .hero h1{font-size:1.8rem;margin-bottom:.4rem} .hero p{opacity:.8;font-size:.95rem}
+    main{max-width:780px;margin:0 auto;padding:2rem 1rem 4rem}
+    .progreso-global{background:white;border-radius:var(--radio);box-shadow:var(--sombra);padding:1.2rem 1.6rem;margin-bottom:2rem}
+    .prog-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.7rem}
+    .prog-header span{font-size:.88rem;color:#555} .prog-header strong{color:#263238;font-size:.95rem}
+    .barra-outer{background:#e0e0e0;border-radius:99px;height:12px;overflow:hidden}
+    .barra-inner{height:100%;background:linear-gradient(90deg,#2e7d32,#1565c0);border-radius:99px;transition:width .5s}
+    .bloques-titulo{font-size:.82rem;text-transform:uppercase;letter-spacing:.07em;color:#888;margin-bottom:1rem}
+    .bloque-card{background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.2rem;overflow:hidden;transition:transform .15s,box-shadow .15s;text-decoration:none;color:var(--texto);display:block}
+    .bloque-card:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(0,0,0,.13)}
+    .bloque-header{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.4rem}
+    .bloque-num{font-size:2rem;font-weight:800;min-width:2.2rem;text-align:center}
+    .bloque-info{flex:1} .bloque-info h3{font-size:1.05rem;margin-bottom:.2rem} .bloque-info p{font-size:.85rem;color:#666}
+    .bloque-prog{padding:.6rem 1.4rem .9rem;border-top:1px solid #f0f0f0;display:flex;align-items:center;gap:.9rem}
+    .mini-barra-outer{flex:1;background:#e0e0e0;border-radius:99px;height:7px;overflow:hidden}
+    .mini-barra-inner{height:100%;border-radius:99px;transition:width .4s}
+    .prog-txt{font-size:.8rem;font-weight:600;white-space:nowrap}
+    .modulos-tags{padding:.5rem 1.4rem .8rem;display:flex;flex-wrap:wrap;gap:.4rem;border-top:1px solid #f5f5f5}
+    .tag{background:var(--gris-bg);border-radius:20px;padding:.2rem .7rem;font-size:.78rem;color:#555}
+    /* Colores */
+    .b0 .bloque-num{color:#2e7d32} .b0 .bloque-header{border-left:5px solid #2e7d32;background:#e8f5e9}
+    .b0 .mini-barra-inner{background:#2e7d32} .b0 .prog-txt{color:#2e7d32}
+    .b1 .bloque-num{color:#1565c0} .b1 .bloque-header{border-left:5px solid #1565c0;background:#e3f2fd}
+    .b1 .mini-barra-inner{background:#1565c0} .b1 .prog-txt{color:#1565c0}
+    .b2 .bloque-num{color:#e65100} .b2 .bloque-header{border-left:5px solid #e65100;background:#fff3e0}
+    .b2 .mini-barra-inner{background:#e65100} .b2 .prog-txt{color:#e65100}
+    .b3 .bloque-num{color:#00838f} .b3 .bloque-header{border-left:5px solid #00838f;background:#e0f7fa}
+    .b3 .mini-barra-inner{background:#00838f} .b3 .prog-txt{color:#00838f}
+    .b4 .bloque-num{color:#6a1b9a} .b4 .bloque-header{border-left:5px solid #6a1b9a;background:#f3e5f5}
+    .b4 .mini-barra-inner{background:#6a1b9a} .b4 .prog-txt{color:#6a1b9a}
+    .b5 .bloque-num{color:#f57f17} .b5 .bloque-header{border-left:5px solid #f57f17;background:#fff8e1}
+    .b5 .mini-barra-inner{background:#f57f17} .b5 .prog-txt{color:#f57f17}
+    footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-left"><strong>Las Chapas ECOS</strong><span>·</span><span>Matemáticas 2º ESO</span></div>
+  <span class="alumno-badge" id="alumno-badge">—</span>
+</nav>
+<div class="hero"><h1>¿Qué quieres trabajar hoy?</h1><p>Elige un bloque. Puedes entrar en cualquier orden.</p></div>
+<main>
+  <div class="progreso-global">
+    <div class="prog-header"><strong>Progreso total</strong><span id="prog-global-txt">0 de 29 módulos completados</span></div>
+    <div class="barra-outer"><div class="barra-inner" id="barra-global" style="width:0%"></div></div>
+  </div>
+
+  <p class="bloques-titulo">Bloques temáticos</p>
+
+  <a href="bloque0-hub.html" class="bloque-card b0">
+    <div class="bloque-header"><span class="bloque-num">0</span><div class="bloque-info"><h3>Números</h3><p>Naturales, enteros y racionales</p></div></div>
+    <div class="bloque-prog"><div class="mini-barra-outer"><div class="mini-barra-inner" id="prog-b0" style="width:0%"></div></div><span class="prog-txt" id="txt-b0">0/9</span></div>
+    <div class="modulos-tags"><span class="tag">Naturales</span><span class="tag">Enteros</span><span class="tag">Racionales</span></div>
+  </a>
+
+  <a href="bloque1-hub.html" class="bloque-card b1">
+    <div class="bloque-header"><span class="bloque-num">1</span><div class="bloque-info"><h3>Álgebra</h3><p>Monomios, polinomios, Ruffini e identidades notables</p></div></div>
+    <div class="bloque-prog"><div class="mini-barra-outer"><div class="mini-barra-inner" id="prog-b1" style="width:0%"></div></div><span class="prog-txt" id="txt-b1">0/6</span></div>
+    <div class="modulos-tags"><span class="tag">Monomios</span><span class="tag">Polinomios</span><span class="tag">Ruffini</span><span class="tag">Lenguaje algebraico</span><span class="tag">Identidades notables</span></div>
+  </a>
+
+  <a href="bloque2-hub.html" class="bloque-card b2">
+    <div class="bloque-header"><span class="bloque-num">2</span><div class="bloque-info"><h3>Ecuaciones</h3><p>Lineales, 2º grado y problemas</p></div></div>
+    <div class="bloque-prog"><div class="mini-barra-outer"><div class="mini-barra-inner" id="prog-b2" style="width:0%"></div></div><span class="prog-txt" id="txt-b2">0/3</span></div>
+    <div class="modulos-tags"><span class="tag">Lineales</span><span class="tag">2º grado</span><span class="tag">Problemas</span></div>
+  </a>
+
+  <a href="bloque3-hub.html" class="bloque-card b3">
+    <div class="bloque-header"><span class="bloque-num">3</span><div class="bloque-info"><h3>Sistemas</h3><p>Sustitución, reducción e igualación</p></div></div>
+    <div class="bloque-prog"><div class="mini-barra-outer"><div class="mini-barra-inner" id="prog-b3" style="width:0%"></div></div><span class="prog-txt" id="txt-b3">0/2</span></div>
+    <div class="modulos-tags"><span class="tag">Sustitución</span><span class="tag">Reducción</span><span class="tag">Igualación</span><span class="tag">Problemas</span></div>
+  </a>
+
+  <a href="bloque4-hub.html" class="bloque-card b4">
+    <div class="bloque-header"><span class="bloque-num">4</span><div class="bloque-info"><h3>Geometría</h3><p>Semejanza, Pitágoras, movimientos y cuerpos de revolución</p></div></div>
+    <div class="bloque-prog"><div class="mini-barra-outer"><div class="mini-barra-inner" id="prog-b4" style="width:0%"></div></div><span class="prog-txt" id="txt-b4">0/6</span></div>
+    <div class="modulos-tags"><span class="tag">Polígonos</span><span class="tag">Semejanza</span><span class="tag">Pitágoras</span><span class="tag">Movimientos</span><span class="tag">Cuerpos</span></div>
+  </a>
+
+  <a href="bloque5-hub.html" class="bloque-card b5">
+    <div class="bloque-header"><span class="bloque-num">5</span><div class="bloque-info"><h3>Análisis</h3><p>Modelización, variables y funciones lineales y cuadráticas</p></div></div>
+    <div class="bloque-prog"><div class="mini-barra-outer"><div class="mini-barra-inner" id="prog-b5" style="width:0%"></div></div><span class="prog-txt" id="txt-b5">0/3</span></div>
+    <div class="modulos-tags"><span class="tag">Modelización</span><span class="tag">Variables</span><span class="tag">Funciones lineales</span><span class="tag">Funciones cuadráticas</span></div>
+  </a>
+
+</main>
+<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
+<script>
+  const nombre=sessionStorage.getItem('alumno_nombre')||'';
+  const apellidos=sessionStorage.getItem('alumno_apellidos')||'';
+  if(nombre) document.getElementById('alumno-badge').textContent=nombre+' '+apellidos;
+  if(!nombre) window.location.href='index.html';
+
+  const TOTALES={b0:9,b1:6,b2:3,b3:2,b4:6,b5:3};
+  const KEYS={b0:'modulos_2eso_b0',b1:'modulos_2eso_b1',b2:'modulos_2eso_b2',b3:'modulos_2eso_b3',b4:'modulos_2eso_b4',b5:'modulos_2eso_b5'};
+  const totalMod=29;
+  let totalComp=0;
+  ['b0','b1','b2','b3','b4','b5'].forEach(b=>{
+    const comp=JSON.parse(sessionStorage.getItem(KEYS[b])||'[]').length;
+    const tot=TOTALES[b];
+    const pct=Math.round(comp/tot*100);
+    document.getElementById('prog-'+b).style.width=pct+'%';
+    document.getElementById('txt-'+b).textContent=comp+'/'+tot;
+    totalComp+=comp;
+  });
+  const pctG=Math.round(totalComp/totalMod*100);
+  document.getElementById('barra-global').style.width=pctG+'%';
+  document.getElementById('prog-global-txt').textContent=totalComp+' de '+totalMod+' módulos completados ('+pctG+'%)';
+</script>
+</body>
+</html>
