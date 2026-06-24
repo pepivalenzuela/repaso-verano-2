@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Funciones lineales y cuadráticas · 2º ESO</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+
+    :root{--color:#f57f17;--color-c:#fff8e1;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto);line-height:1.6}
+    nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+    nav a{color:rgba(255,255,255,.8);text-decoration:none} nav a:hover{color:white} nav span{opacity:.6}
+    .hero{background:linear-gradient(135deg,var(--color),#e65100);color:white;padding:1.8rem 1.5rem 1.6rem;text-align:center}
+    .badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:.25rem .9rem;font-size:.8rem;letter-spacing:.06em;margin-bottom:.7rem}
+    .hero h1{font-size:1.6rem}
+    main{max-width:760px;margin:0 auto;padding:2rem 1rem 4rem}
+    .seccion{background:white;border-radius:var(--radio);box-shadow:var(--sombra);padding:1.6rem 1.8rem;margin-bottom:1.8rem}
+    .seccion h2{font-size:1.05rem;color:var(--color);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--color-c)}
+    .seccion h3{font-size:.95rem;color:#333;margin:1rem 0 .4rem}
+    .seccion p{margin-bottom:.8rem;font-size:.95rem}
+    .seccion ul{margin:.3rem 0 .8rem 1.2rem} .seccion li{margin-bottom:.4rem;font-size:.94rem}
+    .ejemplo{background:var(--color-c);border-left:4px solid var(--color);border-radius:8px;padding:.9rem 1.1rem;margin:.8rem 0;font-size:.93rem}
+    .ejemplo strong{color:var(--color)}
+    .nota{background:#fff8e1;border-left:4px solid #f9a825;border-radius:8px;padding:.7rem 1rem;margin:.8rem 0;font-size:.87rem;color:#4e3a00}
+    .regla-box{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}
+    .regla-box ol{margin:.5rem 0 0 1.2rem} .regla-box li{margin-bottom:.3rem;font-size:.95rem}
+    .estrategia{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:8px;padding:1rem 1.2rem;margin:.8rem 0;font-size:.94rem}
+    table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.8rem 0}
+    th{background:var(--color);color:white;padding:.5rem .7rem;text-align:left}
+    td{padding:.45rem .7rem;border-bottom:1px solid #eee}
+    tr:nth-child(even) td{background:#fafafa}
+    #ejercicios-container .ejercicio{border:1.5px solid #e0e0e0;border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.2rem;background:#fafafa}
+    .dificultad{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .55rem;border-radius:20px;margin-bottom:.5rem}
+    .d1{background:#e8f5e9;color:#2e7d32} .d2{background:#fff8e1;color:#e65100} .d3{background:#fce4ec;color:#880e4f}
+    .enunciado{font-size:.96rem;margin-bottom:.9rem;font-weight:500;line-height:1.7}
+    .opciones{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.8rem}
+    .opcion{display:flex;align-items:center;gap:.7rem;padding:.55rem .9rem;border-radius:8px;border:1.5px solid #ddd;background:white;cursor:pointer;font-size:.93rem;transition:border-color .15s,background .15s}
+    .opcion:hover{border-color:var(--color);background:var(--color-c)}
+    .opcion input[type=radio]{accent-color:var(--color)}
+    .btn-comprobar{padding:.55rem 1.2rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer}
+    .btn-comprobar:hover{background:#e65100}
+    .feedback{display:none;margin-top:.8rem;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;font-weight:500;line-height:1.6}
+    .feedback.correcto{background:var(--color-c);color:#e65100;border-left:4px solid var(--color)}
+    .feedback.incorrecto{background:#ffebee;color:#b71c1c;border-left:4px solid #c62828}
+    .completar-wrap{text-align:center;padding:1.5rem;background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.5rem}
+    .completar-wrap p{font-size:.92rem;color:#555;margin-bottom:1rem}
+    .btn-completar{padding:.7rem 1.8rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+    .completado-msg{display:none;background:var(--color-c);color:#e65100;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
+    .nav-modulos{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .btn-nav{padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
+    .btn-nav:hover{background:var(--color-c)}
+    .nueva-serie{display:block;margin:.5rem auto 0;background:none;border:none;color:var(--color);font-size:.85rem;cursor:pointer;text-decoration:underline}
+    footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  
+  </style>
+</head>
+<body>
+<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque5-hub.html">Bloque 5</a><span>·</span><strong>Funciones lineales y cuadráticas</strong></nav>
+<div class="hero"><div class="badge">Bloque 5 · Análisis</div><h1>📉 Funciones lineales y cuadráticas</h1></div>
+<main>
+<div class="seccion">
+  <h2>📖 Funciones lineales y cuadráticas</h2>
+  <h3>Función lineal: \(y = mx + b\)</h3>
+  <ul>
+    <li>\(m\) = <strong>pendiente</strong> (inclinación): \(m=\dfrac{y_2-y_1}{x_2-x_1}\)</li>
+    <li>\(b\) = <strong>ordenada en el origen</strong>: punto donde corta al eje \(y\)</li>
+    <li>Corte con eje \(x\): hacer \(y=0 \Rightarrow x=-\dfrac{b}{m}\)</li>
+    <li>\(m>0\) → creciente · \(m<0\) → decreciente · \(m=0\) → constante</li>
+  </ul>
+  <h3>Función cuadrática: \(y = ax^2 + bx + c\)</h3>
+  <ul>
+    <li>Parábola: \(a>0\) → abre hacia arriba (mínimo) · \(a<0\) → abre hacia abajo (máximo)</li>
+    <li><strong>Vértice:</strong> \(x_v = -\dfrac{b}{2a}\), \(y_v = f(x_v)\)</li>
+    <li><strong>Eje de simetría:</strong> \(x = x_v\)</li>
+    <li><strong>Raíces:</strong> valores de \(x\) donde \(y=0\) (fórmula cuadrática)</li>
+  </ul>
+  <div class="nota">⚠️ Pendiente de rectas paralelas: igual · Pendiente de rectas perpendiculares: \(m_1\cdot m_2=-1\).</div>
+</div>
+<div class="seccion">
+  <h2>✏️ Ejercicios <span style="font-size:.8rem;font-weight:400;color:#888">(selección aleatoria · 4 por nivel)</span></h2>
+  <div id="ejercicios-container"></div>
+  <button class="nueva-serie" onclick="nuevaSerie()">↻ Nueva serie de ejercicios</button>
+</div>
+<div class="completar-wrap" id="completar-wrap"><p>Cuando hayas trabajado todos los ejercicios, marca el módulo como completado.</p><button class="btn-completar" onclick="marcarCompletado()">✓ Marcar como completado</button></div>
+<div class="completado-msg" id="completado-msg">✅ Módulo completado. ¡Buen trabajo!</div>
+<div class="nav-modulos">
+  <a href="b5-funciones.html" class="btn-nav">← Variables y funciones</a>
+  <a href="bloque5-hub.html" class="btn-nav">Siguiente: Bloque 5 →</a>
+</div>
+</main>
+<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbzuAJuj0ngK4XaM4cRjap1ftSkAsQjrczZTVWt_W_4-Zz-VXVgMsCCMuEXPH2POeexO/exec';
+const MODULE_ID='b5-lc', SESSION_KEY='modulos_2eso_b5', BLOQUE='b5';
+const BANCO=[{"niv": 1, "tex": "¿Cuál es la pendiente de la recta \\(y=3x-5\\)?", "ops": [{"t": "-5", "ok": 0}, {"t": "3", "ok": 1}, {"t": "5", "ok": 0}, {"t": "\\(\\frac{1}{3}\\)", "ok": 0}], "exp": "En \\(y=mx+b\\), la pendiente es el coeficiente de \\(x\\): \\(m=3\\)."}, {"niv": 1, "tex": "¿Dónde corta al eje \\(y\\) la recta \\(y=2x+4\\)?", "ops": [{"t": "\\((2,0)\\)", "ok": 0}, {"t": "\\((0,4)\\)", "ok": 1}, {"t": "\\((0,2)\\)", "ok": 0}, {"t": "\\((-2,0)\\)", "ok": 0}], "exp": "El corte con el eje \\(y\\) ocurre en \\(x=0\\): \\(y=2(0)+4=4\\). Punto: \\((0,4)\\)."}, {"niv": 1, "tex": "¿Dónde corta al eje \\(x\\) la recta \\(y=2x-6\\)?", "ops": [{"t": "\\((0,6)\\)", "ok": 0}, {"t": "\\((3,0)\\)", "ok": 1}, {"t": "\\((-3,0)\\)", "ok": 0}, {"t": "\\((6,0)\\)", "ok": 0}], "exp": "\\(y=0: 2x-6=0 \\Rightarrow x=3\\). Punto: \\((3,0)\\)."}, {"niv": 1, "tex": "La parábola \\(y=x^2-4\\) abre hacia arriba y tiene vértice en \\((0,-4)\\). ¿Cuántos cortes tiene con el eje \\(x\\)?", "ops": [{"t": "0", "ok": 0}, {"t": "1", "ok": 0}, {"t": "2", "ok": 1}, {"t": "4", "ok": 0}], "exp": "\\(x^2-4=0 \\Rightarrow x=\\pm2\\). Dos cortes: \\((-2,0)\\) y \\((2,0)\\)."}, {"niv": 1, "tex": "¿Cuál es la pendiente de la recta que pasa por \\((1,3)\\) y \\((3,7)\\)?", "ops": [{"t": "1", "ok": 0}, {"t": "2", "ok": 1}, {"t": "3", "ok": 0}, {"t": "4", "ok": 0}], "exp": "\\(m=\\frac{7-3}{3-1}=\\frac{4}{2}=2\\)."}, {"niv": 1, "tex": "¿Cuál es el vértice de la parábola \\(y=x^2-2x-3\\)?", "ops": [{"t": "\\((1,-4)\\)", "ok": 1}, {"t": "\\((0,-3)\\)", "ok": 0}, {"t": "\\((-1,0)\\)", "ok": 0}, {"t": "\\((2,-3)\\)", "ok": 0}], "exp": "\\(x_v=-\\frac{-2}{2\\cdot1}=1\\). \\(y_v=1-2-3=-4\\). Vértice: \\((1,-4)\\)."}, {"niv": 1, "tex": "¿Qué forma tiene la gráfica de \\(y=-x^2+4x-3\\)?", "ops": [{"t": "Parábola que abre hacia arriba", "ok": 0}, {"t": "Parábola que abre hacia abajo", "ok": 1}, {"t": "Recta con pendiente negativa", "ok": 0}, {"t": "Hipérbola", "ok": 0}], "exp": "El coeficiente de \\(x^2\\) es \\(-1<0\\) → la parábola abre hacia abajo, con un máximo en el vértice."}, {"niv": 1, "tex": "Dos rectas tienen pendientes \\(m_1=2\\) y \\(m_2=-\\frac{1}{2}\\). ¿Qué relación geométrica tienen?", "ops": [{"t": "Son paralelas", "ok": 0}, {"t": "Son perpendiculares", "ok": 1}, {"t": "Son la misma recta", "ok": 0}, {"t": "Se cruzan en el origen", "ok": 0}], "exp": "\\(m_1\\cdot m_2=2\\times(-\\frac{1}{2})=-1\\). Cuando el producto de pendientes es \\(-1\\), las rectas son perpendiculares."}, {"niv": 2, "tex": "Halla la ecuación de la recta que pasa por \\((2,5)\\) con pendiente \\(m=3\\).", "ops": [{"t": "\\(y=3x+1\\)", "ok": 0}, {"t": "\\(y=3x-1\\)", "ok": 1}, {"t": "\\(y=3x+5\\)", "ok": 0}, {"t": "\\(y=3x+2\\)", "ok": 0}], "exp": "\\(y-5=3(x-2) \\Rightarrow y=3x-6+5=3x-1\\)."}, {"niv": 2, "tex": "Halla la ecuación de la recta que pasa por \\((0,4)\\) y \\((3,-2)\\).", "ops": [{"t": "\\(y=-2x+4\\)", "ok": 1}, {"t": "\\(y=2x+4\\)", "ok": 0}, {"t": "\\(y=-2x-4\\)", "ok": 0}, {"t": "\\(y=-3x+4\\)", "ok": 0}], "exp": "\\(m=\\frac{-2-4}{3-0}=\\frac{-6}{3}=-2\\). Pasa por \\((0,4)\\): \\(b=4\\). Ecuación: \\(y=-2x+4\\)."}, {"niv": 2, "tex": "Estudia el signo de \\(f(x)=x^2-2x-3\\): ¿para qué valores de \\(x\\) es positiva y para cuáles negativa?", "ops": [{"t": "Positiva en \\((-\\infty,-1)\\cup(3,+\\infty)\\), negativa en \\((-1,3)\\)", "ok": 1}, {"t": "Negativa en \\((-\\infty,-1)\\cup(3,+\\infty)\\), positiva en \\((-1,3)\\)", "ok": 0}, {"t": "Siempre positiva", "ok": 0}, {"t": "Siempre negativa", "ok": 0}], "exp": "Raíces: \\(x=-1\\) y \\(x=3\\). Como \\(a=1>0\\), la parábola abre hacia arriba: negativa entre raíces \\((-1,3)\\), positiva fuera."}, {"niv": 2, "tex": "¿Cuántos puntos de intersección tienen \\(y=x+1\\) y \\(y=x^2-1\\)?", "ops": [{"t": "0", "ok": 0}, {"t": "1", "ok": 0}, {"t": "2", "ok": 1}, {"t": "Infinitos", "ok": 0}], "exp": "\\(x+1=x^2-1 \\Rightarrow x^2-x-2=0 \\Rightarrow (x-2)(x+1)=0 \\Rightarrow x=2\\) o \\(x=-1\\). Dos puntos: \\((2,3)\\) y \\((-1,0)\\)."}, {"niv": 2, "tex": "La parábola \\(y=ax^2+bx+c\\) pasa por \\((0,1)\\), \\((1,0)\\) y \\((-1,4)\\). Halla \\(a\\), \\(b\\) y \\(c\\).", "ops": [{"t": "\\(a=2,\\;b=-3,\\;c=1\\)", "ok": 1}, {"t": "\\(a=-2,\\;b=3,\\;c=1\\)", "ok": 0}, {"t": "\\(a=1,\\;b=-2,\\;c=1\\)", "ok": 0}, {"t": "\\(a=3,\\;b=-2,\\;c=1\\)", "ok": 0}], "exp": "\\(f(0)=c=1\\). \\(f(1)=a+b+1=0 \\Rightarrow a+b=-1\\). \\(f(-1)=a-b+1=4 \\Rightarrow a-b=3\\). Sumando: \\(2a=2 \\Rightarrow a=2\\), \\(b=-3\\)."}, {"niv": 3, "tex": "Un proyectil sigue la trayectoria \\(y=-0{,}1x^2+2x\\), donde \\(x\\) es la distancia horizontal en metros e \\(y\\) la altura. ¿A qué distancia horizontal alcanza la altura máxima? ¿Cuánto mide esa altura? ¿Dónde cae al suelo?", "ops": [{"t": "Máximo a \\(x=10\\) m · altura \\(10\\) m · cae a \\(x=20\\) m", "ok": 1}, {"t": "Máximo a \\(x=20\\) m · altura \\(20\\) m · cae a \\(x=40\\) m", "ok": 0}, {"t": "Máximo a \\(x=5\\) m · altura \\(5\\) m · cae a \\(x=10\\) m", "ok": 0}, {"t": "Máximo a \\(x=10\\) m · altura \\(20\\) m · cae a \\(x=20\\) m", "ok": 0}], "exp": "\\(x_v=-\\frac{2}{2\\times(-0{,}1)}=10\\) m. \\(y_v=-0{,}1(100)+20=10\\) m. Cae al suelo: \\(-0{,}1x^2+2x=0 \\Rightarrow x(-0{,}1x+2)=0 \\Rightarrow x=20\\) m."}, {"niv": 3, "tex": "Dos rectas son \\(r: y=3x-2\\) y \\(s: y=-\\frac{1}{3}x+k\\). ¿Son perpendiculares? Si se cruzan en el punto de abscisa \\(x=3\\), ¿cuánto vale \\(k\\)?", "ops": [{"t": "Sí son perpendiculares · \\(k=8\\)", "ok": 1}, {"t": "No son perpendiculares · \\(k=6\\)", "ok": 0}, {"t": "Sí son perpendiculares · \\(k=10\\)", "ok": 0}, {"t": "No son perpendiculares · \\(k=8\\)", "ok": 0}], "exp": "\\(3\\times(-\\frac{1}{3})=-1\\) → perpendiculares. En \\(x=3\\): \\(r(3)=7\\). \\(s(3)=-1+k=7 \\Rightarrow k=8\\)."}, {"niv": 3, "tex": "La factura eléctrica sigue el modelo \\(F=0{,}12E+22\\), donde \\(E\\) son los kWh consumidos y \\(F\\) el importe en euros. En junio se pagaron \\(58\\) € y en julio \\(76\\) €. ¿Cuántos kWh se consumieron en cada mes? ¿Cuánto aumentó el consumo en tanto por ciento?", "ops": [{"t": "Junio 300 kWh, julio 450 kWh · aumento del 50%", "ok": 1}, {"t": "Junio 250 kWh, julio 400 kWh · aumento del 60%", "ok": 0}, {"t": "Junio 300 kWh, julio 400 kWh · aumento del 33%", "ok": 0}, {"t": "Junio 360 kWh, julio 450 kWh · aumento del 25%", "ok": 0}], "exp": "Junio: \\(0{,}12E+22=58 \\Rightarrow E=300\\) kWh. Julio: \\(0{,}12E+22=76 \\Rightarrow E=450\\) kWh. Aumento: \\(\\frac{450-300}{300}\\times100=50\\%\\)."}];
+function shuffle(a){return a.sort(()=>Math.random()-.5);}
+function nuevaSerie(){
+  const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
+  const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
+  sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
+  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+}
+function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
+function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
+function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+</script>
+</body>
+</html>
