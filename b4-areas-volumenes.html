@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Áreas, volúmenes y semejanza · 2º ESO</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+
+    :root{--color:#6a1b9a;--color-c:#f3e5f5;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto);line-height:1.6}
+    nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+    nav a{color:rgba(255,255,255,.8);text-decoration:none} nav a:hover{color:white} nav span{opacity:.6}
+    .hero{background:linear-gradient(135deg,var(--color),#4a148c);color:white;padding:1.8rem 1.5rem 1.6rem;text-align:center}
+    .badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:.25rem .9rem;font-size:.8rem;letter-spacing:.06em;margin-bottom:.7rem}
+    .hero h1{font-size:1.6rem}
+    main{max-width:760px;margin:0 auto;padding:2rem 1rem 4rem}
+    .seccion{background:white;border-radius:var(--radio);box-shadow:var(--sombra);padding:1.6rem 1.8rem;margin-bottom:1.8rem}
+    .seccion h2{font-size:1.05rem;color:var(--color);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--color-c)}
+    .seccion h3{font-size:.95rem;color:#333;margin:1rem 0 .4rem}
+    .seccion p{margin-bottom:.8rem;font-size:.95rem}
+    .seccion ul{margin:.3rem 0 .8rem 1.2rem} .seccion li{margin-bottom:.4rem;font-size:.94rem}
+    .ejemplo{background:var(--color-c);border-left:4px solid var(--color);border-radius:8px;padding:.9rem 1.1rem;margin:.8rem 0;font-size:.93rem}
+    .ejemplo strong{color:var(--color)}
+    .nota{background:#fff8e1;border-left:4px solid #f9a825;border-radius:8px;padding:.7rem 1rem;margin:.8rem 0;font-size:.87rem;color:#4e3a00}
+    .regla-box{background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}
+    .regla-box ol{margin:.5rem 0 0 1.2rem} .regla-box li{margin-bottom:.3rem;font-size:.95rem}
+    .estrategia{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:8px;padding:1rem 1.2rem;margin:.8rem 0;font-size:.94rem}
+    table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.8rem 0}
+    th{background:var(--color);color:white;padding:.5rem .7rem;text-align:left}
+    td{padding:.45rem .7rem;border-bottom:1px solid #eee}
+    tr:nth-child(even) td{background:#fafafa}
+    #ejercicios-container .ejercicio{border:1.5px solid #e0e0e0;border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.2rem;background:#fafafa}
+    .dificultad{display:inline-block;font-size:.75rem;font-weight:700;padding:.15rem .55rem;border-radius:20px;margin-bottom:.5rem}
+    .d1{background:#e8f5e9;color:#2e7d32} .d2{background:#fff8e1;color:#e65100} .d3{background:#fce4ec;color:#880e4f}
+    .enunciado{font-size:.96rem;margin-bottom:.9rem;font-weight:500;line-height:1.7}
+    .opciones{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.8rem}
+    .opcion{display:flex;align-items:center;gap:.7rem;padding:.55rem .9rem;border-radius:8px;border:1.5px solid #ddd;background:white;cursor:pointer;font-size:.93rem;transition:border-color .15s,background .15s}
+    .opcion:hover{border-color:var(--color);background:var(--color-c)}
+    .opcion input[type=radio]{accent-color:var(--color)}
+    .btn-comprobar{padding:.55rem 1.2rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer}
+    .btn-comprobar:hover{background:#4a148c}
+    .feedback{display:none;margin-top:.8rem;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;font-weight:500;line-height:1.6}
+    .feedback.correcto{background:var(--color-c);color:#4a148c;border-left:4px solid var(--color)}
+    .feedback.incorrecto{background:#ffebee;color:#b71c1c;border-left:4px solid #c62828}
+    .completar-wrap{text-align:center;padding:1.5rem;background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.5rem}
+    .completar-wrap p{font-size:.92rem;color:#555;margin-bottom:1rem}
+    .btn-completar{padding:.7rem 1.8rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+    .completado-msg{display:none;background:var(--color-c);color:#4a148c;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
+    .nav-modulos{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .btn-nav{padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
+    .btn-nav:hover{background:var(--color-c)}
+    .nueva-serie{display:block;margin:.5rem auto 0;background:none;border:none;color:var(--color);font-size:.85rem;cursor:pointer;text-decoration:underline}
+    footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  
+  </style>
+</head>
+<body>
+<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque4-hub.html">Bloque 4</a><span>·</span><strong>Áreas, volúmenes y semejanza</strong></nav>
+<div class="hero"><div class="badge">Bloque 4 · Geometría</div><h1>📦 Áreas, volúmenes y semejanza</h1></div>
+<main>
+<div class="seccion">
+  <h2>📖 Relaciones entre áreas y volúmenes en figuras semejantes</h2>
+  <p>Si dos figuras son semejantes con razón de semejanza \(k\):</p>
+  <table>
+    <tr><th>Magnitud</th><th>Factor de escala</th></tr>
+    <tr><td>Longitudes (lados, perímetros, radios)</td><td>\(k\)</td></tr>
+    <tr><td>Áreas (superficies, secciones)</td><td>\(k^2\)</td></tr>
+    <tr><td>Volúmenes</td><td>\(k^3\)</td></tr>
+  </table>
+  <div class="ejemplo"><strong>Ejemplo:</strong> Dos esferas semejantes con \(k=2\).<br>
+  Radios: ×2 · Áreas: ×4 · Volúmenes: ×8</div>
+  <div class="nota">⚠️ Las unidades también escalan: \(1\text{ m}=100\text{ cm}\) pero \(1\text{ m}^2=10000\text{ cm}^2\) y \(1\text{ m}^3=1000000\text{ cm}^3\).</div>
+</div>
+<div class="seccion">
+  <h2>✏️ Ejercicios <span style="font-size:.8rem;font-weight:400;color:#888">(selección aleatoria · 4 por nivel)</span></h2>
+  <div id="ejercicios-container"></div>
+  <button class="nueva-serie" onclick="nuevaSerie()">↻ Nueva serie de ejercicios</button>
+</div>
+<div class="completar-wrap" id="completar-wrap"><p>Cuando hayas trabajado todos los ejercicios, marca el módulo como completado.</p><button class="btn-completar" onclick="marcarCompletado()">✓ Marcar como completado</button></div>
+<div class="completado-msg" id="completado-msg">✅ Módulo completado. ¡Buen trabajo!</div>
+<div class="nav-modulos">
+  <a href="b4-cuerpos.html" class="btn-nav">← Cuerpos</a>
+  <a href="bloque4-hub.html" class="btn-nav">Siguiente: Bloque 4 →</a>
+</div>
+</main>
+<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
+<script>
+const SHEETS_URL='PEGA_AQUI_TU_URL_APPS_SCRIPT_2ESO';
+const MODULE_ID='b4-av', SESSION_KEY='modulos_2eso_b4', BLOQUE='b4';
+const BANCO=[{"niv": 1, "tex": "Dos cubos semejantes tienen aristas \\(2\\) cm y \\(6\\) cm. ¿Cuál es la razón de semejanza?", "ops": [{"t": "2", "ok": 0}, {"t": "3", "ok": 1}, {"t": "4", "ok": 0}, {"t": "6", "ok": 0}], "exp": "\\(k=\\frac{6}{2}=3\\)."}, {"niv": 1, "tex": "Si \\(k=2\\), ¿cuántas veces mayor es el área del cubo grande respecto al pequeño?", "ops": [{"t": "2", "ok": 0}, {"t": "4", "ok": 1}, {"t": "6", "ok": 0}, {"t": "8", "ok": 0}], "exp": "Las áreas escalan con \\(k^2=4\\)."}, {"niv": 1, "tex": "Si \\(k=3\\), ¿cuántas veces mayor es el volumen del sólido mayor?", "ops": [{"t": "3", "ok": 0}, {"t": "9", "ok": 0}, {"t": "27", "ok": 1}, {"t": "6", "ok": 0}], "exp": "Los volúmenes escalan con \\(k^3=27\\)."}, {"niv": 1, "tex": "Dos esferas tienen radios \\(3\\) cm y \\(6\\) cm. ¿Cuántas veces mayor es el volumen de la grande?", "ops": [{"t": "2", "ok": 0}, {"t": "4", "ok": 0}, {"t": "8", "ok": 1}, {"t": "6", "ok": 0}], "exp": "\\(k=2 \\Rightarrow k^3=8\\). El volumen se multiplica por 8."}, {"niv": 1, "tex": "Un cuadrado tiene lado \\(4\\) cm. Si escalamos con \\(k=3\\), ¿cuánto mide el área del nuevo cuadrado?", "ops": [{"t": "36 cm²", "ok": 0}, {"t": "144 cm²", "ok": 1}, {"t": "48 cm²", "ok": 0}, {"t": "108 cm²", "ok": 0}], "exp": "Área original: \\(16\\) cm². Nuevo: \\(16\\times k^2=16\\times9=144\\) cm². O directamente: lado nuevo \\(=12\\), área \\(=144\\)."}, {"niv": 1, "tex": "Dos cilindros semejantes tienen radios \\(r\\) y \\(4r\\). ¿Cuántas veces mayor es el volumen del segundo?", "ops": [{"t": "4", "ok": 0}, {"t": "16", "ok": 0}, {"t": "64", "ok": 1}, {"t": "12", "ok": 0}], "exp": "\\(k=4 \\Rightarrow k^3=64\\)."}, {"niv": 1, "tex": "Si el área de una figura se multiplica por \\(9\\), ¿cuánto vale la razón de semejanza \\(k\\)?", "ops": [{"t": "\\(k=3\\)", "ok": 1}, {"t": "\\(k=9\\)", "ok": 0}, {"t": "\\(k=81\\)", "ok": 0}, {"t": "\\(k=\\sqrt[3]{9}\\)", "ok": 0}], "exp": "Área escala con \\(k^2=9 \\Rightarrow k=3\\)."}, {"niv": 1, "tex": "Convierte \\(2{,}5\\) m² a cm².", "ops": [{"t": "250 cm²", "ok": 0}, {"t": "25000 cm²", "ok": 1}, {"t": "2500 cm²", "ok": 0}, {"t": "250000 cm²", "ok": 0}], "exp": "\\(1\\text{ m}^2=10000\\text{ cm}^2\\). Luego \\(2{,}5\\times10000=25000\\) cm²."}, {"niv": 2, "tex": "Una maqueta de un edificio tiene escala \\(1:50\\). El volumen de la maqueta es \\(8\\) cm³. ¿Cuánto es el volumen real del edificio en m³?", "ops": [{"t": "1 m³", "ok": 1}, {"t": "0{,}001 m³", "ok": 0}, {"t": "1000 m³", "ok": 0}, {"t": "0{,}1 m³", "ok": 0}], "exp": "\\(k=50 \\Rightarrow k^3=125000\\). Volumen real: \\(8\\times125000=1000000\\text{ cm}^3=1\\text{ m}^3\\)."}, {"niv": 2, "tex": "Dos piscinas semejantes tienen longitudes \\(10\\) m y \\(15\\) m. La piscina pequeña tiene \\(500\\text{ m}^2\\) de azulejo. ¿Cuánto azulejo necesita la grande?", "ops": [{"t": "750 m²", "ok": 0}, {"t": "1125 m²", "ok": 1}, {"t": "1500 m²", "ok": 0}, {"t": "1000 m²", "ok": 0}], "exp": "\\(k=\\frac{15}{10}=1{,}5 \\Rightarrow k^2=2{,}25\\). Azulejo grande: \\(500\\times2{,}25=1125\\text{ m}^2\\)."}, {"niv": 2, "tex": "Si el volumen de un sólido se multiplica por \\(8\\), ¿cuánto varían sus áreas?", "ops": [{"t": "×2", "ok": 0}, {"t": "×4", "ok": 1}, {"t": "×8", "ok": 0}, {"t": "×16", "ok": 0}], "exp": "\\(k^3=8 \\Rightarrow k=2 \\Rightarrow k^2=4\\). Las áreas se multiplican por 4."}, {"niv": 2, "tex": "Una estatua de bronce tiene \\(k=5\\) respecto a una maqueta de \\(200\\) cm³. ¿Cuántos cm³ de bronce se necesitan? ¿Y si el bronce pesa \\(8{,}5\\) g/cm³, cuánto pesa la estatua en kg?", "ops": [{"t": "25000 cm³ · 212{,}5 kg", "ok": 1}, {"t": "1000 cm³ · 8{,}5 kg", "ok": 0}, {"t": "5000 cm³ · 42{,}5 kg", "ok": 0}, {"t": "125000 cm³ · 1062{,}5 kg", "ok": 0}], "exp": "\\(k^3=125\\). Volumen estatua: \\(200\\times125=25000\\) cm³. Masa: \\(25000\\times8{,}5=212500\\text{ g}=212{,}5\\text{ kg}\\)."}, {"niv": 3, "tex": "Dos esferas de hielo semejantes tardan en derretirse \\(t_1=10\\) min y \\(t_2\\) min. Si el tiempo de derretido es proporcional al volumen, y las esferas tienen radios \\(3\\) cm y \\(6\\) cm, ¿cuánto tarda la segunda?", "ops": [{"t": "20 min", "ok": 0}, {"t": "80 min", "ok": 1}, {"t": "40 min", "ok": 0}, {"t": "60 min", "ok": 0}], "exp": "\\(k=2 \\Rightarrow k^3=8\\). La esfera grande tiene \\(8\\) veces más volumen. Tarda: \\(10\\times8=80\\) min."}, {"niv": 3, "tex": "Tres cajas cúbicas semejantes con aristas \\(1\\), \\(2\\) y \\(3\\) dm se llenan con arena. La caja pequeña pesa \\(2{,}5\\) kg. ¿Cuánto pesan en total las otras dos?", "ops": [{"t": "72{,}5 kg", "ok": 1}, {"t": "22{,}5 kg", "ok": 0}, {"t": "47{,}5 kg", "ok": 0}, {"t": "90 kg", "ok": 0}], "exp": "Caja 1 dm³: \\(2{,}5\\) kg. Caja 2 dm³: \\(k=2 \\Rightarrow k^3=8 \\Rightarrow 20\\) kg. Caja 3 dm³: \\(k=3 \\Rightarrow k^3=27 \\Rightarrow 67{,}5\\) kg. Total de las dos: \\(20+67{,}5=87{,}5\\) kg. Revisando: \\(2{,}5\\times8=20\\) y \\(2{,}5\\times27=67{,}5\\). Total: \\(87{,}5\\) kg."}, {"niv": 3, "tex": "Un fabricante produce botes cilíndricos de \\(2\\) tamaños con \\(k=1{,}5\\). El bote pequeño cuesta \\(1{,}20\\) € de material. Decide hacer un tercero con \\(k=2\\) respecto al pequeño. Si el precio es proporcional al área, ¿cuánto costará de material el bote grande?", "ops": [{"t": "4{,}80 €", "ok": 1}, {"t": "2{,}40 €", "ok": 0}, {"t": "3{,}60 €", "ok": 0}, {"t": "9{,}60 €", "ok": 0}], "exp": "\\(k=2 \\Rightarrow k^2=4\\). Material grande: \\(1{,}20\\times4=4{,}80\\)€."}];
+function shuffle(a){return a.sort(()=>Math.random()-.5);}
+function nuevaSerie(){
+  const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
+  const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
+  sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
+  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+}
+function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
+function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
+function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+</script>
+</body>
+</html>
