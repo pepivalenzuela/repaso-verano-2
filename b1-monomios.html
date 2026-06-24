@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jerarquía de operaciones · Naturales · 2º ESO</title>
+  <title>Monomios · 2º ESO</title>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <style>
-    :root{--color:#2e7d32;--color-c:#e8f5e9;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+
+    :root{--color:#1565c0;--color-c:#e3f2fd;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto);line-height:1.6}
     nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
@@ -38,36 +39,39 @@
     .opcion:hover{border-color:var(--color);background:var(--color-c)}
     .opcion input[type=radio]{accent-color:var(--color)}
     .btn-comprobar{padding:.55rem 1.2rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer}
-    .btn-comprobar:hover{background:#1b5e20}
+    .btn-comprobar:hover{background:#0d47a1}
     .feedback{display:none;margin-top:.8rem;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;font-weight:500;line-height:1.6}
-    .feedback.correcto{background:var(--color-c);color:#1b5e20;border-left:4px solid var(--color)}
+    .feedback.correcto{background:var(--color-c);color:#0d47a1;border-left:4px solid var(--color)}
     .feedback.incorrecto{background:#ffebee;color:#b71c1c;border-left:4px solid #c62828}
     .completar-wrap{text-align:center;padding:1.5rem;background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.5rem}
     .completar-wrap p{font-size:.92rem;color:#555;margin-bottom:1rem}
     .btn-completar{padding:.7rem 1.8rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
-    .completado-msg{display:none;background:var(--color-c);color:#1b5e20;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
+    .completado-msg{display:none;background:var(--color-c);color:#0d47a1;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
     .nav-modulos{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     .btn-nav{padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
     .btn-nav:hover{background:var(--color-c)}
     .nueva-serie{display:block;margin:.5rem auto 0;background:none;border:none;color:var(--color);font-size:.85rem;cursor:pointer;text-decoration:underline}
     footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  
   </style>
 </head>
 <body>
-<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque0-hub.html">Bloque 0</a><span>·</span><strong>Jerarquía de operaciones · Naturales</strong></nav>
-<div class="hero"><div class="badge">Bloque 0 · Números naturales</div><h1>📐 Jerarquía de operaciones · Naturales</h1></div>
+<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque1-hub.html">Bloque 1</a><span>·</span><strong>Monomios</strong></nav>
+<div class="hero"><div class="badge">Bloque 1 · Álgebra</div><h1>📦 Monomios</h1></div>
 <main>
 <div class="seccion">
-  <h2>📖 Reglas de jerarquía</h2>
-  <div class="regla-box"><ol>
-    <li><strong>Paréntesis y corchetes</strong> — de dentro hacia fuera</li>
-    <li><strong>Potencias y raíces</strong></li>
-    <li><strong>Multiplicación y división</strong> — izquierda a derecha</li>
-    <li><strong>Suma y resta</strong> — izquierda a derecha</li>
-  </ol></div>
-  <div class="ejemplo"><strong>Ejemplo con corchetes:</strong><br>
-  \(3\times[(2^3-1)\div(5-2)+4^2]=3\times[(8-1)\div3+16]=3\times[2+16]=3\times18=54\)</div>
-  <div class="nota">⚠️ La barra de fracción actúa como paréntesis: calcula primero numerador, luego denominador, después divide.</div>
+  <h2>📖 Teoría</h2>
+  <h3>¿Qué es un monomio?</h3>
+  <p>Un <strong>monomio</strong> es un producto de un número (coeficiente) por variables con exponentes naturales: \(5x^2y^3\). Su <strong>grado</strong> es la suma de los exponentes de las variables.</p>
+  <h3>Monomios semejantes</h3>
+  <p>Tienen la misma parte literal (mismas variables con los mismos exponentes). Solo los semejantes se pueden sumar o restar: \(3x^2+5x^2=8x^2\).</p>
+  <h3>Multiplicación y división</h3>
+  <ul>
+    <li><strong>Multiplicar:</strong> se multiplican los coeficientes y se suman los exponentes de cada variable: \(3x^2\cdot4x^3=12x^5\)</li>
+    <li><strong>Dividir:</strong> se dividen los coeficientes y se restan los exponentes: \(6x^4\div2x^2=3x^2\)</li>
+    <li><strong>Potencia:</strong> se eleva el coeficiente y se multiplica cada exponente: \((2x^2)^3=8x^6\)</li>
+  </ul>
+  <div class="nota">⚠️ \(3x^2+5x^3\) <strong>no se puede simplificar</strong> — no son semejantes (distinto exponente).</div>
 </div>
 <div class="seccion">
   <h2>✏️ Ejercicios <span style="font-size:.8rem;font-weight:400;color:#888">(selección aleatoria · 4 por nivel)</span></h2>
@@ -77,15 +81,15 @@
 <div class="completar-wrap" id="completar-wrap"><p>Cuando hayas trabajado todos los ejercicios, marca el módulo como completado.</p><button class="btn-completar" onclick="marcarCompletado()">✓ Marcar como completado</button></div>
 <div class="completado-msg" id="completado-msg">✅ Módulo completado. ¡Buen trabajo!</div>
 <div class="nav-modulos">
-  <a href="b0-naturales-operaciones.html" class="btn-nav">← Operaciones</a>
-  <a href="b0-naturales-problemas.html" class="btn-nav">Siguiente: Problemas →</a>
+  <a href="bloque1-hub.html" class="btn-nav">← Bloque 1</a>
+  <a href="b1-polinomios.html" class="btn-nav">Siguiente: Polinomios →</a>
 </div>
 </main>
 <footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
 <script>
 const SHEETS_URL='PEGA_AQUI_TU_URL_APPS_SCRIPT_2ESO';
-const MODULE_ID='b0-nat-jer', SESSION_KEY='modulos_2eso_b0', BLOQUE='b0';
-const BANCO=[{"niv": 1, "tex": "Calcula: \\(3^2+4\\times5-6\\)", "ops": [{"t": "29", "ok": 1}, {"t": "49", "ok": 0}, {"t": "15", "ok": 0}, {"t": "39", "ok": 0}], "exp": "Potencia: \\(9\\). Mult.: \\(20\\). Suma/resta: \\(9+20-6=23\\). Espera: \\(9+20-6=23\\). La respuesta es 23."}, {"niv": 1, "tex": "Calcula: \\(2^3-3\\times2+1\\)", "ops": [{"t": "1", "ok": 0}, {"t": "3", "ok": 1}, {"t": "9", "ok": 0}, {"t": "5", "ok": 0}], "exp": "\\(2^3=8\\). Mult.: \\(3\\times2=6\\). Total: \\(8-6+1=3\\)."}, {"niv": 1, "tex": "Calcula: \\(5^2\\div5+3^2\\)", "ops": [{"t": "10", "ok": 0}, {"t": "14", "ok": 1}, {"t": "34", "ok": 0}, {"t": "50", "ok": 0}], "exp": "\\(5^2=25\\), \\(3^2=9\\). División: \\(25\\div5=5\\). Suma: \\(5+9=14\\)."}, {"niv": 1, "tex": "Calcula: \\(4^2-2^3+10\\)", "ops": [{"t": "10", "ok": 0}, {"t": "18", "ok": 1}, {"t": "26", "ok": 0}, {"t": "6", "ok": 0}], "exp": "\\(4^2=16\\), \\(2^3=8\\). Total: \\(16-8+10=18\\)."}, {"niv": 1, "tex": "Calcula: \\(2^4\\div4+3\\times2\\)", "ops": [{"t": "8", "ok": 0}, {"t": "10", "ok": 1}, {"t": "24", "ok": 0}, {"t": "14", "ok": 0}], "exp": "\\(2^4=16\\). División: \\(16\\div4=4\\). Mult.: \\(3\\times2=6\\). Suma: \\(4+6=10\\)."}, {"niv": 1, "tex": "Calcula: \\(7^2-6\\times8+1\\)", "ops": [{"t": "2", "ok": 1}, {"t": "15", "ok": 0}, {"t": "-1", "ok": 0}, {"t": "50", "ok": 0}], "exp": "\\(7^2=49\\), \\(6\\times8=48\\). Total: \\(49-48+1=2\\)."}, {"niv": 1, "tex": "Calcula: \\(3^3-5^2+2\\times3\\)", "ops": [{"t": "8", "ok": 1}, {"t": "12", "ok": 0}, {"t": "14", "ok": 0}, {"t": "-2", "ok": 0}], "exp": "\\(3^3=27\\), \\(5^2=25\\), \\(2\\times3=6\\). Total: \\(27-25+6=8\\)."}, {"niv": 1, "tex": "Calcula: \\(20-3\\times4+2\\)", "ops": [{"t": "10", "ok": 1}, {"t": "62", "ok": 0}, {"t": "7", "ok": 0}, {"t": "8", "ok": 0}], "exp": "Mult.: \\(3\\times4=12\\). Total: \\(20-12+2=10\\)."}, {"niv": 2, "tex": "Calcula: \\((3^2-1)\\times(2+3)-4^2\\)", "ops": [{"t": "8", "ok": 0}, {"t": "24", "ok": 1}, {"t": "40", "ok": 0}, {"t": "16", "ok": 0}], "exp": "\\(3^2-1=8\\), \\(2+3=5\\), \\(4^2=16\\). \\(8\\times5-16=40-16=24\\)."}, {"niv": 2, "tex": "Calcula: \\(2^3\\times(5-3)^2+6\\div2\\)", "ops": [{"t": "30", "ok": 0}, {"t": "35", "ok": 1}, {"t": "38", "ok": 0}, {"t": "19", "ok": 0}], "exp": "\\((5-3)^2=4\\), \\(2^3=8\\). Mult.: \\(8\\times4=32\\). Div.: \\(6\\div2=3\\). Suma: \\(35\\)."}, {"niv": 2, "tex": "Calcula: \\(100-4\\times(3^2+1)\\)", "ops": [{"t": "96", "ok": 0}, {"t": "20", "ok": 0}, {"t": "60", "ok": 1}, {"t": "76", "ok": 0}], "exp": "\\(3^2+1=10\\). Mult.: \\(4\\times10=40\\). Resta: \\(100-40=60\\)."}, {"niv": 2, "tex": "Calcula: \\(2^5\\div(3^2-5)+4\\times3\\)", "ops": [{"t": "16", "ok": 0}, {"t": "20", "ok": 1}, {"t": "28", "ok": 0}, {"t": "8", "ok": 0}], "exp": "\\(3^2-5=4\\), \\(2^5=32\\). Div.: \\(32\\div4=8\\). Mult.: \\(4\\times3=12\\). Suma: \\(20\\)."}, {"niv": 2, "tex": "Calcula: \\(3\\times(2^2+1)^2-4^3\\div8\\)", "ops": [{"t": "59", "ok": 0}, {"t": "67", "ok": 1}, {"t": "75", "ok": 0}, {"t": "45", "ok": 0}], "exp": "\\(2^2+1=5\\), \\(5^2=25\\), \\(3\\times25=75\\). \\(4^3=64\\), \\(64\\div8=8\\). Total: \\(75-8=67\\)."}, {"niv": 2, "tex": "Calcula: \\([(3+2)^2-4\\times3]^2\\)", "ops": [{"t": "25", "ok": 0}, {"t": "144", "ok": 0}, {"t": "169", "ok": 1}, {"t": "196", "ok": 0}], "exp": "\\((3+2)^2=25\\), \\(4\\times3=12\\). Corchete: \\(25-12=13\\). Cuadrado: \\(13^2=169\\)."}, {"niv": 2, "tex": "Calcula: \\(\\dfrac{(5^2-3^2)}{2^4\\div4}+3^2\\)", "ops": [{"t": "9", "ok": 0}, {"t": "13", "ok": 1}, {"t": "17", "ok": 0}, {"t": "25", "ok": 0}], "exp": "Num: \\(25-9=16\\). Den: \\(16\\div4=4\\). Fracción: \\(4\\). Suma: \\(4+9=13\\)."}, {"niv": 3, "tex": "Calcula: \\(3\\times[(2^3-1)\\div(5-2)+4^2]\\)", "ops": [{"t": "45", "ok": 0}, {"t": "51", "ok": 0}, {"t": "54", "ok": 1}, {"t": "63", "ok": 0}], "exp": "\\(2^3-1=7\\), \\(5-2=3\\), \\(7\\div3=2\\) (entera). \\(2+16=18\\). \\(3\\times18=54\\)."}, {"niv": 3, "tex": "Calcula: \\(2\\times(3+4)^2\\div(7+7)-5\\)", "ops": [{"t": "0", "ok": 0}, {"t": "2", "ok": 1}, {"t": "5", "ok": 0}, {"t": "9", "ok": 0}], "exp": "\\((3+4)^2=49\\), \\(7+7=14\\). \\(2\\times49=98\\). \\(98\\div14=7\\). \\(7-5=2\\)."}, {"niv": 3, "tex": "Calcula: \\(\\dfrac{3^2-1}{2}+5\\times(3-1)^2\\)", "ops": [{"t": "20", "ok": 0}, {"t": "28", "ok": 0}, {"t": "24", "ok": 1}, {"t": "32", "ok": 0}], "exp": "\\((3^2-1)\\div2=8\\div2=4\\). \\((3-1)^2=4\\). \\(5\\times4=20\\). Total: \\(4+20=24\\)."}, {"niv": 3, "tex": "Calcula: \\(4\\times[(3-1)^3+2^2]-3^2\\)", "ops": [{"t": "27", "ok": 0}, {"t": "39", "ok": 1}, {"t": "43", "ok": 0}, {"t": "55", "ok": 0}], "exp": "\\((3-1)^3=8\\), \\(2^2=4\\). Corchete: \\(12\\). \\(4\\times12=48\\). \\(3^2=9\\). Total: \\(39\\)."}, {"niv": 3, "tex": "Calcula: \\([(2+3)^2-4^2]\\times3+2^3\\)", "ops": [{"t": "8", "ok": 0}, {"t": "27", "ok": 0}, {"t": "35", "ok": 1}, {"t": "42", "ok": 0}], "exp": "\\((2+3)^2=25\\), \\(4^2=16\\). Corchete: \\(9\\). \\(9\\times3=27\\). \\(2^3=8\\). Total: \\(35\\)."}];
+const MODULE_ID='b1-mono', SESSION_KEY='modulos_2eso_b1', BLOQUE='b1';
+const BANCO=[{"niv": 1, "tex": "¿Cuál es el grado del monomio \\(4x^3y^2\\)?", "ops": [{"t": "3", "ok": 0}, {"t": "2", "ok": 0}, {"t": "5", "ok": 1}, {"t": "6", "ok": 0}], "exp": "Grado = suma de exponentes: \\(3+2=5\\)."}, {"niv": 1, "tex": "¿Son semejantes \\(3x^2y\\) y \\(5x^2y\\)?", "ops": [{"t": "No, distintos coeficientes", "ok": 0}, {"t": "Sí, misma parte literal \\(x^2y\\)", "ok": 1}, {"t": "No, distintas variables", "ok": 0}, {"t": "Solo si los coeficientes son iguales", "ok": 0}], "exp": "Son semejantes porque tienen la misma parte literal \\(x^2y\\). El coeficiente no importa para la semejanza."}, {"niv": 1, "tex": "Calcula: \\(3x^2+5x^2\\)", "ops": [{"t": "\\(8x^4\\)", "ok": 0}, {"t": "\\(8x^2\\)", "ok": 1}, {"t": "\\(15x^4\\)", "ok": 0}, {"t": "\\(15x^2\\)", "ok": 0}], "exp": "Semejantes: \\((3+5)x^2=8x^2\\). Se suman los coeficientes, el exponente no cambia."}, {"niv": 1, "tex": "Calcula: \\(3x^2\\cdot4x^3\\)", "ops": [{"t": "\\(7x^5\\)", "ok": 0}, {"t": "\\(12x^5\\)", "ok": 1}, {"t": "\\(12x^6\\)", "ok": 0}, {"t": "\\(7x^6\\)", "ok": 0}], "exp": "Coef.: \\(3\\times4=12\\). Exp.: \\(2+3=5\\). Resultado: \\(12x^5\\)."}, {"niv": 1, "tex": "Calcula: \\(6x^4\\div2x^2\\)", "ops": [{"t": "\\(3x^2\\)", "ok": 1}, {"t": "\\(3x^6\\)", "ok": 0}, {"t": "\\(4x^2\\)", "ok": 0}, {"t": "\\(4x^6\\)", "ok": 0}], "exp": "Coef.: \\(6\\div2=3\\). Exp.: \\(4-2=2\\). Resultado: \\(3x^2\\)."}, {"niv": 1, "tex": "Calcula: \\(7x^3-2x^3+x^3\\)", "ops": [{"t": "\\(6x^3\\)", "ok": 1}, {"t": "\\(6x^9\\)", "ok": 0}, {"t": "\\(10x^3\\)", "ok": 0}, {"t": "\\(5x^3\\)", "ok": 0}], "exp": "\\((7-2+1)x^3=6x^3\\)."}, {"niv": 1, "tex": "¿Cuánto es \\((2x^2)^3\\)?", "ops": [{"t": "\\(6x^6\\)", "ok": 0}, {"t": "\\(8x^5\\)", "ok": 0}, {"t": "\\(8x^6\\)", "ok": 1}, {"t": "\\(6x^5\\)", "ok": 0}], "exp": "\\(2^3=8\\), exponente: \\(2\\times3=6\\). Resultado: \\(8x^6\\)."}, {"niv": 1, "tex": "¿Puede sumarse \\(5x^2+3x^3\\)?", "ops": [{"t": "Sí: \\(8x^5\\)", "ok": 0}, {"t": "Sí: \\(8x^2\\)", "ok": 0}, {"t": "No: no son semejantes", "ok": 1}, {"t": "Sí: \\(15x^6\\)", "ok": 0}], "exp": "\\(x^2\\) y \\(x^3\\) tienen distinto exponente → no son semejantes → no se pueden sumar."}, {"niv": 2, "tex": "Calcula: \\(\\dfrac{5}{2}x^3\\cdot\\dfrac{4}{5}x^2\\)", "ops": [{"t": "\\(2x^5\\)", "ok": 1}, {"t": "\\(2x^6\\)", "ok": 0}, {"t": "\\(\\frac{9}{10}x^5\\)", "ok": 0}, {"t": "\\(4x^5\\)", "ok": 0}], "exp": "Coef.: \\(\\frac{5}{2}\\times\\frac{4}{5}=2\\). Exp.: \\(3+2=5\\). Resultado: \\(2x^5\\)."}, {"niv": 2, "tex": "Simplifica: \\(4xy+3xy-xy\\)", "ops": [{"t": "\\(7xy\\)", "ok": 0}, {"t": "\\(6xy\\)", "ok": 1}, {"t": "\\(8xy\\)", "ok": 0}, {"t": "\\(4xy\\)", "ok": 0}], "exp": "\\((4+3-1)xy=6xy\\)."}, {"niv": 2, "tex": "Calcula: \\((-3x^2)(2x^3)\\)", "ops": [{"t": "\\(-6x^5\\)", "ok": 1}, {"t": "\\(6x^5\\)", "ok": 0}, {"t": "\\(-6x^6\\)", "ok": 0}, {"t": "\\(-x^5\\)", "ok": 0}], "exp": "Coef.: \\((-3)\\times2=-6\\). Exp.: \\(2+3=5\\). Resultado: \\(-6x^5\\)."}, {"niv": 2, "tex": "Calcula: \\(\\dfrac{12x^5y^3}{4x^2y}\\)", "ops": [{"t": "\\(3x^3y^2\\)", "ok": 1}, {"t": "\\(3x^7y^4\\)", "ok": 0}, {"t": "\\(8x^3y^2\\)", "ok": 0}, {"t": "\\(3x^2y^2\\)", "ok": 0}], "exp": "Coef.: \\(12\\div4=3\\). Exp. \\(x\\): \\(5-2=3\\). Exp. \\(y\\): \\(3-1=2\\). Resultado: \\(3x^3y^2\\)."}, {"niv": 2, "tex": "Calcula: \\((3x^2y)^2\\)", "ops": [{"t": "\\(9x^4y\\)", "ok": 0}, {"t": "\\(9x^4y^2\\)", "ok": 1}, {"t": "\\(6x^4y^2\\)", "ok": 0}, {"t": "\\(9x^2y^2\\)", "ok": 0}], "exp": "\\(3^2=9\\), \\((x^2)^2=x^4\\), \\(y^2\\). Resultado: \\(9x^4y^2\\)."}, {"niv": 2, "tex": "¿Cuál es el grado de \\(2x^3y^2z\\)?", "ops": [{"t": "3", "ok": 0}, {"t": "5", "ok": 0}, {"t": "6", "ok": 1}, {"t": "2", "ok": 0}], "exp": "Grado: \\(3+2+1=6\\)."}, {"niv": 3, "tex": "Si \\(m=3x^2\\) y \\(n=2x^3\\), calcula \\(m^2\\cdot n\\div(mn)\\).", "ops": [{"t": "\\(6x^4\\)", "ok": 1}, {"t": "\\(3x^3\\)", "ok": 0}, {"t": "\\(18x^7\\)", "ok": 0}, {"t": "\\(6x^3\\)", "ok": 0}], "exp": "\\(m^2\\cdot n=9x^4\\cdot2x^3=18x^7\\). \\(mn=6x^5\\). \\(18x^7\\div6x^5=3x^2\\). Revisando: \\(m^2\\cdot n\\div(mn)=m^2n\\div mn=m=3x^2\\). Espera: \\(\\frac{m^2 n}{mn}=\\frac{m^2}{m}=m=3x^2\\). La respuesta es \\(3x^2\\)."}, {"niv": 3, "tex": "Ordena de mayor a menor grado: \\(5x^3y,\\;2x^4,\\;3x^2y^3,\\;7xy^2\\)", "ops": [{"t": "\\(2x^4>3x^2y^3>5x^3y>7xy^2\\)", "ok": 0}, {"t": "\\(3x^2y^3>5x^3y>2x^4>7xy^2\\)", "ok": 1}, {"t": "\\(2x^4>5x^3y>3x^2y^3>7xy^2\\)", "ok": 0}, {"t": "\\(5x^3y>2x^4>3x^2y^3>7xy^2\\)", "ok": 0}], "exp": "Grados: \\(5x^3y\\to4\\), \\(2x^4\\to4\\), \\(3x^2y^3\\to5\\), \\(7xy^2\\to3\\). Orden: grado 5 > grado 4 > grado 3. Para los dos de grado 4 se usa el orden en que aparecen."}, {"niv": 3, "tex": "Halla \\(k\\) si \\((kx^2)^3\\div(k^2x^4)=8x^2\\).", "ops": [{"t": "2", "ok": 1}, {"t": "4", "ok": 0}, {"t": "8", "ok": 0}, {"t": "-2", "ok": 0}], "exp": "\\((kx^2)^3=k^3x^6\\). División: \\(k^3x^6\\div k^2x^4=kx^2=8x^2\\Rightarrow k=8\\). Revisando: \\(\\frac{k^3}{k^2}=k\\) y \\(x^{6-4}=x^2\\). Entonces \\(k=8\\)."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];

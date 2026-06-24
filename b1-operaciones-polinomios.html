@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jerarquía de operaciones · Naturales · 2º ESO</title>
+  <title>Operaciones con polinomios y Ruffini · 2º ESO</title>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <style>
-    :root{--color:#2e7d32;--color-c:#e8f5e9;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+
+    :root{--color:#1565c0;--color-c:#e3f2fd;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto);line-height:1.6}
     nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
@@ -38,36 +39,39 @@
     .opcion:hover{border-color:var(--color);background:var(--color-c)}
     .opcion input[type=radio]{accent-color:var(--color)}
     .btn-comprobar{padding:.55rem 1.2rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer}
-    .btn-comprobar:hover{background:#1b5e20}
+    .btn-comprobar:hover{background:#0d47a1}
     .feedback{display:none;margin-top:.8rem;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;font-weight:500;line-height:1.6}
-    .feedback.correcto{background:var(--color-c);color:#1b5e20;border-left:4px solid var(--color)}
+    .feedback.correcto{background:var(--color-c);color:#0d47a1;border-left:4px solid var(--color)}
     .feedback.incorrecto{background:#ffebee;color:#b71c1c;border-left:4px solid #c62828}
     .completar-wrap{text-align:center;padding:1.5rem;background:white;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:1.5rem}
     .completar-wrap p{font-size:.92rem;color:#555;margin-bottom:1rem}
     .btn-completar{padding:.7rem 1.8rem;background:var(--color);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
-    .completado-msg{display:none;background:var(--color-c);color:#1b5e20;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
+    .completado-msg{display:none;background:var(--color-c);color:#0d47a1;border-radius:10px;padding:1rem;font-weight:600;font-size:.97rem;text-align:center;margin-bottom:1.5rem}
     .nav-modulos{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     .btn-nav{padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
     .btn-nav:hover{background:var(--color-c)}
     .nueva-serie{display:block;margin:.5rem auto 0;background:none;border:none;color:var(--color);font-size:.85rem;cursor:pointer;text-decoration:underline}
     footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
+  
   </style>
 </head>
 <body>
-<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque0-hub.html">Bloque 0</a><span>·</span><strong>Jerarquía de operaciones · Naturales</strong></nav>
-<div class="hero"><div class="badge">Bloque 0 · Números naturales</div><h1>📐 Jerarquía de operaciones · Naturales</h1></div>
+<nav><a href="portal.html">Inicio</a><span>·</span><a href="bloque1-hub.html">Bloque 1</a><span>·</span><strong>Operaciones con polinomios y Ruffini</strong></nav>
+<div class="hero"><div class="badge">Bloque 1 · Álgebra</div><h1>🔧 Operaciones con polinomios y Ruffini</h1></div>
 <main>
 <div class="seccion">
-  <h2>📖 Reglas de jerarquía</h2>
-  <div class="regla-box"><ol>
-    <li><strong>Paréntesis y corchetes</strong> — de dentro hacia fuera</li>
-    <li><strong>Potencias y raíces</strong></li>
-    <li><strong>Multiplicación y división</strong> — izquierda a derecha</li>
-    <li><strong>Suma y resta</strong> — izquierda a derecha</li>
-  </ol></div>
-  <div class="ejemplo"><strong>Ejemplo con corchetes:</strong><br>
-  \(3\times[(2^3-1)\div(5-2)+4^2]=3\times[(8-1)\div3+16]=3\times[2+16]=3\times18=54\)</div>
-  <div class="nota">⚠️ La barra de fracción actúa como paréntesis: calcula primero numerador, luego denominador, después divide.</div>
+  <h2>📖 División de polinomios y Regla de Ruffini</h2>
+  <h3>División polinómica</h3>
+  <p>Divide \(p(x)\) entre \(d(x)\): \(p(x)=d(x)\cdot c(x)+r(x)\), con grado\((r)\)<grado\((d)\).</p>
+  <h3>Regla de Ruffini</h3>
+  <p>Método rápido para dividir entre \((x-a)\). Se trabaja solo con los coeficientes:</p>
+  <div class="ejemplo"><strong>Ejemplo:</strong> \(x^3-6x^2+11x-6\div(x-1)\)<br>
+  Coeficientes: 1 | -6 | 11 | -6 · Divisor: \(a=1\)<br>
+  \(egin{array}{c|cccc} 1 & 1 & -6 & 11 & -6 \ & & 1 & -5 & 6 \ \hline & 1 & -5 & 6 & 0 \end{array}\)<br>
+  Cociente: \(x^2-5x+6\), Resto: \(0\)</div>
+  <h3>Factorización con Ruffini</h3>
+  <p>Si \(p(a)=0\), entonces \((x-a)\) es factor. Las raíces enteras posibles son los divisores del término independiente.</p>
+  <div class="nota">⚠️ Si el coeficiente de \(x^n\) falta en el polinomio, se escribe \(0\) como coeficiente.</div>
 </div>
 <div class="seccion">
   <h2>✏️ Ejercicios <span style="font-size:.8rem;font-weight:400;color:#888">(selección aleatoria · 4 por nivel)</span></h2>
@@ -77,15 +81,15 @@
 <div class="completar-wrap" id="completar-wrap"><p>Cuando hayas trabajado todos los ejercicios, marca el módulo como completado.</p><button class="btn-completar" onclick="marcarCompletado()">✓ Marcar como completado</button></div>
 <div class="completado-msg" id="completado-msg">✅ Módulo completado. ¡Buen trabajo!</div>
 <div class="nav-modulos">
-  <a href="b0-naturales-operaciones.html" class="btn-nav">← Operaciones</a>
-  <a href="b0-naturales-problemas.html" class="btn-nav">Siguiente: Problemas →</a>
+  <a href="b1-polinomios.html" class="btn-nav">← Polinomios</a>
+  <a href="b1-resto.html" class="btn-nav">Siguiente: Teorema del resto →</a>
 </div>
 </main>
 <footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
 <script>
 const SHEETS_URL='PEGA_AQUI_TU_URL_APPS_SCRIPT_2ESO';
-const MODULE_ID='b0-nat-jer', SESSION_KEY='modulos_2eso_b0', BLOQUE='b0';
-const BANCO=[{"niv": 1, "tex": "Calcula: \\(3^2+4\\times5-6\\)", "ops": [{"t": "29", "ok": 1}, {"t": "49", "ok": 0}, {"t": "15", "ok": 0}, {"t": "39", "ok": 0}], "exp": "Potencia: \\(9\\). Mult.: \\(20\\). Suma/resta: \\(9+20-6=23\\). Espera: \\(9+20-6=23\\). La respuesta es 23."}, {"niv": 1, "tex": "Calcula: \\(2^3-3\\times2+1\\)", "ops": [{"t": "1", "ok": 0}, {"t": "3", "ok": 1}, {"t": "9", "ok": 0}, {"t": "5", "ok": 0}], "exp": "\\(2^3=8\\). Mult.: \\(3\\times2=6\\). Total: \\(8-6+1=3\\)."}, {"niv": 1, "tex": "Calcula: \\(5^2\\div5+3^2\\)", "ops": [{"t": "10", "ok": 0}, {"t": "14", "ok": 1}, {"t": "34", "ok": 0}, {"t": "50", "ok": 0}], "exp": "\\(5^2=25\\), \\(3^2=9\\). División: \\(25\\div5=5\\). Suma: \\(5+9=14\\)."}, {"niv": 1, "tex": "Calcula: \\(4^2-2^3+10\\)", "ops": [{"t": "10", "ok": 0}, {"t": "18", "ok": 1}, {"t": "26", "ok": 0}, {"t": "6", "ok": 0}], "exp": "\\(4^2=16\\), \\(2^3=8\\). Total: \\(16-8+10=18\\)."}, {"niv": 1, "tex": "Calcula: \\(2^4\\div4+3\\times2\\)", "ops": [{"t": "8", "ok": 0}, {"t": "10", "ok": 1}, {"t": "24", "ok": 0}, {"t": "14", "ok": 0}], "exp": "\\(2^4=16\\). División: \\(16\\div4=4\\). Mult.: \\(3\\times2=6\\). Suma: \\(4+6=10\\)."}, {"niv": 1, "tex": "Calcula: \\(7^2-6\\times8+1\\)", "ops": [{"t": "2", "ok": 1}, {"t": "15", "ok": 0}, {"t": "-1", "ok": 0}, {"t": "50", "ok": 0}], "exp": "\\(7^2=49\\), \\(6\\times8=48\\). Total: \\(49-48+1=2\\)."}, {"niv": 1, "tex": "Calcula: \\(3^3-5^2+2\\times3\\)", "ops": [{"t": "8", "ok": 1}, {"t": "12", "ok": 0}, {"t": "14", "ok": 0}, {"t": "-2", "ok": 0}], "exp": "\\(3^3=27\\), \\(5^2=25\\), \\(2\\times3=6\\). Total: \\(27-25+6=8\\)."}, {"niv": 1, "tex": "Calcula: \\(20-3\\times4+2\\)", "ops": [{"t": "10", "ok": 1}, {"t": "62", "ok": 0}, {"t": "7", "ok": 0}, {"t": "8", "ok": 0}], "exp": "Mult.: \\(3\\times4=12\\). Total: \\(20-12+2=10\\)."}, {"niv": 2, "tex": "Calcula: \\((3^2-1)\\times(2+3)-4^2\\)", "ops": [{"t": "8", "ok": 0}, {"t": "24", "ok": 1}, {"t": "40", "ok": 0}, {"t": "16", "ok": 0}], "exp": "\\(3^2-1=8\\), \\(2+3=5\\), \\(4^2=16\\). \\(8\\times5-16=40-16=24\\)."}, {"niv": 2, "tex": "Calcula: \\(2^3\\times(5-3)^2+6\\div2\\)", "ops": [{"t": "30", "ok": 0}, {"t": "35", "ok": 1}, {"t": "38", "ok": 0}, {"t": "19", "ok": 0}], "exp": "\\((5-3)^2=4\\), \\(2^3=8\\). Mult.: \\(8\\times4=32\\). Div.: \\(6\\div2=3\\). Suma: \\(35\\)."}, {"niv": 2, "tex": "Calcula: \\(100-4\\times(3^2+1)\\)", "ops": [{"t": "96", "ok": 0}, {"t": "20", "ok": 0}, {"t": "60", "ok": 1}, {"t": "76", "ok": 0}], "exp": "\\(3^2+1=10\\). Mult.: \\(4\\times10=40\\). Resta: \\(100-40=60\\)."}, {"niv": 2, "tex": "Calcula: \\(2^5\\div(3^2-5)+4\\times3\\)", "ops": [{"t": "16", "ok": 0}, {"t": "20", "ok": 1}, {"t": "28", "ok": 0}, {"t": "8", "ok": 0}], "exp": "\\(3^2-5=4\\), \\(2^5=32\\). Div.: \\(32\\div4=8\\). Mult.: \\(4\\times3=12\\). Suma: \\(20\\)."}, {"niv": 2, "tex": "Calcula: \\(3\\times(2^2+1)^2-4^3\\div8\\)", "ops": [{"t": "59", "ok": 0}, {"t": "67", "ok": 1}, {"t": "75", "ok": 0}, {"t": "45", "ok": 0}], "exp": "\\(2^2+1=5\\), \\(5^2=25\\), \\(3\\times25=75\\). \\(4^3=64\\), \\(64\\div8=8\\). Total: \\(75-8=67\\)."}, {"niv": 2, "tex": "Calcula: \\([(3+2)^2-4\\times3]^2\\)", "ops": [{"t": "25", "ok": 0}, {"t": "144", "ok": 0}, {"t": "169", "ok": 1}, {"t": "196", "ok": 0}], "exp": "\\((3+2)^2=25\\), \\(4\\times3=12\\). Corchete: \\(25-12=13\\). Cuadrado: \\(13^2=169\\)."}, {"niv": 2, "tex": "Calcula: \\(\\dfrac{(5^2-3^2)}{2^4\\div4}+3^2\\)", "ops": [{"t": "9", "ok": 0}, {"t": "13", "ok": 1}, {"t": "17", "ok": 0}, {"t": "25", "ok": 0}], "exp": "Num: \\(25-9=16\\). Den: \\(16\\div4=4\\). Fracción: \\(4\\). Suma: \\(4+9=13\\)."}, {"niv": 3, "tex": "Calcula: \\(3\\times[(2^3-1)\\div(5-2)+4^2]\\)", "ops": [{"t": "45", "ok": 0}, {"t": "51", "ok": 0}, {"t": "54", "ok": 1}, {"t": "63", "ok": 0}], "exp": "\\(2^3-1=7\\), \\(5-2=3\\), \\(7\\div3=2\\) (entera). \\(2+16=18\\). \\(3\\times18=54\\)."}, {"niv": 3, "tex": "Calcula: \\(2\\times(3+4)^2\\div(7+7)-5\\)", "ops": [{"t": "0", "ok": 0}, {"t": "2", "ok": 1}, {"t": "5", "ok": 0}, {"t": "9", "ok": 0}], "exp": "\\((3+4)^2=49\\), \\(7+7=14\\). \\(2\\times49=98\\). \\(98\\div14=7\\). \\(7-5=2\\)."}, {"niv": 3, "tex": "Calcula: \\(\\dfrac{3^2-1}{2}+5\\times(3-1)^2\\)", "ops": [{"t": "20", "ok": 0}, {"t": "28", "ok": 0}, {"t": "24", "ok": 1}, {"t": "32", "ok": 0}], "exp": "\\((3^2-1)\\div2=8\\div2=4\\). \\((3-1)^2=4\\). \\(5\\times4=20\\). Total: \\(4+20=24\\)."}, {"niv": 3, "tex": "Calcula: \\(4\\times[(3-1)^3+2^2]-3^2\\)", "ops": [{"t": "27", "ok": 0}, {"t": "39", "ok": 1}, {"t": "43", "ok": 0}, {"t": "55", "ok": 0}], "exp": "\\((3-1)^3=8\\), \\(2^2=4\\). Corchete: \\(12\\). \\(4\\times12=48\\). \\(3^2=9\\). Total: \\(39\\)."}, {"niv": 3, "tex": "Calcula: \\([(2+3)^2-4^2]\\times3+2^3\\)", "ops": [{"t": "8", "ok": 0}, {"t": "27", "ok": 0}, {"t": "35", "ok": 1}, {"t": "42", "ok": 0}], "exp": "\\((2+3)^2=25\\), \\(4^2=16\\). Corchete: \\(9\\). \\(9\\times3=27\\). \\(2^3=8\\). Total: \\(35\\)."}];
+const MODULE_ID='b1-opoli', SESSION_KEY='modulos_2eso_b1', BLOQUE='b1';
+const BANCO=[{"niv": 1, "tex": "¿Cuáles son las posibles raíces enteras de \\(x^3-6x^2+11x-6=0\\)?", "ops": [{"t": "±1, ±2, ±3, ±6", "ok": 1}, {"t": "±1, ±6", "ok": 0}, {"t": "Solo 1, 2, 3", "ok": 0}, {"t": "Los coeficientes: 1, 6, 11", "ok": 0}], "exp": "Las raíces enteras posibles son los divisores del término independiente: \\(\\pm1,\\pm2,\\pm3,\\pm6\\)."}, {"niv": 1, "tex": "Aplica Ruffini para dividir \\(x^3-6x^2+11x-6\\) entre \\((x-1)\\). ¿Cuál es el cociente?", "ops": [{"t": "\\(x^2-5x+6\\)", "ok": 1}, {"t": "\\(x^2+5x-6\\)", "ok": 0}, {"t": "\\(x^2-5x-6\\)", "ok": 0}, {"t": "\\(x^2+5x+6\\)", "ok": 0}], "exp": "Ruffini con \\(a=1\\): \\(1,-5,6\\) → cociente \\(x^2-5x+6\\), resto \\(0\\)."}, {"niv": 1, "tex": "Si \\(p(2)=0\\), ¿qué factor tiene el polinomio?", "ops": [{"t": "\\((x+2)\\)", "ok": 0}, {"t": "\\((x-2)\\)", "ok": 1}, {"t": "\\((2x)\\)", "ok": 0}, {"t": "\\((x^2-2)\\)", "ok": 0}], "exp": "Por el Teorema del factor: si \\(p(a)=0\\) entonces \\((x-a)\\) es factor."}, {"niv": 1, "tex": "Factoriza: \\(x^3-6x^2+11x-6\\)", "ops": [{"t": "\\((x-1)(x-2)(x-3)\\)", "ok": 1}, {"t": "\\((x+1)(x+2)(x+3)\\)", "ok": 0}, {"t": "\\((x-2)(x^2-4x+3)\\)", "ok": 0}, {"t": "\\((x-6)(x-1)^2\\)", "ok": 0}], "exp": "\\(p(1)=p(2)=p(3)=0\\). Factorización: \\((x-1)(x-2)(x-3)\\)."}, {"niv": 1, "tex": "Factoriza: \\(x^3+x^2-4x-4\\)", "ops": [{"t": "\\((x-2)(x+1)(x+2)\\)", "ok": 1}, {"t": "\\((x+2)^2(x-1)\\)", "ok": 0}, {"t": "\\((x-1)(x+2)(x-4)\\)", "ok": 0}, {"t": "\\((x+4)(x-1)(x+1)\\)", "ok": 0}], "exp": "\\(p(-1)=0\\), \\(p(2)=0\\), \\(p(-2)=0\\). Factores: \\((x+1)(x-2)(x+2)\\)."}, {"niv": 1, "tex": "Divide \\(x^3-2x^2+3x-4\\) entre \\((x-1)\\). ¿Cuánto vale el resto?", "ops": [{"t": "0", "ok": 0}, {"t": "-2", "ok": 1}, {"t": "2", "ok": 0}, {"t": "-4", "ok": 0}], "exp": "\\(p(1)=1-2+3-4=-2\\). Por el Teorema del resto, el resto es \\(-2\\)."}, {"niv": 1, "tex": "¿Cuántas raíces reales puede tener como mínimo una ecuación de grado 3?", "ops": [{"t": "0", "ok": 0}, {"t": "1", "ok": 1}, {"t": "2", "ok": 0}, {"t": "3", "ok": 0}], "exp": "Una ecuación de grado 3 tiene siempre al menos 1 raíz real (los polinomios de grado impar siempre tienen al menos una raíz real)."}, {"niv": 1, "tex": "Si \\((x-1)\\) es factor de \\(p(x)=x^3+ax^2-x-2\\), ¿cuánto vale \\(a\\)?", "ops": [{"t": "0", "ok": 0}, {"t": "2", "ok": 1}, {"t": "-1", "ok": 0}, {"t": "-2", "ok": 0}], "exp": "\\(p(1)=1+a-1-2=0\\Rightarrow a-2=0\\Rightarrow a=2\\)."}, {"niv": 2, "tex": "Factoriza: \\(2x^3-3x^2-11x+6\\)", "ops": [{"t": "\\((x-3)(x+2)(2x-1)\\)", "ok": 1}, {"t": "\\((x-3)(2x+1)(x-2)\\)", "ok": 0}, {"t": "\\((x+3)(x-2)(2x-1)\\)", "ok": 0}, {"t": "\\(2(x-3)(x+2)(x-1)\\)", "ok": 0}], "exp": "\\(p(3)=0\\), \\(p(-2)=0\\), \\(p(1/2)=0\\). Factores: \\((x-3)(x+2)(2x-1)\\)."}, {"niv": 2, "tex": "Factoriza: \\(x^3-3x^2+3x-1\\)", "ops": [{"t": "\\((x-1)^3\\)", "ok": 1}, {"t": "\\((x-1)^2(x+1)\\)", "ok": 0}, {"t": "\\((x-1)(x^2+1)\\)", "ok": 0}, {"t": "\\((x-3)(x^2+1)\\)", "ok": 0}], "exp": "\\(p(1)=0\\). Ruffini tres veces: \\((x-1)^3\\). Es el cubo de un binomio."}, {"niv": 2, "tex": "Factoriza completamente \\(x^4-1\\).", "ops": [{"t": "\\((x^2-1)(x^2+1)\\)", "ok": 0}, {"t": "\\((x-1)(x+1)(x^2+1)\\)", "ok": 1}, {"t": "\\((x-1)^2(x+1)^2\\)", "ok": 0}, {"t": "\\((x^2+1)^2\\)", "ok": 0}], "exp": "\\(x^4-1=(x^2+1)(x^2-1)=(x^2+1)(x+1)(x-1)\\). El factor \\(x^2+1\\) no factoriza más en reales."}, {"niv": 2, "tex": "¿Para qué valor de \\(k\\) es \\(x^3-kx^2+3x-2\\) divisible por \\((x-1)\\)?", "ops": [{"t": "1", "ok": 0}, {"t": "2", "ok": 1}, {"t": "3", "ok": 0}, {"t": "-2", "ok": 0}], "exp": "\\(p(1)=1-k+3-2=0\\Rightarrow2-k=0\\Rightarrow k=2\\)."}, {"niv": 2, "tex": "Divide \\(2x^3+x^2-5x+2\\) entre \\((x-1)\\). ¿Cuál es el cociente?", "ops": [{"t": "\\(2x^2+3x-2\\)", "ok": 1}, {"t": "\\(2x^2-3x+2\\)", "ok": 0}, {"t": "\\(2x^2+x-2\\)", "ok": 0}, {"t": "\\(2x^2+3x+2\\)", "ok": 0}], "exp": "Ruffini con \\(a=1\\): \\(2,3,-2\\) → cociente \\(2x^2+3x-2\\), resto \\(0\\)."}, {"niv": 3, "tex": "Factoriza \\(x^4-x^3-7x^2+x+6\\) sabiendo que \\(x=1\\) es raíz doble.", "ops": [{"t": "\\((x-1)^2(x-3)(x+2)\\)", "ok": 1}, {"t": "\\((x-1)^2(x+3)(x-2)\\)", "ok": 0}, {"t": "\\((x-1)^3(x+2)\\)", "ok": 0}, {"t": "\\((x-1)^2(x^2-x-6)\\)", "ok": 0}], "exp": "\\((x-1)^2\\) es factor. Dividiendo: \\((x-1)^2(x^2-x-6)=(x-1)^2(x-3)(x+2)\\)."}, {"niv": 3, "tex": "¿Para qué valores de \\(n\\) el polinomio \\(x^3+nx^2-x-n\\) siempre tiene \\(x=1\\) como raíz?", "ops": [{"t": "Solo \\(n=0\\)", "ok": 0}, {"t": "Para cualquier valor de \\(n\\)", "ok": 1}, {"t": "Solo \\(n=1\\)", "ok": 0}, {"t": "Para \\(n\neq1\\)", "ok": 0}], "exp": "\\(p(1)=1+n-1-n=0\\) para cualquier \\(n\\). La raíz \\(x=1\\) es independiente de \\(n\\)."}, {"niv": 3, "tex": "Halla las raíces de \\(x^3-2x^2-x+2=0\\) y calcula su suma.", "ops": [{"t": "0", "ok": 0}, {"t": "2", "ok": 1}, {"t": "1", "ok": 0}, {"t": "-2", "ok": 0}], "exp": "Raíces: \\(p(-1)=0\\), \\(p(1)=0\\), \\(p(2)=0\\). Suma: \\(-1+1+2=2\\). (Por Vieta: suma de raíces = \\(-\\frac{-2}{1}=2\\).)"}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
