@@ -92,15 +92,69 @@ const MODULE_ID='b1-mono', SESSION_KEY='modulos_2eso_b1', BLOQUE='b1';
 const BANCO=[{"niv": 1, "tex": "¿Cuál es el grado del monomio \\(4x^3y^2\\)?", "ops": [{"t": "3", "ok": 0}, {"t": "2", "ok": 0}, {"t": "5", "ok": 1}, {"t": "6", "ok": 0}], "exp": "Grado = suma de exponentes: \\(3+2=5\\)."}, {"niv": 1, "tex": "¿Son semejantes \\(3x^2y\\) y \\(5x^2y\\)?", "ops": [{"t": "No, distintos coeficientes", "ok": 0}, {"t": "Sí, misma parte literal \\(x^2y\\)", "ok": 1}, {"t": "No, distintas variables", "ok": 0}, {"t": "Solo si los coeficientes son iguales", "ok": 0}], "exp": "Son semejantes porque tienen la misma parte literal \\(x^2y\\). El coeficiente no importa para la semejanza."}, {"niv": 1, "tex": "Calcula: \\(3x^2+5x^2\\)", "ops": [{"t": "\\(8x^4\\)", "ok": 0}, {"t": "\\(8x^2\\)", "ok": 1}, {"t": "\\(15x^4\\)", "ok": 0}, {"t": "\\(15x^2\\)", "ok": 0}], "exp": "Semejantes: \\((3+5)x^2=8x^2\\). Se suman los coeficientes, el exponente no cambia."}, {"niv": 1, "tex": "Calcula: \\(3x^2\\cdot4x^3\\)", "ops": [{"t": "\\(7x^5\\)", "ok": 0}, {"t": "\\(12x^5\\)", "ok": 1}, {"t": "\\(12x^6\\)", "ok": 0}, {"t": "\\(7x^6\\)", "ok": 0}], "exp": "Coef.: \\(3\\times4=12\\). Exp.: \\(2+3=5\\). Resultado: \\(12x^5\\)."}, {"niv": 1, "tex": "Calcula: \\(6x^4\\div2x^2\\)", "ops": [{"t": "\\(3x^2\\)", "ok": 1}, {"t": "\\(3x^6\\)", "ok": 0}, {"t": "\\(4x^2\\)", "ok": 0}, {"t": "\\(4x^6\\)", "ok": 0}], "exp": "Coef.: \\(6\\div2=3\\). Exp.: \\(4-2=2\\). Resultado: \\(3x^2\\)."}, {"niv": 1, "tex": "Calcula: \\(7x^3-2x^3+x^3\\)", "ops": [{"t": "\\(6x^3\\)", "ok": 1}, {"t": "\\(6x^9\\)", "ok": 0}, {"t": "\\(10x^3\\)", "ok": 0}, {"t": "\\(5x^3\\)", "ok": 0}], "exp": "\\((7-2+1)x^3=6x^3\\)."}, {"niv": 1, "tex": "¿Cuánto es \\((2x^2)^3\\)?", "ops": [{"t": "\\(6x^6\\)", "ok": 0}, {"t": "\\(8x^5\\)", "ok": 0}, {"t": "\\(8x^6\\)", "ok": 1}, {"t": "\\(6x^5\\)", "ok": 0}], "exp": "\\(2^3=8\\), exponente: \\(2\\times3=6\\). Resultado: \\(8x^6\\)."}, {"niv": 1, "tex": "¿Puede sumarse \\(5x^2+3x^3\\)?", "ops": [{"t": "Sí: \\(8x^5\\)", "ok": 0}, {"t": "Sí: \\(8x^2\\)", "ok": 0}, {"t": "No: no son semejantes", "ok": 1}, {"t": "Sí: \\(15x^6\\)", "ok": 0}], "exp": "\\(x^2\\) y \\(x^3\\) tienen distinto exponente → no son semejantes → no se pueden sumar."}, {"niv": 2, "tex": "Calcula: \\(\\dfrac{5}{2}x^3\\cdot\\dfrac{4}{5}x^2\\)", "ops": [{"t": "\\(2x^5\\)", "ok": 1}, {"t": "\\(2x^6\\)", "ok": 0}, {"t": "\\(\\frac{9}{10}x^5\\)", "ok": 0}, {"t": "\\(4x^5\\)", "ok": 0}], "exp": "Coef.: \\(\\frac{5}{2}\\times\\frac{4}{5}=2\\). Exp.: \\(3+2=5\\). Resultado: \\(2x^5\\)."}, {"niv": 2, "tex": "Simplifica: \\(4xy+3xy-xy\\)", "ops": [{"t": "\\(7xy\\)", "ok": 0}, {"t": "\\(6xy\\)", "ok": 1}, {"t": "\\(8xy\\)", "ok": 0}, {"t": "\\(4xy\\)", "ok": 0}], "exp": "\\((4+3-1)xy=6xy\\)."}, {"niv": 2, "tex": "Calcula: \\((-3x^2)(2x^3)\\)", "ops": [{"t": "\\(-6x^5\\)", "ok": 1}, {"t": "\\(6x^5\\)", "ok": 0}, {"t": "\\(-6x^6\\)", "ok": 0}, {"t": "\\(-x^5\\)", "ok": 0}], "exp": "Coef.: \\((-3)\\times2=-6\\). Exp.: \\(2+3=5\\). Resultado: \\(-6x^5\\)."}, {"niv": 2, "tex": "Calcula: \\(\\dfrac{12x^5y^3}{4x^2y}\\)", "ops": [{"t": "\\(3x^3y^2\\)", "ok": 1}, {"t": "\\(3x^7y^4\\)", "ok": 0}, {"t": "\\(8x^3y^2\\)", "ok": 0}, {"t": "\\(3x^2y^2\\)", "ok": 0}], "exp": "Coef.: \\(12\\div4=3\\). Exp. \\(x\\): \\(5-2=3\\). Exp. \\(y\\): \\(3-1=2\\). Resultado: \\(3x^3y^2\\)."}, {"niv": 2, "tex": "Calcula: \\((3x^2y)^2\\)", "ops": [{"t": "\\(9x^4y\\)", "ok": 0}, {"t": "\\(9x^4y^2\\)", "ok": 1}, {"t": "\\(6x^4y^2\\)", "ok": 0}, {"t": "\\(9x^2y^2\\)", "ok": 0}], "exp": "\\(3^2=9\\), \\((x^2)^2=x^4\\), \\(y^2\\). Resultado: \\(9x^4y^2\\)."}, {"niv": 2, "tex": "¿Cuál es el grado de \\(2x^3y^2z\\)?", "ops": [{"t": "3", "ok": 0}, {"t": "5", "ok": 0}, {"t": "6", "ok": 1}, {"t": "2", "ok": 0}], "exp": "Grado: \\(3+2+1=6\\)."}, {"niv": 3, "tex": "Si \\(m=3x^2\\) y \\(n=2x^3\\), calcula \\(m^2\\cdot n\\div(mn)\\).", "ops": [{"t": "\\(6x^4\\)", "ok": 1}, {"t": "\\(3x^3\\)", "ok": 0}, {"t": "\\(18x^7\\)", "ok": 0}, {"t": "\\(6x^3\\)", "ok": 0}], "exp": "\\(m^2\\cdot n=9x^4\\cdot2x^3=18x^7\\). \\(mn=6x^5\\). \\(18x^7\\div6x^5=3x^2\\). Revisando: \\(m^2\\cdot n\\div(mn)=m^2n\\div mn=m=3x^2\\). Espera: \\(\\frac{m^2 n}{mn}=\\frac{m^2}{m}=m=3x^2\\). La respuesta es \\(3x^2\\)."}, {"niv": 3, "tex": "Ordena de mayor a menor grado: \\(5x^3y,\\;2x^4,\\;3x^2y^3,\\;7xy^2\\)", "ops": [{"t": "\\(2x^4>3x^2y^3>5x^3y>7xy^2\\)", "ok": 0}, {"t": "\\(3x^2y^3>5x^3y>2x^4>7xy^2\\)", "ok": 1}, {"t": "\\(2x^4>5x^3y>3x^2y^3>7xy^2\\)", "ok": 0}, {"t": "\\(5x^3y>2x^4>3x^2y^3>7xy^2\\)", "ok": 0}], "exp": "Grados: \\(5x^3y\\to4\\), \\(2x^4\\to4\\), \\(3x^2y^3\\to5\\), \\(7xy^2\\to3\\). Orden: grado 5 > grado 4 > grado 3. Para los dos de grado 4 se usa el orden en que aparecen."}, {"niv": 3, "tex": "Halla \\(k\\) si \\((kx^2)^3\\div(k^2x^4)=8x^2\\).", "ops": [{"t": "2", "ok": 1}, {"t": "4", "ok": 0}, {"t": "8", "ok": 0}, {"t": "-2", "ok": 0}], "exp": "\\((kx^2)^3=k^3x^6\\). División: \\(k^3x^6\\div k^2x^4=kx^2=8x^2\\Rightarrow k=8\\). Revisando: \\(\\frac{k^3}{k^2}=k\\) y \\(x^{6-4}=x^2\\). Entonces \\(k=8\\)."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

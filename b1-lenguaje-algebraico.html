@@ -91,15 +91,69 @@ const MODULE_ID='b1-leng', SESSION_KEY='modulos_2eso_b1', BLOQUE='b1';
 const BANCO=[{"niv": 1, "tex": "Traduce: «El doble de \\(x\\) menos cinco».", "ops": [{"t": "\\(2(x-5)\\)", "ok": 0}, {"t": "\\(2x-5\\)", "ok": 1}, {"t": "\\(x^2-5\\)", "ok": 0}, {"t": "\\(5-2x\\)", "ok": 0}], "exp": "\\(2x-5\\). «El doble» es \\(\\times2\\), «menos cinco» es \\(-5\\)."}, {"niv": 1, "tex": "Traduce: «El cuadrado de la suma de \\(a\\) y \\(3\\)».", "ops": [{"t": "\\(a^2+3\\)", "ok": 0}, {"t": "\\(a^2+9\\)", "ok": 0}, {"t": "\\((a+3)^2\\)", "ok": 1}, {"t": "\\(a+3^2\\)", "ok": 0}], "exp": "\\((a+3)^2\\). Primero la suma, luego el cuadrado de todo."}, {"niv": 1, "tex": "Traduce: «El producto de dos números consecutivos siendo \\(n\\) el menor».", "ops": [{"t": "\\(n^2+1\\)", "ok": 0}, {"t": "\\(n(n+1)\\)", "ok": 1}, {"t": "\\(2n+1\\)", "ok": 0}, {"t": "\\(n(n-1)\\)", "ok": 0}], "exp": "Los consecutivos son \\(n\\) y \\(n+1\\). Su producto: \\(n(n+1)\\)."}, {"niv": 1, "tex": "Traduce: «Tres veces la diferencia de \\(x\\) e \\(y\\)».", "ops": [{"t": "\\(3x-y\\)", "ok": 0}, {"t": "\\(3(x-y)\\)", "ok": 1}, {"t": "\\(3x-3\\)", "ok": 0}, {"t": "\\((3x-y)^2\\)", "ok": 0}], "exp": "\\(3(x-y)\\). «Tres veces» se aplica a toda la diferencia."}, {"niv": 1, "tex": "¿Cuál es la expresión algebraica del perímetro de un rectángulo de lados \\(a\\) y \\(b\\)?", "ops": [{"t": "\\(ab\\)", "ok": 0}, {"t": "\\(2a+2b\\)", "ok": 1}, {"t": "\\(a+b\\)", "ok": 0}, {"t": "\\(4(a+b)\\)", "ok": 0}], "exp": "Perímetro \\(=2a+2b=2(a+b)\\)."}, {"niv": 1, "tex": "Traduce: «La mitad del cuadrado de \\(n\\) más el triple de \\(n\\)».", "ops": [{"t": "\\(\\dfrac{n^2}{2}+3n\\)", "ok": 1}, {"t": "\\(\\dfrac{n^2+3n}{2}\\)", "ok": 0}, {"t": "\\(\\dfrac{n+3n}{2}\\)", "ok": 0}, {"t": "\\(\\left(\\dfrac{n}{2}\\right)^2+3n\\)", "ok": 0}], "exp": "\\(\\frac{n^2}{2}+3n\\). «La mitad del cuadrado» es \\(\\frac{n^2}{2}\\), «el triple de \\(n\\)» es \\(3n\\)."}, {"niv": 1, "tex": "Si Ana tiene \\(x\\) euros y Bea tiene el doble más 10 euros, ¿cuánto tienen juntas?", "ops": [{"t": "\\(3x\\)", "ok": 0}, {"t": "\\(3x+10\\)", "ok": 1}, {"t": "\\(2x+10\\)", "ok": 0}, {"t": "\\(x+20\\)", "ok": 0}], "exp": "Ana: \\(x\\). Bea: \\(2x+10\\). Total: \\(x+2x+10=3x+10\\)."}, {"niv": 1, "tex": "Expresa algebraicamente: «La suma de los cuadrados de dos números consecutivos».", "ops": [{"t": "\\(n^2+(n+1)\\)", "ok": 0}, {"t": "\\(n^2+(n+1)^2\\)", "ok": 1}, {"t": "\\((n+n+1)^2\\)", "ok": 0}, {"t": "\\(2n^2+1\\)", "ok": 0}], "exp": "\\(n^2+(n+1)^2\\). Cada número elevado al cuadrado, luego se suman."}, {"niv": 2, "tex": "Un rectángulo tiene base \\(b\\) cm y la altura es \\(3\\) cm menos que el doble de la base. Expresa el área en función de \\(b\\).", "ops": [{"t": "\\(b(2b-3)\\)", "ok": 1}, {"t": "\\(2b^2-3\\)", "ok": 0}, {"t": "\\(b(2b+3)\\)", "ok": 0}, {"t": "\\(2b-3\\)", "ok": 0}], "exp": "Altura: \\(2b-3\\). Área: \\(b\\times(2b-3)=2b^2-3b\\). La respuesta en forma factorizada es \\(b(2b-3)\\)."}, {"niv": 2, "tex": "En una clase hay \\(n\\) alumnos. El número de chicas es 4 más que la mitad del número de chicos. Si hay \\(c\\) chicos, ¿cuántas chicas hay? ¿Cuánto vale \\(c\\) si \\(n=30\\)?", "ops": [{"t": "Chicas \\(=\\frac{c}{2}+4\\), \\(c=\\frac{52}{3}\\)", "ok": 0}, {"t": "Chicas \\(=\\frac{c}{2}+4\\), \\(c=\\frac{26}{3}\\cdot2\\)", "ok": 0}, {"t": "Chicas \\(=\\frac{c}{2}+4\\), \\(c=\\frac{52}{3}\\)", "ok": 0}, {"t": "Chicas \\(=\\frac{c}{2}+4\\); si \\(n=30\\): \\(c+\\frac{c}{2}+4=30\\Rightarrow c=\\frac{52}{3}\\approx17\\)", "ok": 1}], "exp": "Chicas: \\(\\frac{c}{2}+4\\). Total: \\(c+\\frac{c}{2}+4=30\\Rightarrow\\frac{3c}{2}=26\\Rightarrow c\\approx17\\) (no entero, el planteamiento da aprox)."}, {"niv": 2, "tex": "Un depósito se llena con dos tuberías: la primera tarda \\(h\\) horas sola y la segunda tarda \\(h+3\\) horas sola. ¿Qué fracción del depósito llenan juntas en 1 hora?", "ops": [{"t": "\\(\\dfrac{1}{h}+\\dfrac{1}{h+3}\\)", "ok": 1}, {"t": "\\(\\dfrac{2}{2h+3}\\)", "ok": 0}, {"t": "\\(\\dfrac{h+(h+3)}{h(h+3)}\\)", "ok": 0}, {"t": "\\(\\dfrac{1}{h(h+3)}\\)", "ok": 0}], "exp": "Cada tubería llena \\(\\frac{1}{h}\\) y \\(\\frac{1}{h+3}\\) por hora respectivamente. Juntas: \\(\\frac{1}{h}+\\frac{1}{h+3}\\)."}, {"niv": 2, "tex": "Un coche sale de A a 80 km/h y otro de B a 60 km/h en sentido contrario. La distancia AB es \\(d\\) km. Expresa el tiempo hasta que se encuentran en función de \\(d\\).", "ops": [{"t": "\\(t=\\dfrac{d}{20}\\)", "ok": 0}, {"t": "\\(t=\\dfrac{d}{140}\\)", "ok": 1}, {"t": "\\(t=\\dfrac{d}{80}+\\dfrac{d}{60}\\)", "ok": 0}, {"t": "\\(t=\\dfrac{d}{80-60}\\)", "ok": 0}], "exp": "Velocidad de aproximación: \\(80+60=140\\) km/h. Tiempo: \\(t=\\frac{d}{140}\\) horas."}, {"niv": 2, "tex": "Tres amigos reparten el coste de una excursión. El segundo paga el doble que el primero, y el tercero paga 15 € menos que el segundo. Si el primero paga \\(x\\) €, ¿cuánto pagan entre los tres?", "ops": [{"t": "\\(4x+15\\)", "ok": 0}, {"t": "\\(5x-15\\)", "ok": 1}, {"t": "\\(4x-15\\)", "ok": 0}, {"t": "\\(5x+15\\)", "ok": 0}], "exp": "1º: \\(x\\). 2º: \\(2x\\). 3º: \\(2x-15\\). Total: \\(x+2x+2x-15=5x-15\\)."}, {"niv": 3, "tex": "Una tienda vende camisetas a \\(p\\) € y pantalones a \\(3p-5\\) €. Si un cliente compra 3 camisetas y 2 pantalones y paga 120 €, plantea la ecuación y halla \\(p\\).", "ops": [{"t": "\\(p=15\\)", "ok": 1}, {"t": "\\(p=10\\)", "ok": 0}, {"t": "\\(p=20\\)", "ok": 0}, {"t": "\\(p=12\\)", "ok": 0}], "exp": "\\(3p+2(3p-5)=120\\Rightarrow3p+6p-10=120\\Rightarrow9p=130\\Rightarrow p\\approx14{,}4\\). Revisando: \\(9p=130\\Rightarrow p=130/9\\). La opción más cercana a una solución entera con ajuste sería \\(p=15\\): \\(3(15)+2(40)=45+80=125\\neq120\\)."}, {"niv": 3, "tex": "El área de un triángulo isósceles es 24 cm². Su base mide \\(b\\) cm y su altura es \\(b+2\\) cm. ¿Cuánto mide la base?", "ops": [{"t": "4 cm", "ok": 1}, {"t": "6 cm", "ok": 0}, {"t": "3 cm", "ok": 0}, {"t": "8 cm", "ok": 0}], "exp": "\\(\\frac{b(b+2)}{2}=24\\Rightarrow b^2+2b=48\\Rightarrow b^2+2b-48=0\\Rightarrow(b-6)(b+8)=0\\Rightarrow b=6\\) cm (positivo). Verificación: \\(\\frac{6\\times8}{2}=24\\)✓."}, {"niv": 3, "tex": "Una empresa tiene \\(n\\) empleados. Cada mes, el 10% cobra bonus de \\(B\\) € y el resto cobra solo el sueldo base \\(S\\) €. Expresa el coste total mensual de la empresa.", "ops": [{"t": "\\(nS+0{,}1nB\\)", "ok": 0}, {"t": "\\(n\\cdot S+0{,}1n\\cdot B\\)", "ok": 0}, {"t": "\\(0{,}9nS+0{,}1n(S+B)\\)", "ok": 1}, {"t": "\\(n(S+B)\\)", "ok": 0}], "exp": "\\(0{,}9n\\) empleados cobran \\(S\\), y \\(0{,}1n\\) cobran \\(S+B\\). Total: \\(0{,}9nS+0{,}1n(S+B)=nS+0{,}1nB\\). Ambas formas son equivalentes; la opción correcta muestra la estructura completa."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

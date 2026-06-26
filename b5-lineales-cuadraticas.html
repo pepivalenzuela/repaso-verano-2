@@ -96,15 +96,69 @@ const MODULE_ID='b5-lc', SESSION_KEY='modulos_2eso_b5', BLOQUE='b5';
 const BANCO=[{"niv": 1, "tex": "¿Cuál es la pendiente de la recta \\(y=3x-5\\)?", "ops": [{"t": "-5", "ok": 0}, {"t": "3", "ok": 1}, {"t": "5", "ok": 0}, {"t": "\\(\\frac{1}{3}\\)", "ok": 0}], "exp": "En \\(y=mx+b\\), la pendiente es el coeficiente de \\(x\\): \\(m=3\\)."}, {"niv": 1, "tex": "¿Dónde corta al eje \\(y\\) la recta \\(y=2x+4\\)?", "ops": [{"t": "\\((2,0)\\)", "ok": 0}, {"t": "\\((0,4)\\)", "ok": 1}, {"t": "\\((0,2)\\)", "ok": 0}, {"t": "\\((-2,0)\\)", "ok": 0}], "exp": "El corte con el eje \\(y\\) ocurre en \\(x=0\\): \\(y=2(0)+4=4\\). Punto: \\((0,4)\\)."}, {"niv": 1, "tex": "¿Dónde corta al eje \\(x\\) la recta \\(y=2x-6\\)?", "ops": [{"t": "\\((0,6)\\)", "ok": 0}, {"t": "\\((3,0)\\)", "ok": 1}, {"t": "\\((-3,0)\\)", "ok": 0}, {"t": "\\((6,0)\\)", "ok": 0}], "exp": "\\(y=0: 2x-6=0 \\Rightarrow x=3\\). Punto: \\((3,0)\\)."}, {"niv": 1, "tex": "La parábola \\(y=x^2-4\\) abre hacia arriba y tiene vértice en \\((0,-4)\\). ¿Cuántos cortes tiene con el eje \\(x\\)?", "ops": [{"t": "0", "ok": 0}, {"t": "1", "ok": 0}, {"t": "2", "ok": 1}, {"t": "4", "ok": 0}], "exp": "\\(x^2-4=0 \\Rightarrow x=\\pm2\\). Dos cortes: \\((-2,0)\\) y \\((2,0)\\)."}, {"niv": 1, "tex": "¿Cuál es la pendiente de la recta que pasa por \\((1,3)\\) y \\((3,7)\\)?", "ops": [{"t": "1", "ok": 0}, {"t": "2", "ok": 1}, {"t": "3", "ok": 0}, {"t": "4", "ok": 0}], "exp": "\\(m=\\frac{7-3}{3-1}=\\frac{4}{2}=2\\)."}, {"niv": 1, "tex": "¿Cuál es el vértice de la parábola \\(y=x^2-2x-3\\)?", "ops": [{"t": "\\((1,-4)\\)", "ok": 1}, {"t": "\\((0,-3)\\)", "ok": 0}, {"t": "\\((-1,0)\\)", "ok": 0}, {"t": "\\((2,-3)\\)", "ok": 0}], "exp": "\\(x_v=-\\frac{-2}{2\\cdot1}=1\\). \\(y_v=1-2-3=-4\\). Vértice: \\((1,-4)\\)."}, {"niv": 1, "tex": "¿Qué forma tiene la gráfica de \\(y=-x^2+4x-3\\)?", "ops": [{"t": "Parábola que abre hacia arriba", "ok": 0}, {"t": "Parábola que abre hacia abajo", "ok": 1}, {"t": "Recta con pendiente negativa", "ok": 0}, {"t": "Hipérbola", "ok": 0}], "exp": "El coeficiente de \\(x^2\\) es \\(-1<0\\) → la parábola abre hacia abajo, con un máximo en el vértice."}, {"niv": 1, "tex": "Dos rectas tienen pendientes \\(m_1=2\\) y \\(m_2=-\\frac{1}{2}\\). ¿Qué relación geométrica tienen?", "ops": [{"t": "Son paralelas", "ok": 0}, {"t": "Son perpendiculares", "ok": 1}, {"t": "Son la misma recta", "ok": 0}, {"t": "Se cruzan en el origen", "ok": 0}], "exp": "\\(m_1\\cdot m_2=2\\times(-\\frac{1}{2})=-1\\). Cuando el producto de pendientes es \\(-1\\), las rectas son perpendiculares."}, {"niv": 2, "tex": "Halla la ecuación de la recta que pasa por \\((2,5)\\) con pendiente \\(m=3\\).", "ops": [{"t": "\\(y=3x+1\\)", "ok": 0}, {"t": "\\(y=3x-1\\)", "ok": 1}, {"t": "\\(y=3x+5\\)", "ok": 0}, {"t": "\\(y=3x+2\\)", "ok": 0}], "exp": "\\(y-5=3(x-2) \\Rightarrow y=3x-6+5=3x-1\\)."}, {"niv": 2, "tex": "Halla la ecuación de la recta que pasa por \\((0,4)\\) y \\((3,-2)\\).", "ops": [{"t": "\\(y=-2x+4\\)", "ok": 1}, {"t": "\\(y=2x+4\\)", "ok": 0}, {"t": "\\(y=-2x-4\\)", "ok": 0}, {"t": "\\(y=-3x+4\\)", "ok": 0}], "exp": "\\(m=\\frac{-2-4}{3-0}=\\frac{-6}{3}=-2\\). Pasa por \\((0,4)\\): \\(b=4\\). Ecuación: \\(y=-2x+4\\)."}, {"niv": 2, "tex": "Estudia el signo de \\(f(x)=x^2-2x-3\\): ¿para qué valores de \\(x\\) es positiva y para cuáles negativa?", "ops": [{"t": "Positiva en \\((-\\infty,-1)\\cup(3,+\\infty)\\), negativa en \\((-1,3)\\)", "ok": 1}, {"t": "Negativa en \\((-\\infty,-1)\\cup(3,+\\infty)\\), positiva en \\((-1,3)\\)", "ok": 0}, {"t": "Siempre positiva", "ok": 0}, {"t": "Siempre negativa", "ok": 0}], "exp": "Raíces: \\(x=-1\\) y \\(x=3\\). Como \\(a=1>0\\), la parábola abre hacia arriba: negativa entre raíces \\((-1,3)\\), positiva fuera."}, {"niv": 2, "tex": "¿Cuántos puntos de intersección tienen \\(y=x+1\\) y \\(y=x^2-1\\)?", "ops": [{"t": "0", "ok": 0}, {"t": "1", "ok": 0}, {"t": "2", "ok": 1}, {"t": "Infinitos", "ok": 0}], "exp": "\\(x+1=x^2-1 \\Rightarrow x^2-x-2=0 \\Rightarrow (x-2)(x+1)=0 \\Rightarrow x=2\\) o \\(x=-1\\). Dos puntos: \\((2,3)\\) y \\((-1,0)\\)."}, {"niv": 2, "tex": "La parábola \\(y=ax^2+bx+c\\) pasa por \\((0,1)\\), \\((1,0)\\) y \\((-1,4)\\). Halla \\(a\\), \\(b\\) y \\(c\\).", "ops": [{"t": "\\(a=2,\\;b=-3,\\;c=1\\)", "ok": 1}, {"t": "\\(a=-2,\\;b=3,\\;c=1\\)", "ok": 0}, {"t": "\\(a=1,\\;b=-2,\\;c=1\\)", "ok": 0}, {"t": "\\(a=3,\\;b=-2,\\;c=1\\)", "ok": 0}], "exp": "\\(f(0)=c=1\\). \\(f(1)=a+b+1=0 \\Rightarrow a+b=-1\\). \\(f(-1)=a-b+1=4 \\Rightarrow a-b=3\\). Sumando: \\(2a=2 \\Rightarrow a=2\\), \\(b=-3\\)."}, {"niv": 3, "tex": "Un proyectil sigue la trayectoria \\(y=-0{,}1x^2+2x\\), donde \\(x\\) es la distancia horizontal en metros e \\(y\\) la altura. ¿A qué distancia horizontal alcanza la altura máxima? ¿Cuánto mide esa altura? ¿Dónde cae al suelo?", "ops": [{"t": "Máximo a \\(x=10\\) m · altura \\(10\\) m · cae a \\(x=20\\) m", "ok": 1}, {"t": "Máximo a \\(x=20\\) m · altura \\(20\\) m · cae a \\(x=40\\) m", "ok": 0}, {"t": "Máximo a \\(x=5\\) m · altura \\(5\\) m · cae a \\(x=10\\) m", "ok": 0}, {"t": "Máximo a \\(x=10\\) m · altura \\(20\\) m · cae a \\(x=20\\) m", "ok": 0}], "exp": "\\(x_v=-\\frac{2}{2\\times(-0{,}1)}=10\\) m. \\(y_v=-0{,}1(100)+20=10\\) m. Cae al suelo: \\(-0{,}1x^2+2x=0 \\Rightarrow x(-0{,}1x+2)=0 \\Rightarrow x=20\\) m."}, {"niv": 3, "tex": "Dos rectas son \\(r: y=3x-2\\) y \\(s: y=-\\frac{1}{3}x+k\\). ¿Son perpendiculares? Si se cruzan en el punto de abscisa \\(x=3\\), ¿cuánto vale \\(k\\)?", "ops": [{"t": "Sí son perpendiculares · \\(k=8\\)", "ok": 1}, {"t": "No son perpendiculares · \\(k=6\\)", "ok": 0}, {"t": "Sí son perpendiculares · \\(k=10\\)", "ok": 0}, {"t": "No son perpendiculares · \\(k=8\\)", "ok": 0}], "exp": "\\(3\\times(-\\frac{1}{3})=-1\\) → perpendiculares. En \\(x=3\\): \\(r(3)=7\\). \\(s(3)=-1+k=7 \\Rightarrow k=8\\)."}, {"niv": 3, "tex": "La factura eléctrica sigue el modelo \\(F=0{,}12E+22\\), donde \\(E\\) son los kWh consumidos y \\(F\\) el importe en euros. En junio se pagaron \\(58\\) € y en julio \\(76\\) €. ¿Cuántos kWh se consumieron en cada mes? ¿Cuánto aumentó el consumo en tanto por ciento?", "ops": [{"t": "Junio 300 kWh, julio 450 kWh · aumento del 50%", "ok": 1}, {"t": "Junio 250 kWh, julio 400 kWh · aumento del 60%", "ok": 0}, {"t": "Junio 300 kWh, julio 400 kWh · aumento del 33%", "ok": 0}, {"t": "Junio 360 kWh, julio 450 kWh · aumento del 25%", "ok": 0}], "exp": "Junio: \\(0{,}12E+22=58 \\Rightarrow E=300\\) kWh. Julio: \\(0{,}12E+22=76 \\Rightarrow E=450\\) kWh. Aumento: \\(\\frac{450-300}{300}\\times100=50\\%\\)."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

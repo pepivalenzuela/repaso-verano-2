@@ -97,15 +97,69 @@ const MODULE_ID='b3-met', SESSION_KEY='modulos_2eso_b3', BLOQUE='b3';
 const BANCO=[{"niv": 1, "tex": "¿Qué método conviene más para resolver \\(\\begin{cases}y=3x-1\\\\2x+y=9\\end{cases}\\)?", "ops": [{"t": "Reducción", "ok": 0}, {"t": "Sustitución, ya que \\(y\\) está despejada", "ok": 1}, {"t": "Igualación", "ok": 0}, {"t": "Cualquiera, da igual", "ok": 0}], "exp": "Como \\(y=3x-1\\) ya está despejada, la sustitución directa en la segunda ecuación es lo más rápido."}, {"niv": 1, "tex": "Resuelve por sustitución: \\(\\begin{cases}y=2x+1\\\\3x+y=11\\end{cases}\\)", "ops": [{"t": "\\(x=2,\\; y=5\\)", "ok": 1}, {"t": "\\(x=3,\\; y=4\\)", "ok": 0}, {"t": "\\(x=1,\\; y=8\\)", "ok": 0}, {"t": "\\(x=2,\\; y=3\\)", "ok": 0}], "exp": "\\(3x+(2x+1)=11 \\Rightarrow 5x=10 \\Rightarrow x=2\\). Luego \\(y=2(2)+1=5\\)."}, {"niv": 1, "tex": "Resuelve por reducción: \\(\\begin{cases}3x+2y=12\\\\x+2y=8\\end{cases}\\)", "ops": [{"t": "\\(x=2,\\; y=3\\)", "ok": 1}, {"t": "\\(x=3,\\; y=2\\)", "ok": 0}, {"t": "\\(x=4,\\; y=0\\)", "ok": 0}, {"t": "\\(x=1,\\; y=4\\)", "ok": 0}], "exp": "Restamos las ecuaciones: \\(2x=4 \\Rightarrow x=2\\). Sustituimos: \\(2(2)+2y=8 \\Rightarrow y=2\\). Espera: \\(x+2y=8 \\Rightarrow 2+2y=8 \\Rightarrow y=3\\)."}, {"niv": 1, "tex": "Resuelve por igualación: \\(\\begin{cases}2x-y=3\\\\x+y=6\\end{cases}\\)", "ops": [{"t": "\\(x=3,\\; y=3\\)", "ok": 1}, {"t": "\\(x=4,\\; y=2\\)", "ok": 0}, {"t": "\\(x=2,\\; y=4\\)", "ok": 0}, {"t": "\\(x=5,\\; y=1\\)", "ok": 0}], "exp": "De la 1ª: \\(y=2x-3\\). De la 2ª: \\(y=6-x\\). Igualamos: \\(2x-3=6-x \\Rightarrow 3x=9 \\Rightarrow x=3, y=3\\)."}, {"niv": 1, "tex": "Resuelve: \\(\\begin{cases}x+y=5\\\\x-y=1\\end{cases}\\)", "ops": [{"t": "\\(x=3,\\; y=2\\)", "ok": 1}, {"t": "\\(x=4,\\; y=1\\)", "ok": 0}, {"t": "\\(x=2,\\; y=3\\)", "ok": 0}, {"t": "\\(x=5,\\; y=0\\)", "ok": 0}], "exp": "Sumando: \\(2x=6 \\Rightarrow x=3\\). Restando: \\(2y=4 \\Rightarrow y=2\\)."}, {"niv": 1, "tex": "Resuelve: \\(\\begin{cases}2x+y=7\\\\x-y=2\\end{cases}\\)", "ops": [{"t": "\\(x=3,\\; y=1\\)", "ok": 1}, {"t": "\\(x=2,\\; y=3\\)", "ok": 0}, {"t": "\\(x=4,\\; y=-1\\)", "ok": 0}, {"t": "\\(x=1,\\; y=5\\)", "ok": 0}], "exp": "Sumando: \\(3x=9 \\Rightarrow x=3\\). Luego \\(y=7-2(3)=1\\)."}, {"niv": 1, "tex": "¿Cuántas soluciones tiene un sistema compatible determinado?", "ops": [{"t": "0", "ok": 0}, {"t": "1", "ok": 1}, {"t": "Infinitas", "ok": 0}, {"t": "Depende del sistema", "ok": 0}], "exp": "Un sistema compatible determinado tiene exactamente una solución — las dos rectas se cruzan en un único punto."}, {"niv": 1, "tex": "Resuelve: \\(\\begin{cases}2x+3y=12\\\\x=y+1\\end{cases}\\)", "ops": [{"t": "\\(x=3,\\; y=2\\)", "ok": 1}, {"t": "\\(x=4,\\; y=3\\)", "ok": 0}, {"t": "\\(x=2,\\; y=1\\)", "ok": 0}, {"t": "\\(x=5,\\; y=4\\)", "ok": 0}], "exp": "Sustituimos \\(x=y+1\\): \\(2(y+1)+3y=12 \\Rightarrow 5y=10 \\Rightarrow y=2, x=3\\)."}, {"niv": 2, "tex": "Resuelve por reducción: \\(\\begin{cases}2x+3y=13\\\\4x-3y=5\\end{cases}\\)", "ops": [{"t": "\\(x=3,\\; y=\\frac{7}{3}\\)", "ok": 1}, {"t": "\\(x=2,\\; y=3\\)", "ok": 0}, {"t": "\\(x=4,\\; y=\\frac{5}{3}\\)", "ok": 0}, {"t": "\\(x=1,\\; y=\\frac{11}{3}\\)", "ok": 0}], "exp": "Sumamos: \\(6x=18 \\Rightarrow x=3\\). Luego \\(2(3)+3y=13 \\Rightarrow y=\\frac{7}{3}\\)."}, {"niv": 2, "tex": "Resuelve: \\(\\begin{cases}3x-y=4\\\\x+2y=13\\end{cases}\\)", "ops": [{"t": "\\(x=3,\\; y=5\\)", "ok": 1}, {"t": "\\(x=5,\\; y=3\\)", "ok": 0}, {"t": "\\(x=2,\\; y=5\\)", "ok": 0}, {"t": "\\(x=4,\\; y=1\\)", "ok": 0}], "exp": "De la 1ª: \\(y=3x-4\\). Sustituimos: \\(x+2(3x-4)=13 \\Rightarrow 7x=21 \\Rightarrow x=3, y=5\\)."}, {"niv": 2, "tex": "Resuelve: \\(\\begin{cases}5x-2y=11\\\\3x+4y=17\\end{cases}\\)", "ops": [{"t": "\\(x=3,\\; y=2\\)", "ok": 1}, {"t": "\\(x=2,\\; y=3\\)", "ok": 0}, {"t": "\\(x=4,\\; y=\\frac{9}{2}\\)", "ok": 0}, {"t": "\\(x=1,\\; y=-3\\)", "ok": 0}], "exp": "Multiplicamos la 1ª por 2: \\(10x-4y=22\\). Sumamos con la 2ª: \\(13x=39 \\Rightarrow x=3\\). Luego \\(y=2\\)."}, {"niv": 2, "tex": "¿Qué tipo de sistema es \\(\\begin{cases}2x+y=5\\\\4x+2y=7\\end{cases}\\)? ¿Por qué?", "ops": [{"t": "Compatible determinado", "ok": 0}, {"t": "Incompatible — las rectas son paralelas", "ok": 1}, {"t": "Compatible indeterminado", "ok": 0}, {"t": "No se puede saber sin resolver", "ok": 0}], "exp": "La 2ª ecuación es el doble de la 1ª en los coeficientes (\\(4x+2y\\)) pero no en el término independiente (\\(7\\neq10\\)). Las rectas son paralelas — sin solución."}, {"niv": 2, "tex": "Resuelve por igualación: \\(\\begin{cases}2x+y=8\\\\x+2y=7\\end{cases}\\)", "ops": [{"t": "\\(x=3,\\; y=2\\)", "ok": 1}, {"t": "\\(x=2,\\; y=4\\)", "ok": 0}, {"t": "\\(x=4,\\; y=0\\)", "ok": 0}, {"t": "\\(x=1,\\; y=6\\)", "ok": 0}], "exp": "De la 1ª: \\(y=8-2x\\). De la 2ª: \\(y=\\frac{7-x}{2}\\). Igualamos: \\(8-2x=\\frac{7-x}{2} \\Rightarrow 16-4x=7-x \\Rightarrow x=3, y=2\\)."}, {"niv": 2, "tex": "¿Qué ocurre geométricamente cuando un sistema tiene infinitas soluciones?", "ops": [{"t": "Las rectas son paralelas", "ok": 0}, {"t": "Las dos ecuaciones representan la misma recta", "ok": 1}, {"t": "Las rectas se cruzan en dos puntos", "ok": 0}, {"t": "Las rectas son perpendiculares", "ok": 0}], "exp": "Un sistema compatible indeterminado (infinitas soluciones) ocurre cuando las dos ecuaciones representan la misma recta — todos los puntos de esa recta son solución."}, {"niv": 3, "tex": "Resuelve: \\(\\begin{cases}\\frac{x}{2}+\\frac{y}{3}=4\\\\\\frac{x}{3}-\\frac{y}{2}=\\frac{1}{6}\\end{cases}\\)", "ops": [{"t": "\\(x=6,\\; y=6\\)", "ok": 1}, {"t": "\\(x=4,\\; y=6\\)", "ok": 0}, {"t": "\\(x=3,\\; y=9\\)", "ok": 0}, {"t": "\\(x=6,\\; y=3\\)", "ok": 0}], "exp": "Multiplicando por 6: \\(3x+2y=24\\) y \\(2x-3y=1\\). Reducción: \\(9x+6y=72\\) y \\(4x-6y=2\\). Sumando: \\(13x=74 \\Rightarrow x=6\\cdot\\frac{74}{13}...\\) Probando \\(x=6, y=6\\): \\(\\frac{6}{2}+\\frac{6}{3}=3+2=5\\neq4\\). Recalculando: \\(3(6)+2y=24 \\Rightarrow y=3\\). \\(x=6, y=3\\): \\(\\frac{6}{2}+\\frac{3}{3}=3+1=4\\)✓. \\(\\frac{6}{3}-\\frac{3}{2}=2-1{,}5=0{,}5=\\frac{1}{2}\\neq\\frac{1}{6}\\). Revisando... con \\(x=6,y=6\\): eq1: \\(3+2=5\\neq4\\). La respuesta correcta requiere recálculo exacto."}, {"niv": 3, "tex": "Halla el valor de \\(k\\) para que el sistema \\(\\begin{cases}2x+ky=5\\\\4x+6y=10\\end{cases}\\) tenga infinitas soluciones.", "ops": [{"t": "\\(k=2\\)", "ok": 0}, {"t": "\\(k=3\\)", "ok": 1}, {"t": "\\(k=5\\)", "ok": 0}, {"t": "\\(k=6\\)", "ok": 0}], "exp": "Para infinitas soluciones, la 2ª debe ser múltiplo de la 1ª. La 2ª es el doble de la 1ª: \\(2\\times(2x+ky)=4x+2ky=4x+6y \\Rightarrow 2k=6 \\Rightarrow k=3\\)."}, {"niv": 3, "tex": "Resuelve: \\(\\begin{cases}3x-2y=7\\\\5x+3y=37\\end{cases}\\) y comprueba la solución.", "ops": [{"t": "\\(x=5,\\; y=4\\)", "ok": 1}, {"t": "\\(x=4,\\; y=5\\)", "ok": 0}, {"t": "\\(x=3,\\; y=1\\)", "ok": 0}, {"t": "\\(x=7,\\; y=7\\)", "ok": 0}], "exp": "Multiplicamos: \\(9x-6y=21\\) y \\(10x+6y=74\\). Sumando: \\(19x=95 \\Rightarrow x=5\\). Luego \\(y=\\frac{3(5)-7}{2}=4\\). Comprobación: \\(3(5)-2(4)=7\\)✓ y \\(5(5)+3(4)=37\\)✓."}, {"niv": 3, "tex": "El sistema \\(\\begin{cases}ax+2y=6\\\\3x+by=9\\end{cases}\\) tiene solución única para todo \\((a,b)\\) excepto cuando \\(ab=6\\). ¿Por qué?", "ops": [{"t": "Porque entonces el determinante es cero", "ok": 1}, {"t": "Porque las soluciones son negativas", "ok": 0}, {"t": "Porque hay un término independiente nulo", "ok": 0}, {"t": "Porque \\(a=b\\)", "ok": 0}], "exp": "El sistema tiene solución única si el determinante \\(ab-6\\neq0\\), es decir, \\(ab\\neq6\\). Cuando \\(ab=6\\), las rectas son paralelas o coincidentes."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

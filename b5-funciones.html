@@ -98,15 +98,69 @@ const MODULE_ID='b5-func', SESSION_KEY='modulos_2eso_b5', BLOQUE='b5';
 const BANCO=[{"niv": 1, "tex": "¿Cuál de estas relaciones es una función?", "ops": [{"t": "A cada persona le corresponden varias edades", "ok": 0}, {"t": "A cada DNI le corresponde exactamente una persona", "ok": 1}, {"t": "A cada ciudad le corresponden varios países", "ok": 0}, {"t": "A cada número le corresponden dos raíces cuadradas", "ok": 0}], "exp": "Una función asigna exactamente un valor de salida a cada valor de entrada. Un DNI identifica unívocamente a una persona."}, {"niv": 1, "tex": "En la función \\(y=2x-3\\), ¿cuánto vale \\(y\\) cuando \\(x=4\\)?", "ops": [{"t": "3", "ok": 0}, {"t": "5", "ok": 1}, {"t": "11", "ok": 0}, {"t": "-1", "ok": 0}], "exp": "\\(y=2(4)-3=8-3=5\\)."}, {"niv": 1, "tex": "¿Qué significa que una función sea creciente en un intervalo?", "ops": [{"t": "Que su gráfica es una línea recta", "ok": 0}, {"t": "Que al aumentar \\(x\\), también aumenta \\(y\\)", "ok": 1}, {"t": "Que siempre tiene valores positivos", "ok": 0}, {"t": "Que pasa por el origen", "ok": 0}], "exp": "Creciente significa que cuando \\(x\\) aumenta, \\(y\\) también aumenta. La gráfica sube de izquierda a derecha."}, {"niv": 1, "tex": "Una función tiene los valores: \\(f(1)=5\\), \\(f(2)=3\\), \\(f(3)=1\\), \\(f(4)=-1\\). ¿Es creciente o decreciente?", "ops": [{"t": "Creciente", "ok": 0}, {"t": "Decreciente", "ok": 1}, {"t": "Primero crece y luego decrece", "ok": 0}, {"t": "Constante", "ok": 0}], "exp": "A medida que \\(x\\) aumenta, \\(y\\) disminuye (\\(5\\to3\\to1\\to-1\\)). La función es decreciente."}, {"niv": 1, "tex": "¿Cuántos cortes tiene la gráfica de \\(y=x^2-4\\) con el eje \\(x\\)?", "ops": [{"t": "Ninguno", "ok": 0}, {"t": "1", "ok": 0}, {"t": "2", "ok": 1}, {"t": "4", "ok": 0}], "exp": "\\(x^2-4=0 \\Rightarrow x=\\pm2\\). Dos cortes: \\((-2,0)\\) y \\((2,0)\\)."}, {"niv": 1, "tex": "La gráfica de una función corta el eje \\(y\\) en \\((0,3)\\). ¿Qué nos dice esto?", "ops": [{"t": "Que la función pasa por \\((3,0)\\)", "ok": 0}, {"t": "Que \\(f(0)=3\\)", "ok": 1}, {"t": "Que la pendiente es 3", "ok": 0}, {"t": "Que la función siempre vale 3", "ok": 0}], "exp": "El corte con el eje \\(y\\) ocurre en \\(x=0\\). Entonces \\(f(0)=3\\)."}, {"niv": 1, "tex": "¿Cuál es el dominio natural de la función \\(y=\\sqrt{x}\\)?", "ops": [{"t": "Todos los reales", "ok": 0}, {"t": "\\(x\\geq0\\) (reales no negativos)", "ok": 1}, {"t": "\\(x>0\\) (reales positivos)", "ok": 0}, {"t": "Todos los enteros", "ok": 0}], "exp": "La raíz cuadrada solo está definida para valores no negativos: dominio \\(x\\geq0\\)."}, {"niv": 1, "tex": "Una función tiene un máximo en \\(x=3\\). ¿Qué significa esto?", "ops": [{"t": "Que \\(f(3)\\) es el mayor valor posible de \\(x\\)", "ok": 0}, {"t": "Que \\(f(3)\\) es mayor que los valores de \\(f\\) en puntos cercanos", "ok": 1}, {"t": "Que la función siempre vale \\(f(3)\\)", "ok": 0}, {"t": "Que la función corta al eje \\(x\\) en \\(x=3\\)", "ok": 0}], "exp": "Un máximo local es un punto donde la función alcanza un valor mayor que en los puntos vecinos. La gráfica «sube y luego baja» en ese punto."}, {"niv": 2, "tex": "La gráfica de una función comienza creciendo, llega a un máximo en \\(x=2\\), luego decrece hasta un mínimo en \\(x=5\\), y vuelve a crecer. Describe los intervalos de crecimiento y decrecimiento.", "ops": [{"t": "Crece en \\((-\\infty,2)\\), decrece en \\((2,5)\\), crece en \\((5,+\\infty)\\)", "ok": 1}, {"t": "Crece en \\((2,5)\\), decrece en el resto", "ok": 0}, {"t": "Siempre crece excepto en \\(x=2\\) y \\(x=5\\)", "ok": 0}, {"t": "Decrece en \\((-\\infty,2)\\), crece en \\((2,5)\\)", "ok": 0}], "exp": "Antes del máximo sube → crece en \\((-\\infty,2)\\). Entre máximo y mínimo baja → decrece en \\((2,5)\\). Tras el mínimo sube → crece en \\((5,+\\infty)\\)."}, {"niv": 2, "tex": "Dada la tabla: \\(x: -2,-1,0,1,2\\) · \\(y: 4,1,0,1,4\\). ¿A qué función corresponde? ¿Es par, impar o ninguna?", "ops": [{"t": "\\(y=x^2\\), función par", "ok": 1}, {"t": "\\(y=x^2+1\\), función par", "ok": 0}, {"t": "\\(y=2x\\), función impar", "ok": 0}, {"t": "\\(y=|x|\\), ninguna", "ok": 0}], "exp": "\\(f(-x)=(-x)^2=x^2=f(x)\\) → función par. La tabla corresponde a \\(y=x^2\\)."}, {"niv": 2, "tex": "La velocidad de un ciclista durante una etapa de montaña sigue este patrón: empieza a \\(25\\) km/h, baja progresivamente durante \\(30\\) min hasta \\(8\\) km/h (cima), y luego sube hasta \\(45\\) km/h en los siguientes \\(20\\) min. ¿Cuál es el mínimo? ¿Cuándo se alcanza?", "ops": [{"t": "Mínimo \\(8\\) km/h · a los \\(30\\) min", "ok": 1}, {"t": "Mínimo \\(25\\) km/h · al inicio", "ok": 0}, {"t": "Mínimo \\(8\\) km/h · a los \\(20\\) min", "ok": 0}, {"t": "Mínimo \\(45\\) km/h · al final", "ok": 0}], "exp": "El valor mínimo de velocidad es \\(8\\) km/h, que se alcanza al llegar a la cima, es decir, a los \\(30\\) minutos."}, {"niv": 2, "tex": "¿Cuál de estas gráficas describe correctamente la cantidad de agua en una bañera que se llena, se queda llena durante un rato y luego se vacía?", "ops": [{"t": "Creciente → constante → decreciente", "ok": 1}, {"t": "Constante → creciente → constante", "ok": 0}, {"t": "Siempre creciente", "ok": 0}, {"t": "Creciente → decreciente → constante", "ok": 0}], "exp": "El agua entra (crece), la bañera está llena (constante), y luego el tapón se abre (decrece). La gráfica es creciente → constante → decreciente."}, {"niv": 2, "tex": "Completa la tabla para \\(f(x)=x^2-2x-3\\): calcula \\(f(-1)\\), \\(f(0)\\), \\(f(1)\\), \\(f(3)\\), \\(f(4)\\).", "ops": [{"t": "\\(0,\\;-3,\\;-4,\\;0,\\;5\\)", "ok": 1}, {"t": "\\(-1,\\;-3,\\;-4,\\;1,\\;5\\)", "ok": 0}, {"t": "\\(0,\\;3,\\;-4,\\;0,\\;5\\)", "ok": 0}, {"t": "\\(2,\\;-3,\\;0,\\;0,\\;5\\)", "ok": 0}], "exp": "\\(f(-1)=1+2-3=0\\), \\(f(0)=-3\\), \\(f(1)=1-2-3=-4\\), \\(f(3)=9-6-3=0\\), \\(f(4)=16-8-3=5\\)."}, {"niv": 3, "tex": "Una empresa de alquiler de coches cobra según la fórmula \\(C=0{,}15d+40\\) para el Plan A y \\(C=0{,}25d\\) para el Plan B, donde \\(d\\) es la distancia en km. Un cliente no sabe cuántos km recorrerá. Analiza ambas funciones: ¿cuál es más barata para distancias cortas? ¿A qué distancia se igualan? ¿Qué Plan elige un cliente que va a recorrer 450 km y otro que va a recorrer 350 km?", "ops": [{"t": "B para cortas · igualan a 400 km · Plan A para 450, Plan B para 350", "ok": 1}, {"t": "A para cortas · igualan a 400 km · Plan A siempre", "ok": 0}, {"t": "B para cortas · igualan a 300 km · Plan B siempre", "ok": 0}, {"t": "Igualan a 200 km · Plan A siempre", "ok": 0}], "exp": "Para \\(d\\) pequeña: B vale \\(0{,}25d\\) (sin cuota fija) → B más barata al inicio. Igualan: \\(0{,}15d+40=0{,}25d \\Rightarrow 40=0{,}1d \\Rightarrow d=400\\) km. Para 450 km: A=\\(107{,}5\\)€, B=\\(112{,}5\\)€ → Plan A. Para 350 km: A=\\(92{,}5\\)€, B=\\(87{,}5\\)€ → Plan B."}, {"niv": 3, "tex": "La gráfica de una función \\(f\\) pasa por los puntos \\(A(-2,7)\\), \\(B(0,3)\\), \\(C(2,-1)\\), \\(D(4,-5)\\). ¿Es lineal? Justifica. Si lo es, halla su expresión y di cuándo corta al eje \\(x\\).", "ops": [{"t": "Sí es lineal · \\(y=-2x+3\\) · corte en \\(x=1{,}5\\)", "ok": 1}, {"t": "No es lineal, los puntos no están alineados", "ok": 0}, {"t": "Sí es lineal · \\(y=2x+3\\) · corte en \\(x=-1{,}5\\)", "ok": 0}, {"t": "Sí es lineal · \\(y=-x+3\\) · corte en \\(x=3\\)", "ok": 0}], "exp": "Diferencias \\(\\Delta y/\\Delta x\\): \\((-1-3)/(2-0)=-2\\) siempre. Pendiente constante → lineal. Punto \\((0,3)\\) → \\(b=3\\). Ecuación: \\(y=-2x+3\\). Corte eje \\(x\\): \\(-2x+3=0 \\Rightarrow x=1{,}5\\)."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

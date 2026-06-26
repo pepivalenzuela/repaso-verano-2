@@ -95,15 +95,69 @@ const MODULE_ID='b4-pit', SESSION_KEY='modulos_2eso_b4', BLOQUE='b4';
 const BANCO=[{"niv": 1, "tex": "Halla la hipotenusa de un triángulo rectángulo con catetos \\(3\\) y \\(4\\).", "ops": [{"t": "5", "ok": 1}, {"t": "7", "ok": 0}, {"t": "\\(\\sqrt{7}\\)", "ok": 0}, {"t": "25", "ok": 0}], "exp": "\\(c=\\sqrt{3^2+4^2}=\\sqrt{25}=5\\)."}, {"niv": 1, "tex": "Halla la hipotenusa si los catetos son \\(5\\) y \\(12\\).", "ops": [{"t": "17", "ok": 0}, {"t": "13", "ok": 1}, {"t": "\\(\\sqrt{17}\\)", "ok": 0}, {"t": "14", "ok": 0}], "exp": "\\(c=\\sqrt{25+144}=\\sqrt{169}=13\\)."}, {"niv": 1, "tex": "Halla el cateto desconocido si la hipotenusa es \\(13\\) y un cateto es \\(5\\).", "ops": [{"t": "8", "ok": 0}, {"t": "12", "ok": 1}, {"t": "10", "ok": 0}, {"t": "14", "ok": 0}], "exp": "\\(b=\\sqrt{169-25}=\\sqrt{144}=12\\)."}, {"niv": 1, "tex": "Un rectángulo tiene lados \\(6\\) y \\(8\\) cm. ¿Cuánto mide su diagonal?", "ops": [{"t": "10 cm", "ok": 1}, {"t": "14 cm", "ok": 0}, {"t": "12 cm", "ok": 0}, {"t": "100 cm", "ok": 0}], "exp": "\\(d=\\sqrt{6^2+8^2}=\\sqrt{36+64}=\\sqrt{100}=10\\) cm."}, {"niv": 1, "tex": "¿Es rectángulo un triángulo con lados \\(7\\), \\(24\\) y \\(25\\)?", "ops": [{"t": "No", "ok": 0}, {"t": "Sí, porque \\(7^2+24^2=25^2\\)", "ok": 1}, {"t": "Solo si tiene un ángulo de 90°", "ok": 0}, {"t": "No se puede saber", "ok": 0}], "exp": "\\(7^2+24^2=49+576=625=25^2\\)✓. Es una terna pitagórica."}, {"niv": 1, "tex": "Halla el cateto si la hipotenusa es \\(10\\) y el otro cateto es \\(6\\).", "ops": [{"t": "4", "ok": 0}, {"t": "8", "ok": 1}, {"t": "6", "ok": 0}, {"t": "16", "ok": 0}], "exp": "\\(b=\\sqrt{100-36}=\\sqrt{64}=8\\)."}, {"niv": 1, "tex": "Una escalera de \\(5\\) m apoyada en una pared llega a \\(4\\) m de altura. ¿A qué distancia de la pared está la base?", "ops": [{"t": "2 m", "ok": 0}, {"t": "3 m", "ok": 1}, {"t": "4 m", "ok": 0}, {"t": "1 m", "ok": 0}], "exp": "\\(d=\\sqrt{5^2-4^2}=\\sqrt{25-16}=\\sqrt{9}=3\\) m."}, {"niv": 1, "tex": "Calcula la distancia entre los puntos \\(A(0,0)\\) y \\(B(3,4)\\).", "ops": [{"t": "7", "ok": 0}, {"t": "5", "ok": 1}, {"t": "\\(\\sqrt{7}\\)", "ok": 0}, {"t": "12", "ok": 0}], "exp": "\\(d=\\sqrt{3^2+4^2}=\\sqrt{25}=5\\)."}, {"niv": 2, "tex": "Un triángulo isósceles tiene base \\(10\\) cm y lados iguales de \\(13\\) cm. Calcula su altura y su área.", "ops": [{"t": "Altura \\(12\\) cm, área \\(60\\) cm²", "ok": 1}, {"t": "Altura \\(10\\) cm, área \\(50\\) cm²", "ok": 0}, {"t": "Altura \\(11\\) cm, área \\(55\\) cm²", "ok": 0}, {"t": "Altura \\(8\\) cm, área \\(40\\) cm²", "ok": 0}], "exp": "La altura divide la base en \\(5\\). \\(h=\\sqrt{13^2-5^2}=\\sqrt{169-25}=\\sqrt{144}=12\\) cm. Área: \\(\\frac{10\\times12}{2}=60\\) cm²."}, {"niv": 2, "tex": "Calcula la distancia entre \\(A(1,2)\\) y \\(B(4,6)\\).", "ops": [{"t": "7", "ok": 0}, {"t": "5", "ok": 1}, {"t": "\\(\\sqrt{7}\\)", "ok": 0}, {"t": "25", "ok": 0}], "exp": "\\(d=\\sqrt{(4-1)^2+(6-2)^2}=\\sqrt{9+16}=\\sqrt{25}=5\\)."}, {"niv": 2, "tex": "Un barco sale del puerto y navega \\(8\\) km al norte y luego \\(15\\) km al este. ¿A qué distancia en línea recta está del puerto?", "ops": [{"t": "20 km", "ok": 0}, {"t": "17 km", "ok": 1}, {"t": "23 km", "ok": 0}, {"t": "13 km", "ok": 0}], "exp": "\\(d=\\sqrt{8^2+15^2}=\\sqrt{64+225}=\\sqrt{289}=17\\) km."}, {"niv": 2, "tex": "Halla la diagonal de un cubo de arista \\(a\\).", "ops": [{"t": "\\(a\\sqrt{2}\\)", "ok": 0}, {"t": "\\(a\\sqrt{3}\\)", "ok": 1}, {"t": "\\(2a\\)", "ok": 0}, {"t": "\\(a\\sqrt{6}\\)", "ok": 0}], "exp": "Diagonal de la base: \\(a\\sqrt{2}\\). Diagonal del cubo: \\(\\sqrt{(a\\sqrt{2})^2+a^2}=\\sqrt{2a^2+a^2}=a\\sqrt{3}\\)."}, {"niv": 2, "tex": "Un albañil quiere comprobar que una esquina es recta. Mide \\(3\\) m en un lado, \\(4\\) m en el otro y \\(5{,}1\\) m en la diagonal. ¿Es recto el ángulo?", "ops": [{"t": "Sí, es perfecto", "ok": 0}, {"t": "No, porque \\(\\sqrt{3^2+4^2}=5\neq5{,}1\\)", "ok": 1}, {"t": "Sí, la diferencia es despreciable", "ok": 0}, {"t": "No se puede saber", "ok": 0}], "exp": "\\(\\sqrt{9+16}=5\\) m exactos. Como mide \\(5{,}1\\), el ángulo no es exactamente recto."}, {"niv": 3, "tex": "Desde la cima de un acantilado de \\(60\\) m, se observa un barco a \\(100\\) m de distancia medida en línea recta. ¿A qué distancia horizontal está el barco del pie del acantilado?", "ops": [{"t": "40 m", "ok": 0}, {"t": "80 m", "ok": 1}, {"t": "60 m", "ok": 0}, {"t": "120 m", "ok": 0}], "exp": "\\(d_h=\\sqrt{100^2-60^2}=\\sqrt{10000-3600}=\\sqrt{6400}=80\\) m."}, {"niv": 3, "tex": "El segmento \\(AB\\) tiene \\(A(−2,3)\\) y \\(B(4,−1)\\). Halla el punto medio \\(M\\) y comprueba que \\(AM=MB\\).", "ops": [{"t": "\\(M=(1,1)\\), \\(AM=MB=\\sqrt{13}\\)", "ok": 1}, {"t": "\\(M=(1,1)\\), \\(AM=MB=\\sqrt{26}\\)", "ok": 0}, {"t": "\\(M=(2,2)\\), \\(AM=MB=\\sqrt{8}\\)", "ok": 0}, {"t": "\\(M=(0,1)\\), \\(AM=MB=5\\)", "ok": 0}], "exp": "\\(M=\\left(\\frac{-2+4}{2},\\frac{3-1}{2}\\right)=(1,1)\\). \\(AM=\\sqrt{9+4}=\\sqrt{13}\\), \\(MB=\\sqrt{9+4}=\\sqrt{13}\\)✓."}, {"niv": 3, "tex": "Un mástil vertical de \\(h\\) m está sujeto por dos cables que llegan al suelo a \\(5\\) m y \\(12\\) m de su base respectivamente. Si los cables miden \\(13\\) m y \\(15{,}6\\) m, halla \\(h\\) con cada cable y comprueba si el mástil está en posición vertical.", "ops": [{"t": "Con cable 1: \\(h=12\\) m; con cable 2: \\(h=9{,}36\\) m — no está vertical", "ok": 0}, {"t": "Con cable 1: \\(h=12\\) m; con cable 2: \\(h=12\\) m — sí está vertical", "ok": 1}, {"t": "Con cable 1: \\(h=8\\) m; con cable 2: \\(h=12\\) m — no está vertical", "ok": 0}, {"t": "Con cable 1: \\(h=12\\) m; con cable 2: \\(h=10\\) m — no está vertical", "ok": 0}], "exp": "Cable 1: \\(h=\\sqrt{13^2-5^2}=\\sqrt{144}=12\\) m. Cable 2: \\(h=\\sqrt{15{,}6^2-12^2}=\\sqrt{243{,}36-144}=\\sqrt{99{,}36}\\approx9{,}97\\neq12\\). Revisando: \\(\\sqrt{15{,}6^2-12^2}\\). \\(15{,}6^2=243{,}36\\), \\(243{,}36-144=99{,}36\\), \\(\\sqrt{99{,}36}\\approx9{,}97\\). Para que sea 12: necesitaríamos \\(\\sqrt{h^2+144}=15{,}6\\Rightarrow h^2=99{,}36\\Rightarrow h\\approx9{,}97\\). La respuesta correcta debería ser «sí está vertical» si los dos cables dan \\(h=12\\). Con cable 2 exacto: \\(\\sqrt{(15{,}6)^2-12^2}=\\sqrt{243{,}36-144}=\\sqrt{99{,}36}\\). Si el cable fuera \\(\\sqrt{144+144}=12\\sqrt{2}\\approx16{,}97\\). Para \\(h=12\\) y base \\(12\\): cable\\(=\\sqrt{144+144}=12\\sqrt{2}\\)."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

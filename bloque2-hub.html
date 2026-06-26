@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bloque 2 · Álgebra · 1º ESO</title>
+  <title>Bloque 2 · Ecuaciones · 2º ESO</title>
   <style>
     :root{--color:#e65100;--color-c:#fff3e0;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -26,36 +26,38 @@
     .modulo-icon{font-size:1.6rem;margin-bottom:.5rem}
     .modulo-nombre{font-size:.98rem;font-weight:600;margin-bottom:.25rem}
     .modulo-desc{font-size:.82rem;color:#666;line-height:1.5}
+    .nota-orden{background:var(--color-c);border-left:4px solid var(--color);border-radius:8px;padding:.9rem 1.1rem;font-size:.88rem;color:#5d3000;margin-bottom:1.5rem;line-height:1.6}
     .btn-volver{display:inline-block;margin-top:1.5rem;padding:.6rem 1.2rem;background:white;border:1.5px solid var(--color);color:var(--color);border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
     .btn-volver:hover{background:var(--color-c)}
     footer{text-align:center;font-size:.82rem;color:#aaa;padding:1.5rem}
   </style>
 </head>
 <body>
-<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 1º ESO</span><span>·</span><strong>Bloque 2</strong></nav>
-<div class="hero"><div class="badge">Bloque 2</div><h1>Álgebra</h1><p>Lenguaje algebraico, monomios, polinomios y productos notables</p></div>
+<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 2º ESO</span><span>·</span><strong>Bloque 2</strong></nav>
+<div class="hero"><div class="badge">Bloque 2</div><h1>Ecuaciones</h1><p>Lineales, 2º grado y problemas</p></div>
 <main>
   <div class="progreso-bar-wrap">
     <span style="font-size:.85rem;color:#555;white-space:nowrap">Tu progreso</span>
     <div class="barra-outer"><div class="barra-inner" id="barra" style="width:0%"></div></div>
-    <span class="progreso-pct" id="pct">0 / 4</span>
+    <span class="progreso-pct" id="pct">0 / 3</span>
   </div>
+  <div class="nota-orden">💡 Se recomienda trabajar en orden: primero las lineales, luego las de 2º grado, y finalmente los problemas que combinan ambas.</div>
   <div class="modulos-grid">
-    <a href="b2-lenguaje-algebraico.html" class="modulo-card" id="card-b2-leng"><div class="modulo-icon">💬</div><div class="modulo-nombre">Lenguaje algebraico</div><div class="modulo-desc">Traducir frases a expresiones matemáticas</div></a>
-    <a href="b2-monomios.html" class="modulo-card" id="card-b2-mono"><div class="modulo-icon">📦</div><div class="modulo-nombre">Monomios</div><div class="modulo-desc">Grado, semejantes y operaciones</div></a>
-    <a href="b2-polinomios.html" class="modulo-card" id="card-b2-poli"><div class="modulo-icon">📊</div><div class="modulo-nombre">Polinomios y operaciones</div><div class="modulo-desc">Suma, resta, multiplicación y valor numérico</div></a>
-    <a href="b2-productos-notables.html" class="modulo-card" id="card-b2-pn"><div class="modulo-icon">⭐</div><div class="modulo-nombre">Productos notables</div><div class="modulo-desc">Cuadrado de la suma, diferencia y suma×diferencia</div></a>
+    <a href="b2-ec-lineales.html" class="modulo-card" id="card-b2-ec1"><div class="modulo-icon">📏</div><div class="modulo-nombre">Ecuaciones lineales</div><div class="modulo-desc">Con paréntesis y denominadores</div></a>
+    <a href="b2-ec-segundo-grado.html" class="modulo-card" id="card-b2-ec2"><div class="modulo-icon">∪</div><div class="modulo-nombre">Ecuaciones de 2º grado</div><div class="modulo-desc">Completas, incompletas y discriminante</div></a>
+    <a href="b2-problemas.html" class="modulo-card" id="card-b2-prob"><div class="modulo-icon">📝</div><div class="modulo-nombre">Problemas de ecuaciones</div><div class="modulo-desc">Edades, movimiento, mezclas, geometría</div></a>
   </div>
   <a href="portal.html" class="btn-volver">← Volver al portal</a>
 </main>
-<footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
+<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
 <script>
-const MODULOS=['b2-leng','b2-mono','b2-poli','b2-pn'];
+const MODULOS=['b2-ec1','b2-ec2','b2-prob'];
 function actualizarProgreso(){
-  const completados=JSON.parse(sessionStorage.getItem('modulos_1eso_b2')||'[]');
+  const completados=JSON.parse(sessionStorage.getItem('modulos_2eso_b2')||'[]');
   let cuenta=0;
   MODULOS.forEach(id=>{const card=document.getElementById('card-'+id);if(card&&completados.includes(id)){card.classList.add('completado');cuenta++;}});
-  document.getElementById('barra').style.width=Math.round(cuenta/MODULOS.length*100)+'%';
+  const pct=Math.round(cuenta/MODULOS.length*100);
+  document.getElementById('barra').style.width=pct+'%';
   document.getElementById('pct').textContent=cuenta+' / '+MODULOS.length;
 }
 actualizarProgreso();

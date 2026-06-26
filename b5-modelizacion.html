@@ -94,15 +94,69 @@ const MODULE_ID='b5-mod', SESSION_KEY='modulos_2eso_b5', BLOQUE='b5';
 const BANCO=[{"niv": 1, "tex": "Un fontanero cobra \\(25\\) € por desplazamiento más \\(18\\) € por cada hora de trabajo. ¿Cuál es el modelo que expresa el coste total \\(C\\) en función de las horas \\(h\\)?", "ops": [{"t": "\\(C=18h\\)", "ok": 0}, {"t": "\\(C=25+18h\\)", "ok": 1}, {"t": "\\(C=18+25h\\)", "ok": 0}, {"t": "\\(C=43h\\)", "ok": 0}], "exp": "\\(C=25+18h\\). El desplazamiento es fijo (independiente de las horas) y las horas tienen coste variable."}, {"niv": 1, "tex": "Un coche viaja a velocidad constante de \\(90\\) km/h. ¿Qué modelo relaciona distancia \\(d\\) y tiempo \\(t\\)? ¿Cuántos km recorre en \\(2{,}5\\) h?", "ops": [{"t": "\\(d=90t\\); \\(225\\) km", "ok": 1}, {"t": "\\(d=90+t\\); \\(92{,}5\\) km", "ok": 0}, {"t": "\\(t=90d\\); \\(225\\) km", "ok": 0}, {"t": "\\(d=90t^2\\); \\(562{,}5\\) km", "ok": 0}], "exp": "\\(d=90t\\) (proporcional directa). Para \\(t=2{,}5\\): \\(d=90\\times2{,}5=225\\) km."}, {"niv": 1, "tex": "El área de un cuadrado en función de su lado es \\(A=l^2\\). Si el lado se duplica, ¿cómo cambia el área?", "ops": [{"t": "Se duplica", "ok": 0}, {"t": "Se cuadruplica", "ok": 1}, {"t": "Se triplica", "ok": 0}, {"t": "No cambia", "ok": 0}], "exp": "Si \\(l\\to2l\\): \\(A=(2l)^2=4l^2\\). El área se multiplica por 4."}, {"niv": 1, "tex": "\\(8\\) obreros construyen un muro en \\(6\\) días. ¿Qué tipo de relación hay entre el número de obreros y los días necesarios?", "ops": [{"t": "Proporcional directa", "ok": 0}, {"t": "Proporcional inversa", "ok": 1}, {"t": "Lineal no proporcional", "ok": 0}, {"t": "Cuadrática", "ok": 0}], "exp": "A más obreros, menos días → proporcional inversa. \\(n\\times d=\\text{cte}=48\\). Modelo: \\(d=\\frac{48}{n}\\)."}, {"niv": 1, "tex": "Un depósito tiene ya \\(200\\) litros y se llena a razón de \\(50\\) L/min. ¿Qué modelo relaciona el volumen \\(V\\) con el tiempo \\(t\\) en minutos?", "ops": [{"t": "\\(V=50t\\)", "ok": 0}, {"t": "\\(V=200+50t\\)", "ok": 1}, {"t": "\\(V=200t+50\\)", "ok": 0}, {"t": "\\(V=250t\\)", "ok": 0}], "exp": "\\(V=200+50t\\). El depósito ya tiene 200 L de partida (término independiente) y gana 50 L por minuto (pendiente)."}, {"niv": 1, "tex": "¿Cuál de estas situaciones se modela mejor con \\(y=\\frac{k}{x}\\)?", "ops": [{"t": "El ahorro mensual a lo largo del tiempo", "ok": 0}, {"t": "El tiempo que tarda en llenarse una piscina según el caudal de entrada", "ok": 1}, {"t": "El precio total de comprar \\(n\\) artículos", "ok": 0}, {"t": "La distancia recorrida a velocidad constante", "ok": 0}], "exp": "Si el caudal es \\(q\\) litros/hora y la piscina tiene capacidad \\(k\\): tiempo \\(=\\frac{k}{q}\\). A mayor caudal, menos tiempo → proporcional inversa."}, {"niv": 1, "tex": "Una empresa de telefonía cobra \\(20\\) € al mes de cuota fija más \\(0{,}10\\) € por minuto. ¿Cuánto paga alguien que habla \\(150\\) minutos?", "ops": [{"t": "15 €", "ok": 0}, {"t": "35 €", "ok": 1}, {"t": "30 €", "ok": 0}, {"t": "50 €", "ok": 0}], "exp": "\\(C=20+0{,}10\\times150=20+15=35\\) €."}, {"niv": 1, "tex": "En una tabla de valores: \\(x=1\\to y=4\\), \\(x=2\\to y=7\\), \\(x=3\\to y=10\\). ¿Qué tipo de función es?", "ops": [{"t": "Cuadrática", "ok": 0}, {"t": "Lineal (crece 3 unidades por cada unidad de \\(x\\))", "ok": 1}, {"t": "Proporcional inversa", "ok": 0}, {"t": "Exponencial", "ok": 0}], "exp": "La diferencia entre valores consecutivos de \\(y\\) es constante (\\(+3\\)), lo que indica una función lineal. \\(y=3x+1\\)."}, {"niv": 2, "tex": "Una empresa produce camisetas. El coste fijo mensual es \\(800\\) € y cada camiseta cuesta \\(4\\) € producirla. Se venden a \\(12\\) € cada una. ¿A partir de cuántas unidades empieza a haber beneficio?", "ops": [{"t": "80 camisetas", "ok": 0}, {"t": "100 camisetas", "ok": 1}, {"t": "120 camisetas", "ok": 0}, {"t": "200 camisetas", "ok": 0}], "exp": "Ingresos: \\(12n\\). Costes: \\(800+4n\\). Beneficio: \\(12n>800+4n \\Rightarrow 8n>800 \\Rightarrow n>100\\). A partir de 101 camisetas hay beneficio."}, {"niv": 2, "tex": "La tabla muestra el consumo de agua de un municipio: año 1 → 50000 m³; año 2 → 53000 m³; año 3 → 56000 m³; año 4 → 59000 m³. Modela el consumo \\(C\\) en función del año \\(t\\) y predice el año 7.", "ops": [{"t": "\\(C=50000+3000t\\); año 7 → \\(68000\\) m³", "ok": 1}, {"t": "\\(C=50000t\\); año 7 → \\(350000\\) m³", "ok": 0}, {"t": "\\(C=3000t\\); año 7 → \\(21000\\) m³", "ok": 0}, {"t": "\\(C=50000+3000t^2\\); año 7 → \\(197000\\) m³", "ok": 0}], "exp": "Crece linealmente: \\(+3000\\) m³/año. Modelo: \\(C=50000+3000t\\) (con \\(t=0\\) al inicio). Para \\(t=6\\) (año 7): \\(50000+18000=68000\\) m³."}, {"niv": 2, "tex": "La temperatura de un horno industrial sube \\(15\\)°C por minuto desde \\(20\\)°C. ¿Cuándo alcanza \\(500\\)°C? ¿Qué representa el coeficiente de \\(t\\) en este modelo?", "ops": [{"t": "\\(t=32\\) min · la velocidad de calentamiento", "ok": 1}, {"t": "\\(t=25\\) min · la temperatura inicial", "ok": 0}, {"t": "\\(t=40\\) min · el calor total", "ok": 0}, {"t": "\\(t=33{,}3\\) min · los grados por segundo", "ok": 0}], "exp": "\\(T=20+15t=500 \\Rightarrow 15t=480 \\Rightarrow t=32\\) min. El coeficiente \\(15\\) es la pendiente: la velocidad de calentamiento en °C/min."}, {"niv": 2, "tex": "Un taxi cobra \\(2{,}50\\) € de bajada de bandera y \\(0{,}90\\) € por km. Un VTC cobra \\(1\\) € de base y \\(1{,}10\\) € por km. ¿A partir de qué distancia sale más barato el taxi?", "ops": [{"t": "7 km", "ok": 0}, {"t": "7{,}5 km", "ok": 1}, {"t": "10 km", "ok": 0}, {"t": "5 km", "ok": 0}], "exp": "Taxi: \\(C_T=2{,}5+0{,}9d\\). VTC: \\(C_V=1+1{,}1d\\). Igualar: \\(2{,}5+0{,}9d=1+1{,}1d \\Rightarrow 1{,}5=0{,}2d \\Rightarrow d=7{,}5\\) km. Para \\(d>7{,}5\\) km, el taxi es más barato."}, {"niv": 2, "tex": "Una pelota cae desde \\(45\\) m de altura. La altura en función del tiempo es \\(h=45-5t^2\\). ¿Cuándo toca el suelo? ¿Cuál es su altura a los \\(2\\) s?", "ops": [{"t": "Toca a los 3 s · altura 2 s = 25 m", "ok": 1}, {"t": "Toca a los 9 s · altura 2 s = 5 m", "ok": 0}, {"t": "Toca a los 3 s · altura 2 s = 35 m", "ok": 0}, {"t": "Toca a los 5 s · altura 2 s = 20 m", "ok": 0}], "exp": "\\(h=0 \\Rightarrow 45-5t^2=0 \\Rightarrow t^2=9 \\Rightarrow t=3\\) s. A \\(t=2\\): \\(h=45-20=25\\) m."}, {"niv": 3, "tex": "Una empresa tiene dos tarifas de envío. Tarifa A: \\(5\\) € fijos más \\(0{,}50\\) € por km. Tarifa B: \\(2\\) € fijos más \\(0{,}80\\) € por km. Una tienda online necesita hacer envíos de entre \\(1\\) y \\(20\\) km. ¿Para qué distancias conviene cada tarifa? ¿Cuánto se ahorra con la tarifa óptima en un envío de \\(15\\) km?", "ops": [{"t": "A conviene para >10 km · ahorro 0{,}50 €", "ok": 1}, {"t": "B conviene siempre · ahorro 1 €", "ok": 0}, {"t": "A conviene para <10 km · ahorro 1 €", "ok": 0}, {"t": "B conviene para >10 km · ahorro 0{,}50 €", "ok": 0}], "exp": "Igualar: \\(5+0{,}5d=2+0{,}8d \\Rightarrow 3=0{,}3d \\Rightarrow d=10\\) km. Para \\(d<10\\): B más barata. Para \\(d>10\\): A más barata. A 15 km: A=\\(12{,}5\\)€, B=\\(14\\)€. Ahorro: \\(1{,}5\\)€."}, {"niv": 3, "tex": "El número de bacterias en un cultivo sigue la tabla: \\(t=0\\to n=100\\), \\(t=1\\to n=200\\), \\(t=2\\to n=400\\), \\(t=3\\to n=800\\). ¿Es este crecimiento lineal o de otro tipo? Justifica. ¿Cuántas bacterias habrá a \\(t=5\\)?", "ops": [{"t": "Lineal · 1600 bacterias", "ok": 0}, {"t": "No es lineal (se duplica) · 3200 bacterias", "ok": 1}, {"t": "Cuadrático · 2500 bacterias", "ok": 0}, {"t": "Lineal · 1000 bacterias", "ok": 0}], "exp": "Cada hora se duplica: no es lineal (no hay diferencia constante). Es crecimiento exponencial: \\(n=100\\times2^t\\). A \\(t=5\\): \\(100\\times32=3200\\) bacterias."}, {"niv": 3, "tex": "Un granjero tiene \\(80\\) m de valla para cercar un corral rectangular. Quiere maximizar el área. Si un lado mide \\(x\\) metros, el área es \\(A=x(40-x)\\). ¿Cuánto deben medir los lados para el área máxima? ¿Cuántos m² es esa área?", "ops": [{"t": "20×20 = 400 m²", "ok": 1}, {"t": "10×30 = 300 m²", "ok": 0}, {"t": "15×25 = 375 m²", "ok": 0}, {"t": "25×15 = 375 m²", "ok": 0}], "exp": "\\(A=x(40-x)=-x^2+40x\\). El máximo está en el vértice: \\(x=-\\frac{40}{2(-1)}=20\\). Lados: \\(20\\times20=400\\) m². El cuadrado maximiza el área para un perímetro fijo."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

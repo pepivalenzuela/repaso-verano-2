@@ -94,15 +94,69 @@ const MODULE_ID='b4-pol', SESSION_KEY='modulos_2eso_b4', BLOQUE='b4';
 const BANCO=[{"niv": 1, "tex": "¿Cuál es la suma de los ángulos interiores de un pentágono?", "ops": [{"t": "360°", "ok": 0}, {"t": "540°", "ok": 1}, {"t": "720°", "ok": 0}, {"t": "900°", "ok": 0}], "exp": "\\((5-2)\\times180°=3\\times180°=540°\\)."}, {"niv": 1, "tex": "¿Cuánto mide cada ángulo interior de un octógono regular?", "ops": [{"t": "120°", "ok": 0}, {"t": "135°", "ok": 1}, {"t": "144°", "ok": 0}, {"t": "150°", "ok": 0}], "exp": "\\(\\frac{(8-2)\\times180°}{8}=\\frac{1080°}{8}=135°\\)."}, {"niv": 1, "tex": "¿Cuánto mide el ángulo exterior de un hexágono regular?", "ops": [{"t": "30°", "ok": 0}, {"t": "60°", "ok": 1}, {"t": "72°", "ok": 0}, {"t": "45°", "ok": 0}], "exp": "\\(\\frac{360°}{6}=60°\\). Los ángulos exteriores de cualquier polígono suman siempre \\(360°\\)."}, {"niv": 1, "tex": "¿Cuántas aristas tiene un cubo?", "ops": [{"t": "6", "ok": 0}, {"t": "8", "ok": 0}, {"t": "12", "ok": 1}, {"t": "10", "ok": 0}], "exp": "Un cubo tiene 6 caras, 8 vértices y 12 aristas. Verificación con Euler: \\(6+8-12=2\\)✓."}, {"niv": 1, "tex": "Un triángulo tiene ángulos \\(45°\\) y \\(75°\\). ¿Cuánto mide el tercero?", "ops": [{"t": "50°", "ok": 0}, {"t": "60°", "ok": 1}, {"t": "70°", "ok": 0}, {"t": "80°", "ok": 0}], "exp": "La suma de los ángulos de un triángulo es \\(180°\\). Tercero: \\(180°-45°-75°=60°\\)."}, {"niv": 1, "tex": "¿Cuántos lados tiene un polígono regular cuyos ángulos interiores miden \\(144°\\)?", "ops": [{"t": "8", "ok": 0}, {"t": "9", "ok": 0}, {"t": "10", "ok": 1}, {"t": "12", "ok": 0}], "exp": "\\(\\frac{(n-2)\\times180°}{n}=144° \\Rightarrow 180n-360=144n \\Rightarrow 36n=360 \\Rightarrow n=10\\)."}, {"niv": 1, "tex": "¿Qué sólido de Platón tiene 20 caras triangulares?", "ops": [{"t": "Dodecaedro", "ok": 0}, {"t": "Octaedro", "ok": 0}, {"t": "Icosaedro", "ok": 1}, {"t": "Tetraedro", "ok": 0}], "exp": "El icosaedro tiene 20 caras triangulares, 12 vértices y 30 aristas. Euler: \\(20+12-30=2\\)✓."}, {"niv": 1, "tex": "¿Cuál es la suma de los ángulos exteriores de cualquier polígono convexo?", "ops": [{"t": "180°", "ok": 0}, {"t": "270°", "ok": 0}, {"t": "360°", "ok": 1}, {"t": "Depende del número de lados", "ok": 0}], "exp": "La suma de los ángulos exteriores de cualquier polígono convexo es siempre \\(360°\\), independientemente del número de lados."}, {"niv": 2, "tex": "Un polígono regular tiene ángulos exteriores de \\(30°\\). ¿Cuántos lados tiene y cómo se llama?", "ops": [{"t": "10 lados — decágono", "ok": 0}, {"t": "12 lados — dodecágono", "ok": 1}, {"t": "8 lados — octógono", "ok": 0}, {"t": "9 lados — eneágono", "ok": 0}], "exp": "\\(n=\\frac{360°}{30°}=12\\) lados. Se llama dodecágono regular."}, {"niv": 2, "tex": "Verifica la fórmula de Euler para un tetraedro regular.", "ops": [{"t": "\\(C+V-A=4+4-6=2\\)✓", "ok": 1}, {"t": "\\(C+V-A=4+6-4=6\\)✗", "ok": 0}, {"t": "\\(C+V-A=6+4-4=6\\)✗", "ok": 0}, {"t": "\\(C+V-A=4+4-4=4\\)✗", "ok": 0}], "exp": "Tetraedro: 4 caras (triángulos), 4 vértices, 6 aristas. \\(4+4-6=2\\)✓."}, {"niv": 2, "tex": "En un triángulo isósceles, el ángulo del vértice mide \\(40°\\). ¿Cuánto miden los ángulos de la base?", "ops": [{"t": "60° cada uno", "ok": 0}, {"t": "70° cada uno", "ok": 1}, {"t": "80° cada uno", "ok": 0}, {"t": "50° cada uno", "ok": 0}], "exp": "El triángulo isósceles tiene dos ángulos iguales en la base. \\(40°+2\\alpha=180° \\Rightarrow \\alpha=70°\\)."}, {"niv": 2, "tex": "¿Puede existir un triángulo con ángulos de \\(90°\\), \\(90°\\) y \\(0°\\)? ¿Y con \\(91°\\), \\(50°\\) y \\(39°\\)?", "ops": [{"t": "No y sí", "ok": 0}, {"t": "No y no", "ok": 1}, {"t": "Sí y sí", "ok": 0}, {"t": "Sí y no", "ok": 0}], "exp": "El primero no: los ángulos deben ser positivos. El segundo: \\(91+50+39=180°\\) pero los ángulos deben ser estrictamente positivos y menores de \\(180°\\) — en este caso suman exactamente \\(180°\\), así que técnicamente es válido. Pero \\(91+50+39=180°\\)✓ → sí existe. Ambos son no y sí, pero la opción más cercana al razonamiento esperado es «no y no» si se considera que \\(0°\\) no es válido y \\(39+50+91=180\\) es exacto pero límite."}, {"niv": 2, "tex": "Un poliedro tiene 8 caras y 12 vértices. ¿Cuántas aristas tiene según la fórmula de Euler?", "ops": [{"t": "16", "ok": 0}, {"t": "18", "ok": 1}, {"t": "20", "ok": 0}, {"t": "22", "ok": 0}], "exp": "\\(C+V-A=2 \\Rightarrow 8+12-A=2 \\Rightarrow A=18\\)."}, {"niv": 3, "tex": "Un diseñador crea un mosaico con hexágonos regulares. ¿Por qué los hexágonos encajan perfectamente sin dejar huecos? Usa los ángulos para justificarlo.", "ops": [{"t": "Porque tienen 6 lados", "ok": 0}, {"t": "Porque su ángulo interior (120°) divide exactamente a 360°: 3×120°=360°", "ok": 1}, {"t": "Porque son regulares", "ok": 0}, {"t": "Porque la suma de sus ángulos es 720°", "ok": 0}], "exp": "En cada vértice del mosaico se juntan 3 hexágonos. \\(3\\times120°=360°\\) → encajan exactamente. Solo triángulos (60°×6), cuadrados (90°×4) y hexágonos (120°×3) pueden teselar el plano solos."}, {"niv": 3, "tex": "Un polígono tiene \\(n\\) lados. Si la diferencia entre su suma de ángulos interiores y la suma de sus ángulos exteriores es \\(900°\\), ¿cuántos lados tiene?", "ops": [{"t": "7", "ok": 1}, {"t": "8", "ok": 0}, {"t": "9", "ok": 0}, {"t": "6", "ok": 0}], "exp": "Suma interiores: \\((n-2)\\times180°\\). Suma exteriores: \\(360°\\). \\((n-2)\\times180-360=900 \\Rightarrow (n-2)\\times180=1260 \\Rightarrow n-2=7 \\Rightarrow n=9\\). Revisando: \\((9-2)\\times180=1260\\), \\(1260-360=900\\)✓. La respuesta es \\(n=9\\)."}, {"niv": 3, "tex": "Una abeja construye un panal hexagonal. Cada celda es un hexágono regular de lado \\(3\\) mm. La apotema (distancia del centro al lado) es \\(2{,}6\\) mm. ¿Cuál es el área de cada celda?", "ops": [{"t": "\\(23{,}4\\) mm²", "ok": 1}, {"t": "\\(27\\) mm²", "ok": 0}, {"t": "\\(18\\) mm²", "ok": 0}, {"t": "\\(31{,}2\\) mm²", "ok": 0}], "exp": "\\(A=\\frac{p\\times a}{2}=\\frac{6\\times3\\times2{,}6}{2}=\\frac{46{,}8}{2}=23{,}4\\) mm²."}];
 function shuffle(a){return a.sort(()=>Math.random()-.5);}
 function nuevaSerie(){
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
   const sel=[...shuffle(BANCO.filter(e=>e.niv===1)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===2)).slice(0,4),...shuffle(BANCO.filter(e=>e.niv===3)).slice(0,4)];
   const cont=document.getElementById('ejercicios-container');cont.innerHTML='';
   sel.forEach((q,i)=>{const lbl=['Básico','Medio','Avanzado'][q.niv-1],cls=['d1','d2','d3'][q.niv-1];cont.innerHTML+=`<div class="ejercicio"><span class="dificultad ${cls}">${lbl}</span><div class="enunciado">${q.tex}</div><div class="opciones">${q.ops.map((o,j)=>`<label class="opcion"><input type="radio" name="ej${i}" value="${j}"> ${o.t}</label>`).join('')}</div><button class="btn-comprobar" onclick="comprobar(${i})">Comprobar</button><div class="feedback" id="fb${i}"></div></div>`;});
-  window._sel=sel;if(window.MathJax)MathJax.typesetPromise([cont]);
+  window._sel=sel;
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='none';
+  document.getElementById('progreso-serie').textContent='';
+  document.getElementById('aviso-repetir').style.display='none';
+  document.getElementById('aviso-repetir').innerHTML='';
+  if(window.MathJax)MathJax.typesetPromise([cont]);
 }
-function comprobar(i){const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}const ok=q.ops[parseInt(sel.value)].ok===1;fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;MathJax.typesetPromise([fb]);}
-function enviarASheets(){const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';if(!n||!a)return;fetch(SHEETS_URL+'?accion=completar&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE,{method:'GET',mode:'no-cors'}).catch(()=>{});}
-function marcarCompletado(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(!c.includes(MODULE_ID))c.push(MODULE_ID);sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));enviarASheets();document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
-(function(){const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}})();
+function comprobar(i){
+  if(window._respondidas.has(i))return;
+  const q=window._sel[i],sel=document.querySelector(`input[name="ej${i}"]:checked`),fb=document.getElementById('fb'+i);
+  if(!sel){fb.style.display='block';fb.className='feedback incorrecto';fb.textContent='Selecciona una opción.';return;}
+  window._respondidas.add(i);
+  window._comprobados++;
+  const ok=q.ops[parseInt(sel.value)].ok===1;
+  if(ok)window._aciertos++;
+  fb.style.display='block';fb.className=ok?'feedback correcto':'feedback incorrecto';
+  fb.innerHTML=ok?'✓ ¡Correcto! '+q.exp:'✗ No es correcto. '+q.exp;
+  MathJax.typesetPromise([fb]);
+  actualizarProgresoCuestionario();
+}
+function actualizarProgresoCuestionario(){
+  const total=window._sel?window._sel.length:12;
+  const respondidas=window._respondidas.size;
+  const pct=Math.round(window._aciertos/total*100);
+  document.getElementById('progreso-serie').textContent='Respondidas: '+respondidas+'/'+total+' · Aciertos: '+window._aciertos+' ('+pct+'%)';
+  if(respondidas===total && !window._serieEnviada){
+    window._serieEnviada=true;
+    const aprobado=window._aciertos>=Math.ceil(total*0.8);
+    enviarIntento(window._aciertos,total,aprobado);
+    if(aprobado){
+      document.getElementById('completar-wrap').style.display='block';
+      document.getElementById('aviso-repetir').style.display='none';
+    } else {
+      document.getElementById('completar-wrap').style.display='none';
+      document.getElementById('aviso-repetir').style.display='block';
+      document.getElementById('aviso-repetir').innerHTML='⚠️ Has acertado '+window._aciertos+' de '+total+' ('+pct+'%). Necesitas al menos el 80% para completar el módulo. Pulsa <strong>↻ Nueva serie</strong> e inténtalo de nuevo.';
+    }
+  }
+}
+function enviarIntento(aciertos,total,aprobado){
+  const n=sessionStorage.getItem('alumno_nombre')||'',a=sessionStorage.getItem('alumno_apellidos')||'',g=sessionStorage.getItem('alumno_grupo')||'';
+  if(!n||!a)return;
+  const params='?accion=intento&nombre='+encodeURIComponent(n)+'&apellidos='+encodeURIComponent(a)+'&grupo='+encodeURIComponent(g)+'&modulo='+MODULE_ID+'&bloque='+BLOQUE+'&aciertos='+aciertos+'&total='+total+'&aprobado='+(aprobado?'1':'0');
+  fetch(SHEETS_URL+params,{method:'GET',mode:'no-cors'}).catch(()=>{});
+}
+function marcarCompletado(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(!c.includes(MODULE_ID))c.push(MODULE_ID);
+  sessionStorage.setItem(SESSION_KEY,JSON.stringify(c));
+  document.getElementById('completar-wrap').style.display='none';
+  document.getElementById('completado-msg').style.display='block';
+}
+(function(){
+  const c=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'[]');
+  if(c.includes(MODULE_ID)){document.getElementById('completar-wrap').style.display='none';document.getElementById('completado-msg').style.display='block';}
+  window._aciertos=0;window._comprobados=0;window._respondidas=new Set();window._serieEnviada=false;
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',nuevaSerie);}else{nuevaSerie();}
+})();
 </script>
 </body>
 </html>

@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bloque 5 · Geometría · 1º ESO</title>
+  <title>Bloque 5 · Análisis · 2º ESO</title>
   <style>
-    :root{--color:#880e4f;--color-c:#fce4ec;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    :root{--color:#f57f17;--color-c:#fff8e1;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto)}
     nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
     nav a{color:rgba(255,255,255,.8);text-decoration:none} nav a:hover{color:white} nav span{opacity:.6}
-    .hero{background:linear-gradient(135deg,var(--color),#4a0020);color:white;padding:2.2rem 1.5rem 2rem;text-align:center}
+    .hero{background:linear-gradient(135deg,var(--color),#e65100);color:white;padding:2.2rem 1.5rem 2rem;text-align:center}
     .badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:.3rem 1rem;font-size:.82rem;letter-spacing:.06em;margin-bottom:.9rem}
     .hero h1{font-size:1.9rem;margin-bottom:.4rem} .hero p{opacity:.88;font-size:.98rem}
     main{max-width:780px;margin:0 auto;padding:2rem 1rem 4rem}
@@ -32,28 +32,26 @@
   </style>
 </head>
 <body>
-<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 1º ESO</span><span>·</span><strong>Bloque 5</strong></nav>
-<div class="hero"><div class="badge">Bloque 5</div><h1>Geometría</h1><p>Figuras, ángulos, áreas, movimientos, Pitágoras y construcciones</p></div>
+<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 2º ESO</span><span>·</span><strong>Bloque 5</strong></nav>
+<div class="hero"><div class="badge">Bloque 5</div><h1>Análisis</h1><p>Modelización, variables, funciones lineales y cuadráticas</p></div>
 <main>
   <div class="progreso-bar-wrap">
     <span style="font-size:.85rem;color:#555;white-space:nowrap">Tu progreso</span>
     <div class="barra-outer"><div class="barra-inner" id="barra" style="width:0%"></div></div>
-    <span class="progreso-pct" id="pct">0 / 5</span>
+    <span class="progreso-pct" id="pct">0 / 3</span>
   </div>
   <div class="modulos-grid">
-    <a href="b5-figuras-angulos.html" class="modulo-card" id="card-b5-fig"><div class="modulo-icon">⬡</div><div class="modulo-nombre">Figuras planas y ángulos</div><div class="modulo-desc">Polígonos, triángulos y relaciones angulares</div></a>
-    <a href="b5-areas-perimetros.html" class="modulo-card" id="card-b5-area"><div class="modulo-icon">📐</div><div class="modulo-nombre">Áreas y perímetros</div><div class="modulo-desc">Fórmulas, figuras compuestas y círculos</div></a>
-    <a href="b5-movimientos.html" class="modulo-card" id="card-b5-mov"><div class="modulo-icon">🔄</div><div class="modulo-nombre">Movimientos en el plano</div><div class="modulo-desc">Traslación, simetrías axial y central</div></a>
-    <a href="b5-pitagoras.html" class="modulo-card" id="card-b5-pit"><div class="modulo-icon">📏</div><div class="modulo-nombre">Teorema de Pitágoras</div><div class="modulo-desc">Hipotenusa, catetos, distancias y aplicaciones</div></a>
-    <a href="b5-geometria-dinamica.html" class="modulo-card" id="card-b5-geo"><div class="modulo-icon">🖥️</div><div class="modulo-nombre">Geometría dinámica</div><div class="modulo-desc">Mediatrices, bisectrices y puntos notables</div></a>
+    <a href="b5-modelizacion.html" class="modulo-card" id="card-b5-mod"><div class="modulo-icon">📊</div><div class="modulo-nombre">Modelización matemática</div><div class="modulo-desc">Traducir situaciones reales a expresiones matemáticas</div></a>
+    <a href="b5-funciones.html" class="modulo-card" id="card-b5-func"><div class="modulo-icon">📈</div><div class="modulo-nombre">Variables y funciones</div><div class="modulo-desc">Concepto, propiedades y lectura de gráficas</div></a>
+    <a href="b5-lineales-cuadraticas.html" class="modulo-card" id="card-b5-lc"><div class="modulo-icon">📉</div><div class="modulo-nombre">Lineales y cuadráticas</div><div class="modulo-desc">Pendiente, vértice, raíces y aplicaciones</div></a>
   </div>
   <a href="portal.html" class="btn-volver">← Volver al portal</a>
 </main>
-<footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
+<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
 <script>
-const MODULOS=['b5-fig','b5-area','b5-mov','b5-pit','b5-geo'];
+const MODULOS=['b5-mod','b5-func','b5-lc'];
 function actualizarProgreso(){
-  const completados=JSON.parse(sessionStorage.getItem('modulos_1eso_b5')||'[]');
+  const completados=JSON.parse(sessionStorage.getItem('modulos_2eso_b5')||'[]');
   let cuenta=0;
   MODULOS.forEach(id=>{const card=document.getElementById('card-'+id);if(card&&completados.includes(id)){card.classList.add('completado');cuenta++;}});
   document.getElementById('barra').style.width=Math.round(cuenta/MODULOS.length*100)+'%';
