@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bloque 4 · Geometría · 2º ESO</title>
+  <title>Bloque 4 · Sistemas · 1º ESO</title>
   <style>
     :root{--color:#6a1b9a;--color-c:#f3e5f5;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -32,29 +32,25 @@
   </style>
 </head>
 <body>
-<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 2º ESO</span><span>·</span><strong>Bloque 4</strong></nav>
-<div class="hero"><div class="badge">Bloque 4</div><h1>Geometría</h1><p>Polígonos, semejanza, Pitágoras, movimientos y cuerpos</p></div>
+<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 1º ESO</span><span>·</span><strong>Bloque 4</strong></nav>
+<div class="hero"><div class="badge">Bloque 4</div><h1>Sistemas de ecuaciones</h1><p>Sustitución, reducción, igualación y problemas</p></div>
 <main>
   <div class="progreso-bar-wrap">
     <span style="font-size:.85rem;color:#555;white-space:nowrap">Tu progreso</span>
     <div class="barra-outer"><div class="barra-inner" id="barra" style="width:0%"></div></div>
-    <span class="progreso-pct" id="pct">0 / 6</span>
+    <span class="progreso-pct" id="pct">0 / 2</span>
   </div>
   <div class="modulos-grid">
-    <a href="b4-poligonos.html" class="modulo-card" id="card-b4-pol"><div class="modulo-icon">⬡</div><div class="modulo-nombre">Polígonos y poliedros</div><div class="modulo-desc">Ángulos, clasificación y sólidos de Platón</div></a>
-    <a href="b4-semejanza.html" class="modulo-card" id="card-b4-sem"><div class="modulo-icon">📐</div><div class="modulo-nombre">Semejanza y Tales</div><div class="modulo-desc">Criterios, razón k, aplicaciones</div></a>
-    <a href="b4-pitagoras.html" class="modulo-card" id="card-b4-pit"><div class="modulo-icon">📏</div><div class="modulo-nombre">Teorema de Pitágoras</div><div class="modulo-desc">Cálculo de lados, distancias y alturas</div></a>
-    <a href="b4-movimientos.html" class="modulo-card" id="card-b4-mov"><div class="modulo-icon">🔄</div><div class="modulo-nombre">Movimientos en el plano</div><div class="modulo-desc">Traslación, simetría y giros</div></a>
-    <a href="b4-cuerpos.html" class="modulo-card" id="card-b4-cuer"><div class="modulo-icon">🌀</div><div class="modulo-nombre">Cuerpos de revolución</div><div class="modulo-desc">Cilindro, cono y esfera: áreas y volúmenes</div></a>
-    <a href="b4-areas-volumenes.html" class="modulo-card" id="card-b4-av"><div class="modulo-icon">📦</div><div class="modulo-nombre">Áreas, volúmenes y semejanza</div><div class="modulo-desc">Escala k, k² y k³ en figuras semejantes</div></a>
+    <a href="b4-metodos.html" class="modulo-card" id="card-b4-met"><div class="modulo-icon">⚙️</div><div class="modulo-nombre">Métodos de resolución</div><div class="modulo-desc">Sustitución, reducción e igualación</div></a>
+    <a href="b4-problemas.html" class="modulo-card" id="card-b4-prob"><div class="modulo-icon">📝</div><div class="modulo-nombre">Problemas de sistemas</div><div class="modulo-desc">Movimiento, mezclas, trabajo, economía</div></a>
   </div>
   <a href="portal.html" class="btn-volver">← Volver al portal</a>
 </main>
-<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
+<footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
 <script>
-const MODULOS=['b4-pol','b4-sem','b4-pit','b4-mov','b4-cuer','b4-av'];
+const MODULOS=['b4-met','b4-prob'];
 function actualizarProgreso(){
-  const completados=JSON.parse(sessionStorage.getItem('modulos_2eso_b4')||'[]');
+  const completados=JSON.parse(sessionStorage.getItem('modulos_1eso_b4')||'[]');
   let cuenta=0;
   MODULOS.forEach(id=>{const card=document.getElementById('card-'+id);if(card&&completados.includes(id)){card.classList.add('completado');cuenta++;}});
   document.getElementById('barra').style.width=Math.round(cuenta/MODULOS.length*100)+'%';

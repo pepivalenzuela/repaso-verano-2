@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bloque 1 · Álgebra · 2º ESO</title>
+  <title>Bloque 1 · Proporcionalidad · 1º ESO</title>
   <style>
     :root{--color:#1565c0;--color-c:#e3f2fd;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -14,11 +14,9 @@
     .hero h1{font-size:1.9rem;margin-bottom:.4rem} .hero p{opacity:.88;font-size:.98rem}
     main{max-width:780px;margin:0 auto;padding:2rem 1rem 4rem}
     .progreso-bar-wrap{background:white;border-radius:var(--radio);box-shadow:var(--sombra);padding:1rem 1.4rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
-    .label{font-size:.85rem;color:#555;white-space:nowrap}
     .barra-outer{flex:1;background:#e0e0e0;border-radius:99px;height:10px;overflow:hidden}
     .barra-inner{height:100%;background:var(--color);border-radius:99px;transition:width .4s}
     .progreso-pct{font-weight:700;color:var(--color);font-size:.9rem;white-space:nowrap}
-    .subtema-title{font-size:.82rem;text-transform:uppercase;letter-spacing:.07em;color:#888;margin-bottom:.8rem}
     .modulos-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
     @media(max-width:520px){.modulos-grid{grid-template-columns:1fr}}
     .modulo-card{background:white;border-radius:var(--radio);box-shadow:var(--sombra);text-decoration:none;color:var(--texto);display:flex;flex-direction:column;padding:1.1rem 1.3rem;border-top:4px solid #e0e0e0;transition:transform .15s,box-shadow .15s,border-color .15s;position:relative}
@@ -34,34 +32,30 @@
   </style>
 </head>
 <body>
-<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 2º ESO</span><span>·</span><strong>Bloque 1</strong></nav>
-<div class="hero"><div class="badge">Bloque 1</div><h1>Álgebra</h1><p>Monomios, polinomios, Ruffini, lenguaje algebraico e identidades notables</p></div>
+<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 1º ESO</span><span>·</span><strong>Bloque 1</strong></nav>
+<div class="hero"><div class="badge">Bloque 1</div><h1>Proporcionalidad</h1><p>Razones, proporciones, porcentajes y escalas</p></div>
 <main>
   <div class="progreso-bar-wrap">
-    <span class="label">Tu progreso</span>
+    <span style="font-size:.85rem;color:#555;white-space:nowrap">Tu progreso</span>
     <div class="barra-outer"><div class="barra-inner" id="barra" style="width:0%"></div></div>
-    <span class="progreso-pct" id="pct">0 / 6</span>
+    <span class="progreso-pct" id="pct">0 / 4</span>
   </div>
-  <p class="subtema-title">Módulos</p>
   <div class="modulos-grid">
-    <a href="b1-monomios.html" class="modulo-card" id="card-b1-mono"><div class="modulo-icon">📦</div><div class="modulo-nombre">Monomios</div><div class="modulo-desc">Grado, coeficiente, semejantes, operaciones</div></a>
-    <a href="b1-polinomios.html" class="modulo-card" id="card-b1-poli"><div class="modulo-icon">📊</div><div class="modulo-nombre">Polinomios</div><div class="modulo-desc">Suma, resta, multiplicación y valor numérico</div></a>
-    <a href="b1-operaciones-polinomios.html" class="modulo-card" id="card-b1-opoli"><div class="modulo-icon">🔧</div><div class="modulo-nombre">División y Ruffini</div><div class="modulo-desc">División de polinomios y regla de Ruffini</div></a>
-    <a href="b1-resto.html" class="modulo-card" id="card-b1-resto"><div class="modulo-icon">⚖️</div><div class="modulo-nombre">Teorema del resto</div><div class="modulo-desc">Resto, factor y búsqueda de raíces racionales</div></a>
-    <a href="b1-lenguaje-algebraico.html" class="modulo-card" id="card-b1-leng"><div class="modulo-icon">💬</div><div class="modulo-nombre">Lenguaje algebraico</div><div class="modulo-desc">Traducir frases a expresiones algebraicas</div></a>
-    <a href="b1-identidades-notables.html" class="modulo-card" id="card-b1-idn"><div class="modulo-icon">⭐</div><div class="modulo-nombre">Identidades notables</div><div class="modulo-desc">Cuadrado de la suma, diferencia y suma×diferencia</div></a>
+    <a href="b1-razones-proporciones.html" class="modulo-card" id="card-b1-raz"><div class="modulo-icon">⚖️</div><div class="modulo-nombre">Razones y proporciones</div><div class="modulo-desc">Regla de tres directa e inversa</div></a>
+    <a href="b1-porcentajes.html" class="modulo-card" id="card-b1-pct"><div class="modulo-icon">💯</div><div class="modulo-nombre">Porcentajes</div><div class="modulo-desc">Calcular, aplicar e interpretar porcentajes</div></a>
+    <a href="b1-aumentos-disminuciones.html" class="modulo-card" id="card-b1-aum"><div class="modulo-icon">📈</div><div class="modulo-nombre">Aumentos y disminuciones</div><div class="modulo-desc">IVA, rebajas, factor de conversión</div></a>
+    <a href="b1-escalas.html" class="modulo-card" id="card-b1-esc"><div class="modulo-icon">🗺️</div><div class="modulo-nombre">Escalas y representación</div><div class="modulo-desc">Mapas, planos y conversión de medidas</div></a>
   </div>
   <a href="portal.html" class="btn-volver">← Volver al portal</a>
 </main>
-<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
+<footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
 <script>
-const MODULOS=['b1-mono','b1-poli','b1-opoli','b1-resto','b1-leng','b1-idn'];
+const MODULOS=['b1-raz','b1-pct','b1-aum','b1-esc'];
 function actualizarProgreso(){
-  const completados=JSON.parse(sessionStorage.getItem('modulos_2eso_b1')||'[]');
+  const completados=JSON.parse(sessionStorage.getItem('modulos_1eso_b1')||'[]');
   let cuenta=0;
   MODULOS.forEach(id=>{const card=document.getElementById('card-'+id);if(card&&completados.includes(id)){card.classList.add('completado');cuenta++;}});
-  const pct=Math.round(cuenta/MODULOS.length*100);
-  document.getElementById('barra').style.width=pct+'%';
+  document.getElementById('barra').style.width=Math.round(cuenta/MODULOS.length*100)+'%';
   document.getElementById('pct').textContent=cuenta+' / '+MODULOS.length;
 }
 actualizarProgreso();

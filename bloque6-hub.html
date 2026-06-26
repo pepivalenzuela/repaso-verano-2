@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bloque 2 · Álgebra · 1º ESO</title>
+  <title>Bloque 6 · Medidas · 1º ESO</title>
   <style>
-    :root{--color:#e65100;--color-c:#fff3e0;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
+    :root{--color:#558b2f;--color-c:#f1f8e9;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Segoe UI',sans-serif;background:var(--gris-bg);color:var(--texto)}
     nav{background:var(--color);color:white;padding:.7rem 1.4rem;font-size:.9rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
     nav a{color:rgba(255,255,255,.8);text-decoration:none} nav a:hover{color:white} nav span{opacity:.6}
-    .hero{background:linear-gradient(135deg,var(--color),#bf360c);color:white;padding:2.2rem 1.5rem 2rem;text-align:center}
+    .hero{background:linear-gradient(135deg,var(--color),#33691e);color:white;padding:2.2rem 1.5rem 2rem;text-align:center}
     .badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:.3rem 1rem;font-size:.82rem;letter-spacing:.06em;margin-bottom:.9rem}
     .hero h1{font-size:1.9rem;margin-bottom:.4rem} .hero p{opacity:.88;font-size:.98rem}
     main{max-width:780px;margin:0 auto;padding:2rem 1rem 4rem}
@@ -32,27 +32,25 @@
   </style>
 </head>
 <body>
-<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 1º ESO</span><span>·</span><strong>Bloque 2</strong></nav>
-<div class="hero"><div class="badge">Bloque 2</div><h1>Álgebra</h1><p>Lenguaje algebraico, monomios, polinomios y productos notables</p></div>
+<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 1º ESO</span><span>·</span><strong>Bloque 6</strong></nav>
+<div class="hero"><div class="badge">Bloque 6</div><h1>Sistema de medidas</h1><p>Longitud, superficie, volumen y capacidad</p></div>
 <main>
   <div class="progreso-bar-wrap">
     <span style="font-size:.85rem;color:#555;white-space:nowrap">Tu progreso</span>
     <div class="barra-outer"><div class="barra-inner" id="barra" style="width:0%"></div></div>
-    <span class="progreso-pct" id="pct">0 / 4</span>
+    <span class="progreso-pct" id="pct">0 / 2</span>
   </div>
   <div class="modulos-grid">
-    <a href="b2-lenguaje-algebraico.html" class="modulo-card" id="card-b2-leng"><div class="modulo-icon">💬</div><div class="modulo-nombre">Lenguaje algebraico</div><div class="modulo-desc">Traducir frases a expresiones matemáticas</div></a>
-    <a href="b2-monomios.html" class="modulo-card" id="card-b2-mono"><div class="modulo-icon">📦</div><div class="modulo-nombre">Monomios</div><div class="modulo-desc">Grado, semejantes y operaciones</div></a>
-    <a href="b2-polinomios.html" class="modulo-card" id="card-b2-poli"><div class="modulo-icon">📊</div><div class="modulo-nombre">Polinomios y operaciones</div><div class="modulo-desc">Suma, resta, multiplicación y valor numérico</div></a>
-    <a href="b2-productos-notables.html" class="modulo-card" id="card-b2-pn"><div class="modulo-icon">⭐</div><div class="modulo-nombre">Productos notables</div><div class="modulo-desc">Cuadrado de la suma, diferencia y suma×diferencia</div></a>
+    <a href="b6-longitud-superficie.html" class="modulo-card" id="card-b6-long"><div class="modulo-icon">📏</div><div class="modulo-nombre">Longitud y superficie</div><div class="modulo-desc">Conversiones, hectáreas, escalas y áreas</div></a>
+    <a href="b6-volumen-capacidad.html" class="modulo-card" id="card-b6-vol"><div class="modulo-icon">🧊</div><div class="modulo-nombre">Volumen y capacidad</div><div class="modulo-desc">m³ ↔ L, cuerpos geométricos, presas y depósitos</div></a>
   </div>
   <a href="portal.html" class="btn-volver">← Volver al portal</a>
 </main>
 <footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
 <script>
-const MODULOS=['b2-leng','b2-mono','b2-poli','b2-pn'];
+const MODULOS=['b6-long','b6-vol'];
 function actualizarProgreso(){
-  const completados=JSON.parse(sessionStorage.getItem('modulos_1eso_b2')||'[]');
+  const completados=JSON.parse(sessionStorage.getItem('modulos_1eso_b6')||'[]');
   let cuenta=0;
   MODULOS.forEach(id=>{const card=document.getElementById('card-'+id);if(card&&completados.includes(id)){card.classList.add('completado');cuenta++;}});
   document.getElementById('barra').style.width=Math.round(cuenta/MODULOS.length*100)+'%';

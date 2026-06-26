@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bloque 0 · Números · 2º ESO</title>
+  <title>Bloque 0 · Números · 1º ESO</title>
   <style>
     :root{--color:#2e7d32;--color-c:#e8f5e9;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -35,7 +35,7 @@
   </style>
 </head>
 <body>
-<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 2º ESO</span><span>·</span><strong>Bloque 0</strong></nav>
+<nav><a href="portal.html">Las Chapas ECOS</a><span>·</span><span>Matemáticas 1º ESO</span><span>·</span><strong>Bloque 0</strong></nav>
 <div class="hero"><div class="badge">Bloque 0</div><h1>Números</h1><p>Naturales, enteros y racionales</p></div>
 <main>
   <div class="progreso-bar-wrap">
@@ -43,7 +43,6 @@
     <div class="barra-outer"><div class="barra-inner" id="barra" style="width:0%"></div></div>
     <span class="progreso-pct" id="pct">0 / 9</span>
   </div>
-
   <div class="subtema-section">
     <p class="subtema-title">Números naturales</p>
     <div class="modulos-grid">
@@ -52,16 +51,14 @@
       <a href="b0-naturales-problemas.html" class="modulo-card" id="card-b0-nat-prob"><div class="modulo-icon">📝</div><div class="modulo-nombre">Problemas contextualizados</div><div class="modulo-desc">MCM, MCD y potencias en situaciones reales</div></a>
     </div>
   </div>
-
   <div class="subtema-section">
     <p class="subtema-title">Números enteros</p>
     <div class="modulos-grid">
-      <a href="b0-enteros-operaciones.html" class="modulo-card" id="card-b0-ent-op"><div class="modulo-icon">±</div><div class="modulo-nombre">Operaciones con enteros</div><div class="modulo-desc">Reglas de signos, potencias con base negativa</div></a>
+      <a href="b0-enteros-operaciones.html" class="modulo-card" id="card-b0-ent-op"><div class="modulo-icon">±</div><div class="modulo-nombre">Operaciones con enteros</div><div class="modulo-desc">Reglas de signos y potencias</div></a>
       <a href="b0-enteros-jerarquia.html" class="modulo-card" id="card-b0-ent-jer"><div class="modulo-icon">🔣</div><div class="modulo-nombre">Jerarquía de operaciones</div><div class="modulo-desc">Expresiones combinadas con enteros</div></a>
       <a href="b0-enteros-problemas.html" class="modulo-card" id="card-b0-ent-prob"><div class="modulo-icon">🌡️</div><div class="modulo-nombre">Problemas contextualizados</div><div class="modulo-desc">Temperaturas, altitudes, deudas</div></a>
     </div>
   </div>
-
   <div class="subtema-section">
     <p class="subtema-title">Números racionales</p>
     <div class="modulos-grid">
@@ -70,18 +67,16 @@
       <a href="b0-racionales-problemas.html" class="modulo-card" id="card-b0-rac-prob"><div class="modulo-icon">🛒</div><div class="modulo-nombre">Problemas contextualizados</div><div class="modulo-desc">Repartos, proporciones, situaciones cotidianas</div></a>
     </div>
   </div>
-
   <a href="portal.html" class="btn-volver">← Volver al portal</a>
 </main>
-<footer>Las Chapas ECOS · Matemáticas 2º ESO · Repaso de verano</footer>
+<footer>Las Chapas ECOS · Matemáticas 1º ESO · Repaso de verano</footer>
 <script>
 const MODULOS=['b0-nat-op','b0-nat-jer','b0-nat-prob','b0-ent-op','b0-ent-jer','b0-ent-prob','b0-rac-op','b0-rac-jer','b0-rac-prob'];
 function actualizarProgreso(){
-  const completados=JSON.parse(sessionStorage.getItem('modulos_2eso_b0')||'[]');
+  const completados=JSON.parse(sessionStorage.getItem('modulos_1eso_b0')||'[]');
   let cuenta=0;
   MODULOS.forEach(id=>{const card=document.getElementById('card-'+id);if(card&&completados.includes(id)){card.classList.add('completado');cuenta++;}});
-  const pct=Math.round(cuenta/MODULOS.length*100);
-  document.getElementById('barra').style.width=pct+'%';
+  document.getElementById('barra').style.width=Math.round(cuenta/MODULOS.length*100)+'%';
   document.getElementById('pct').textContent=cuenta+' / '+MODULOS.length;
 }
 actualizarProgreso();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Repaso de Verano · Matemáticas 2º ESO</title>
+  <title>Repaso de Verano · Matemáticas 1º ESO</title>
   <style>
     :root{--verde:#2e7d32;--verde-c:#e8f5e9;--gris-bg:#f5f7fa;--texto:#212121;--radio:12px;--sombra:0 2px 8px rgba(0,0,0,.09)}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -31,10 +31,12 @@
     .bloque-row{background:white;border-radius:var(--radio);box-shadow:var(--sombra);display:flex;align-items:center;gap:1rem;padding:1rem 1.3rem}
     .bloque-row.b0{border-left:5px solid #2e7d32} .bloque-row.b1{border-left:5px solid #1565c0}
     .bloque-row.b2{border-left:5px solid #e65100} .bloque-row.b3{border-left:5px solid #00838f}
-    .bloque-row.b4{border-left:5px solid #6a1b9a} .bloque-row.b5{border-left:5px solid #f57f17}
+    .bloque-row.b4{border-left:5px solid #6a1b9a} .bloque-row.b5{border-left:5px solid #880e4f}
+    .bloque-row.b6{border-left:5px solid #558b2f}
     .bloque-num{font-size:1.6rem;font-weight:700;min-width:2rem;text-align:center}
     .b0 .bloque-num{color:#2e7d32} .b1 .bloque-num{color:#1565c0} .b2 .bloque-num{color:#e65100}
-    .b3 .bloque-num{color:#00838f} .b4 .bloque-num{color:#6a1b9a} .b5 .bloque-num{color:#f57f17}
+    .b3 .bloque-num{color:#00838f} .b4 .bloque-num{color:#6a1b9a} .b5 .bloque-num{color:#880e4f}
+    .b6 .bloque-num{color:#558b2f}
     .bloque-info h3{font-size:1rem} .bloque-info p{font-size:.85rem;color:#666;margin-top:.15rem}
     .pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:.5rem}
     @media(max-width:520px){.pasos{grid-template-columns:1fr}}
@@ -47,9 +49,9 @@
 <body>
 <nav><strong>Las Chapas ECOS</strong><span>·</span><span>Matemáticas · Verano 2025</span></nav>
 <div class="hero">
-  <div class="curso-label">2º ESO</div>
+  <div class="curso-label">1º ESO</div>
   <h1>Repaso de <em>Verano</em></h1>
-  <p>Consolida las matemáticas de 2º ESO a tu ritmo, antes de empezar 3º.</p>
+  <p>Consolida las matemáticas de 1º ESO a tu ritmo, antes de empezar 2º.</p>
 </div>
 <main>
   <div class="card">
@@ -58,10 +60,10 @@
       <div class="form-group"><label for="nombre">Nombre</label><input type="text" id="nombre" placeholder="Tu nombre"/></div>
       <div class="form-group"><label for="apellidos">Apellidos</label><input type="text" id="apellidos" placeholder="Tus apellidos"/></div>
       <div class="form-group">
-        <label for="grupo">Grupo en 2º ESO</label>
+        <label for="grupo">Grupo en 1º ESO</label>
         <select id="grupo">
           <option value="">— Elige tu grupo —</option>
-          <option>2º A</option><option>2º B</option><option>2º C</option><option>2º D</option>
+          <option>1º A</option><option>1º B</option><option>1º C</option><option>1º D</option>
         </select>
       </div>
     </div>
@@ -72,23 +74,24 @@
   <p class="info-title">¿Qué vas a trabajar este verano?</p>
   <div class="bloques-preview">
     <div class="bloque-row b0"><span class="bloque-num">0</span><div class="bloque-info"><h3>Números</h3><p>Naturales, enteros y racionales</p></div></div>
-    <div class="bloque-row b1"><span class="bloque-num">1</span><div class="bloque-info"><h3>Álgebra</h3><p>Monomios, polinomios, Ruffini e identidades notables</p></div></div>
-    <div class="bloque-row b2"><span class="bloque-num">2</span><div class="bloque-info"><h3>Ecuaciones</h3><p>Lineales, 2º grado y problemas</p></div></div>
-    <div class="bloque-row b3"><span class="bloque-num">3</span><div class="bloque-info"><h3>Sistemas</h3><p>Sustitución, reducción e igualación</p></div></div>
-    <div class="bloque-row b4"><span class="bloque-num">4</span><div class="bloque-info"><h3>Geometría</h3><p>Semejanza, Pitágoras, movimientos y cuerpos de revolución</p></div></div>
-    <div class="bloque-row b5"><span class="bloque-num">5</span><div class="bloque-info"><h3>Análisis</h3><p>Funciones lineales y cuadráticas</p></div></div>
+    <div class="bloque-row b1"><span class="bloque-num">1</span><div class="bloque-info"><h3>Proporcionalidad</h3><p>Razones, proporciones, porcentajes y escalas</p></div></div>
+    <div class="bloque-row b2"><span class="bloque-num">2</span><div class="bloque-info"><h3>Álgebra</h3><p>Lenguaje algebraico, monomios, polinomios y productos notables</p></div></div>
+    <div class="bloque-row b3"><span class="bloque-num">3</span><div class="bloque-info"><h3>Ecuaciones</h3><p>Ecuaciones de primer grado y problemas</p></div></div>
+    <div class="bloque-row b4"><span class="bloque-num">4</span><div class="bloque-info"><h3>Sistemas</h3><p>Sustitución, reducción, igualación y problemas</p></div></div>
+    <div class="bloque-row b5"><span class="bloque-num">5</span><div class="bloque-info"><h3>Geometría</h3><p>Figuras planas, ángulos, áreas, movimientos y Pitágoras</p></div></div>
+    <div class="bloque-row b6"><span class="bloque-num">6</span><div class="bloque-info"><h3>Medidas</h3><p>Longitud, superficie, volumen y capacidad</p></div></div>
   </div>
 
   <div class="card" style="margin-top:2rem">
     <h2>¿Cómo funciona?</h2>
     <div class="pasos">
-      <div class="paso"><div class="num">01</div><h4>Elige un bloque</h4><p>Navega libremente o sigue el orden recomendado empezando por el Bloque 0.</p></div>
+      <div class="paso"><div class="num">01</div><h4>Elige un bloque</h4><p>Navega libremente o sigue el orden recomendado.</p></div>
       <div class="paso"><div class="num">02</div><h4>Trabaja los módulos</h4><p>Teoría clara y ejercicios aleatorios con corrección inmediata.</p></div>
-      <div class="paso"><div class="num">03</div><h4>Comprueba tu progreso</h4><p>El portal recuerda qué módulos has completado en tu dispositivo.</p></div>
+      <div class="paso"><div class="num">03</div><h4>Comprueba tu progreso</h4><p>El portal recuerda qué módulos has completado.</p></div>
     </div>
   </div>
 </main>
-<footer>Departamento de Matemáticas · Las Chapas ECOS · Marbella · Curso 2024–25</footer>
+<footer>Departamento de Matemáticas · Las Chapas ECOS · Marbella · Verano 2026</footer>
 <script>
 function entrar(){
   const nombre=document.getElementById('nombre').value.trim();
